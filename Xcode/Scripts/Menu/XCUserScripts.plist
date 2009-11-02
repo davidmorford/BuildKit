@@ -1,0 +1,2109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>Open</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.sh</string>
+				<key>name</key>
+				<string>Open Path in Text Edit</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Opens the selected file path in TextEdit
+
+xargs open -e 
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>04103ED5-1758-4881-BEDD-268AB9C31553</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.sh</string>
+				<key>name</key>
+				<string>Open Path or URL</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Opens the selected file path or URL
+
+xargs open
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>C8588D1C-9151-47CE-BE3C-0A54EAFDEC7E</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>D8A081D7-4D08-4204-9047-04EBCC2F7C7A</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>Search</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.sh</string>
+				<key>name</key>
+				<string>Search Google for Selection</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Searches www.google.com for the selected text
+
+INPUT=`cat -`
+
+open &quot;http://www.google.com/search?ie=UTF-8&amp;q=${INPUT}&amp;btnG=Google+Search&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>9A158C5D-8476-40DF-B0F3-C2E32106F5C1</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.sh</string>
+				<key>name</key>
+				<string>Search Apple Developer Site for Selection</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Searches developer.apple.com for the selected text
+
+INPUT=`cat -`
+
+open &quot;http://developer.apple.com/cgi-bin/search.pl?q=${INPUT}&amp;ie=utf8&amp;oe=utf8&quot;
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>AD8073E2-FF86-48C3-AA3D-778C13DF1741</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>7AAE141E-344D-4CC2-B0D8-AD623D22FE4E</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>Comments</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string>@/</string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Un/Comment Selection</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+#
+# un_commentLines.pl - 	Comments or uncomments the selected lines
+#			Uses &apos;# &apos; for Perl and shell scripts; &apos;// &apos; otherwise
+
+my $outputString = &quot;&quot;;
+my $perlCmt = &quot;#&quot;;
+my $cCmt = &quot;//&quot;;
+
+# Get the first few lines of the file
+my $fileString = &lt;&lt;&apos;HEADTEXT&apos;;
+%%%{PBXHeadText}%%%
+HEADTEXT
+
+
+# determine the type of file we have by looking for the #! line at the top
+# careful--it might already be commented out!
+my $commentString;
+if ($fileString =~ m!^($perlCmt|$cCmt)?#\!\s*.*?/perl|^($perlCmt|$cCmt)?#\!\s*.*?/sh!) {
+	$commentString = $perlCmt;
+} else {
+	$commentString = $cCmt;
+}
+
+my @selection = &lt;STDIN&gt;;       # read the selection from standard input
+
+# no chars in selection, so create an empty selection
+if (!@selection) {
+    push @selection, &quot;&quot;;
+};  
+
+# add or remove comment markers depending on the state of the first line of the selection
+# if it is uncommented, comment all lines.  If it is commented, remove comment markers, if present
+my $firstLineOfSelection = $selection[0]; #get first line
+my $addingCommentsString = 1;
+if ($firstLineOfSelection =~ /^$commentString/) { #selection starts with comment
+    $addingCommentsString = 0;
+}
+
+foreach my $line (@selection) {
+    if ($addingCommentsString == 1) {
+        $outputString .= $commentString.$line;
+    } else {
+        $line =~ s/^$commentString//;
+        $outputString .= $line;
+    }
+}
+
+print &quot;%%%{PBXSelection}%%%&quot;;
+print $outputString;
+print &quot;%%%{PBXSelection}%%%&quot;;
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>CCC886A0-0579-48F5-B6D9-D97A23128C5C</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Un/Backslash Selection</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+#
+# backslashLines.pl - 	adds or deletes a backslash at the ends of the selected lines
+
+my $outputString = &quot;&quot;;
+
+my @selection = &lt;STDIN&gt;;       # read the selection from standard input
+
+if (!@selection) { exit; };  # no chars in selection, nothing to do
+
+# add or remove backslash depending on the state of the first line of the selection
+my $firstLineOfSelection = $selection[0]; # get first line
+my $addingBackslash = 1;
+if ($firstLineOfSelection =~ /\\$/) { #selection ends with backslash
+    $addingBackslash = 0;
+}
+
+# get the length of the longest line
+my $longest=0;
+foreach my $line (@selection) {
+    my $lineLength = length($line);
+    if ($lineLength &gt;$longest) {
+        $longest = $lineLength;
+    }
+}
+
+# add an offset to the longest line, for location of continuation character
+my $paddedLength = $longest + 5;
+
+my $numLines = scalar(@selection);
+my $lastLineIndex= $numLines - 1;
+
+for (my $i = 0; $i &lt; $numLines ; $i++) {
+    my $line = $selection[$i];
+    if ($addingBackslash == 1) {
+        if ($i &lt; $lastLineIndex) { 
+            chomp $line;
+            my $paddedLine = sprintf(&quot;%-*s&quot;, $paddedLength, $line);
+            $outputString .= $paddedLine.&quot;\\\n&quot;;
+        } else { # don&apos;t add continuation character on last line
+            $outputString .= $line;
+        }
+    } else {
+        $line =~ s/\s*\\$//;
+        $outputString .= $line;
+    }
+}
+
+print &quot;%%%{PBXSelection}%%%&quot;;
+print $outputString;
+print &quot;%%%{PBXSelection}%%%&quot;;
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>FE9A0F57-671A-4E52-984B-C48CB62C7727</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScriptSeparator</string>
+				<key>uuid</key>
+				<string>FD46702B-062A-4BE4-8EAA-BA13402D79B8</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Insert !!!:Name:Date</string>
+				<key>script</key>
+				<string>#!/bin/sh
+
+echo -n &quot;// !!!:${USER}:&quot;
+date +%Y%m%d | awk &apos;{printf &quot;%s&quot;, $1}&apos;
+echo -n &quot; %%%{PBXSelection}%%%&quot;
+cat -
+echo -n &quot;%%%{PBXSelection}%%%&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>439221AC-F855-4202-97FD-AE3E687B81E7</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Insert ???:Name:Date</string>
+				<key>script</key>
+				<string>#!/bin/sh
+
+echo -n &quot;// ???:${USER}:&quot;
+date +%Y%m%d | awk &apos;{printf &quot;%s&quot;, $1}&apos;
+echo -n &quot; %%%{PBXSelection}%%%&quot;
+cat -
+echo -n &quot;%%%{PBXSelection}%%%&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>D6E38EC1-FD95-444F-8DB5-C1A058E26097</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Insert :Name:Date</string>
+				<key>script</key>
+				<string>#!/bin/sh
+
+echo -n &quot;// :${USER}:&quot;
+date +%Y%m%d | awk &apos;{printf &quot;%s&quot;, $1}&apos;
+echo -n &quot; %%%{PBXSelection}%%%&quot;
+cat -
+echo -n &quot;%%%{PBXSelection}%%%&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>61304851-C495-4CD1-9D96-BB965D7041F9</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>544D53B7-4313-403E-BD91-8E610715FDA1</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>Code</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.python</string>
+				<key>name</key>
+				<string>Place Accessor Decls on Clipboard</string>
+				<key>script</key>
+				<string>#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Known limitations:
+#   - Multiword types (like &quot;unsigned int&quot;) are not handled.
+#   - The script attempts to determine if the type is an object or not, but it is imperfect at detecting this
+
+import sys
+import string
+import re
+
+# ================== Debug input ==================
+
+# Set the variable below to True to run the script in test mode on the test 
+# input below instead of reading input from stdin
+doDebug = False
+
+testInput = (
+&quot;&quot;&quot;    NSString *_name;  // comment
+&quot;&quot;&quot;,
+&quot;&quot;&quot;    IBOutlet NSButton *button;  // comment
+&quot;&quot;&quot;,
+&quot;&quot;&quot;    NSMutableArray *_children;  /* comment */
+&quot;&quot;&quot;,
+&quot;&quot;&quot;   /* comment */
+&quot;&quot;&quot;,
+&quot;&quot;&quot;   // comment
+&quot;&quot;&quot;,
+&quot;&quot;&quot;    unsigned _count;
+&quot;&quot;&quot;)
+
+# ================== Script data ==================
+
+# List of known scalar types (no ref-counting in accessors for these types)
+knownScalarTypes = (&quot;int&quot;, &quot;unsigned&quot;, &quot;char&quot;, &quot;short&quot;, &quot;long&quot;, &quot;float&quot;, &quot;double&quot;, &quot;NSRect&quot;, &quot;NSPoint&quot;, &quot;NSSize&quot;, &quot;NSRange&quot;, &quot;BOOL&quot;)
+
+# List of known to-many relationship types.  (Since the generated code assumes NSMutableArray, this list probably would not grow...)
+knownArrayTypes = (&quot;NSMutableArray&quot;)
+
+# Templates for accessor methods
+# Substitutions will be performed on use:
+#    &lt;key&gt; -&gt; normal key name
+#    &lt;capKey&gt; -&gt; capitalized key name
+#    &lt;ivar&gt; -&gt; instance variable name
+#    &lt;type&gt; -&gt; key&apos;s type
+#
+
+objectAccessorDecls = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt;;
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value;
+
+&quot;&quot;&quot;
+
+objectAccessorDefs = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt; {
+    return [[&lt;ivar&gt; retain] autorelease];
+}
+
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value {
+    if (&lt;ivar&gt; != value) {
+        [&lt;ivar&gt; release];
+        &lt;ivar&gt; = [value copy];
+    }
+}
+
+&quot;&quot;&quot;
+
+scalarAccessorDecls = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt;;
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value;
+
+&quot;&quot;&quot;
+
+scalarAccessorDefs = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt; {
+    return &lt;ivar&gt;;
+}
+
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value {
+    if (&lt;ivar&gt; != value) {
+        &lt;ivar&gt; = value;
+    }
+}
+
+&quot;&quot;&quot;
+
+indexedAccessorDecls = &quot;&quot;&quot;\
+- (NSArray *)&lt;key&gt;;
+- (unsigned)countOf&lt;capKey&gt;;
+- (id)objectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex;
+- (void)get&lt;capKey&gt;:(id *)objsPtr range:(NSRange)range;
+- (void)insertObject:(id)obj in&lt;capKey&gt;AtIndex:(unsigned)theIndex;
+- (void)removeObjectFrom&lt;capKey&gt;AtIndex:(unsigned)theIndex;
+- (void)replaceObjectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex withObject:(id)obj;
+
+&quot;&quot;&quot;
+
+indexedAccessorDefs = &quot;&quot;&quot;\
+- (NSArray *)&lt;key&gt; {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    return [[&lt;ivar&gt; retain] autorelease];
+}
+
+- (unsigned)countOf&lt;capKey&gt; {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    return [&lt;ivar&gt; count];
+}
+
+- (id)objectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    return [&lt;ivar&gt; objectAtIndex:theIndex];
+}
+
+- (void)get&lt;capKey&gt;:(id *)objsPtr range:(NSRange)range {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; getObjects:objsPtr range:range];
+}
+
+- (void)insertObject:(id)obj in&lt;capKey&gt;AtIndex:(unsigned)theIndex {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; insertObject:obj atIndex:theIndex];
+}
+
+- (void)removeObjectFrom&lt;capKey&gt;AtIndex:(unsigned)theIndex {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; removeObjectAtIndex:theIndex];
+}
+
+- (void)replaceObjectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex withObject:(id)obj {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; replaceObjectAtIndex:theIndex withObject:obj];
+}
+
+
+&quot;&quot;&quot;
+
+# ================== Runtime variables ==================
+
+# ================== Script ==================
+
+# Get input lines
+if doDebug:
+    inputLines = testInput
+else:
+    inputLines = sys.stdin.readlines()
+
+# Strip comments and extra whitespace
+commentRE1 = re.compile(r&quot;[ 	]*\/\/.*$&quot;)
+commentRE2 = re.compile(r&quot;[ 	]*\/\*.*\*\/[ 	]*&quot;)
+
+newInputLines = []
+for curLine in inputLines:
+    curLine = re.sub(commentRE1, &quot;&quot;, curLine)
+    curLine = re.sub(commentRE2, &quot;&quot;, curLine)
+    curLine = curLine.strip()
+    if curLine != &quot;&quot;:
+        newInputLines.append(curLine)
+
+inputLines = newInputLines
+
+# Process each line
+
+# Subexpressions:
+#     1 - IBOutlet decl
+#     2 - Type name (without pointer *&apos;s)
+#     3 - Pointer *&apos;s from type
+#     4 - Leading underbar(s) of variable name
+#     5 - First letter of variable name
+#     6 - Rest of variable name
+declRE = re.compile(r&quot;^(IBOutlet)?[ 	]*([_a-zA-Z][_a-zA-Z0-9]*)[ 	]*(\**)[ 	]*([_]*)([a-zA-Z])([_a-zA-Z0-9]*)[ 	]*;&quot;)
+
+typeRE = re.compile(r&quot;&lt;type&gt;&quot;, re.MULTILINE)
+keyRE = re.compile(r&quot;&lt;key&gt;&quot;, re.MULTILINE)
+capKeyRE = re.compile(r&quot;&lt;capKey&gt;&quot;, re.MULTILINE)
+ivarRE = re.compile(r&quot;&lt;ivar&gt;&quot;, re.MULTILINE)
+
+resultText = &quot;&quot;
+
+for curLine in inputLines:
+    # Match the line and extract the subexpressions
+    matchObj = re.match(declRE, curLine)
+    if matchObj != None:
+        # Note indices are 1 less than subexpression numbers in the comment above
+        subexps = matchObj.groups()
+        
+        isObject = True
+        isArray = False
+        if subexps[1] in knownScalarTypes:
+            isObject = False
+        elif subexps[1] in knownArrayTypes:
+            isArray = True
+        
+        # Figure out the substitution strings for the accessor templates
+        if subexps[2] != &quot;&quot;:
+            curType = subexps[1] + &quot; &quot; + subexps[2]
+        else:
+            curType = subexps[1]
+        curKey = subexps[4] + subexps[5]
+        curCapKey = string.upper(subexps[4]) + subexps[5]
+        curIvar = subexps[3] + subexps[4] + subexps[5]
+        
+        # Build the result
+        if isObject:
+            if isArray:
+                curResultText = indexedAccessorDecls
+            else:
+                curResultText = objectAccessorDecls
+        else:
+            curResultText = scalarAccessorDecls
+
+        curResultText = re.sub(typeRE, curType, curResultText)
+        curResultText = re.sub(keyRE, curKey, curResultText)
+        curResultText = re.sub(capKeyRE, curCapKey, curResultText)
+        curResultText = re.sub(ivarRE, curIvar, curResultText)
+        
+        resultText += curResultText
+
+
+# The comma suppresses adding another newline to the end
+print resultText,
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>6</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>68D60653-A91C-4C27-A786-56C22403AE37</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.python</string>
+				<key>name</key>
+				<string>Place Accessor Defs on Clipboard</string>
+				<key>script</key>
+				<string>#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Known limitations:
+#   - Multiword types (like &quot;unsigned int&quot;) are not handled.
+#   - The script attempts to determine if the type is an object or not, but it is imperfect at detecting this
+
+import sys
+import string
+import re
+
+# ================== Debug input ==================
+
+# Set the variable below to True to run the script in test mode on the test 
+# input below instead of reading input from stdin
+doDebug = False
+
+testInput = (
+&quot;&quot;&quot;    NSString *_name;  // comment
+&quot;&quot;&quot;,
+&quot;&quot;&quot;    IBOutlet NSButton *button;  // comment
+&quot;&quot;&quot;,
+&quot;&quot;&quot;    NSMutableArray *_children;  /* comment */
+&quot;&quot;&quot;,
+&quot;&quot;&quot;   /* comment */
+&quot;&quot;&quot;,
+&quot;&quot;&quot;   // comment
+&quot;&quot;&quot;,
+&quot;&quot;&quot;    unsigned _count;
+&quot;&quot;&quot;)
+
+# ================== Script data ==================
+
+# List of known scalar types (no ref-counting in accessors for these types)
+knownScalarTypes = (&quot;int&quot;, &quot;unsigned&quot;, &quot;char&quot;, &quot;short&quot;, &quot;long&quot;, &quot;float&quot;, &quot;double&quot;, &quot;NSRect&quot;, &quot;NSPoint&quot;, &quot;NSSize&quot;, &quot;NSRange&quot;, &quot;BOOL&quot;)
+
+# List of known to-many relationship types.  (Since the generated code assumes NSMutableArray, this list probably would not grow...)
+knownArrayTypes = (&quot;NSMutableArray&quot;)
+
+# Templates for accessor methods
+# Substitutions will be performed on use:
+#    &lt;key&gt; -&gt; normal key name
+#    &lt;capKey&gt; -&gt; capitalized key name
+#    &lt;ivar&gt; -&gt; instance variable name
+#    &lt;type&gt; -&gt; key&apos;s type
+#
+
+objectAccessorDecls = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt;;
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value;
+
+&quot;&quot;&quot;
+
+objectAccessorDefs = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt; {
+    return [[&lt;ivar&gt; retain] autorelease];
+}
+
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value {
+    if (&lt;ivar&gt; != value) {
+        [&lt;ivar&gt; release];
+        &lt;ivar&gt; = [value copy];
+    }
+}
+
+&quot;&quot;&quot;
+
+scalarAccessorDecls = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt;;
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value;
+
+&quot;&quot;&quot;
+
+scalarAccessorDefs = &quot;&quot;&quot;\
+- (&lt;type&gt;)&lt;key&gt; {
+    return &lt;ivar&gt;;
+}
+
+- (void)set&lt;capKey&gt;:(&lt;type&gt;)value {
+    if (&lt;ivar&gt; != value) {
+        &lt;ivar&gt; = value;
+    }
+}
+
+&quot;&quot;&quot;
+
+indexedAccessorDecls = &quot;&quot;&quot;\
+- (NSArray *)&lt;key&gt;;
+- (unsigned)countOf&lt;capKey&gt;;
+- (id)objectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex;
+- (void)get&lt;capKey&gt;:(id *)objsPtr range:(NSRange)range;
+- (void)insertObject:(id)obj in&lt;capKey&gt;AtIndex:(unsigned)theIndex;
+- (void)removeObjectFrom&lt;capKey&gt;AtIndex:(unsigned)theIndex;
+- (void)replaceObjectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex withObject:(id)obj;
+
+&quot;&quot;&quot;
+
+indexedAccessorDefs = &quot;&quot;&quot;\
+- (NSArray *)&lt;key&gt; {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    return [[&lt;ivar&gt; retain] autorelease];
+}
+
+- (unsigned)countOf&lt;capKey&gt; {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    return [&lt;ivar&gt; count];
+}
+
+- (id)objectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    return [&lt;ivar&gt; objectAtIndex:theIndex];
+}
+
+- (void)get&lt;capKey&gt;:(id *)objsPtr range:(NSRange)range {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; getObjects:objsPtr range:range];
+}
+
+- (void)insertObject:(id)obj in&lt;capKey&gt;AtIndex:(unsigned)theIndex {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; insertObject:obj atIndex:theIndex];
+}
+
+- (void)removeObjectFrom&lt;capKey&gt;AtIndex:(unsigned)theIndex {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; removeObjectAtIndex:theIndex];
+}
+
+- (void)replaceObjectIn&lt;capKey&gt;AtIndex:(unsigned)theIndex withObject:(id)obj {
+    if (!&lt;ivar&gt;) {
+        &lt;ivar&gt; = [[NSMutableArray alloc] init];
+    }
+    [&lt;ivar&gt; replaceObjectAtIndex:theIndex withObject:obj];
+}
+
+
+&quot;&quot;&quot;
+
+# ================== Runtime variables ==================
+
+# ================== Script ==================
+
+# Get input lines
+if doDebug:
+    inputLines = testInput
+else:
+    inputLines = sys.stdin.readlines()
+
+# Strip comments and extra whitespace
+commentRE1 = re.compile(r&quot;[ 	]*\/\/.*$&quot;)
+commentRE2 = re.compile(r&quot;[ 	]*\/\*.*\*\/[ 	]*&quot;)
+
+newInputLines = []
+for curLine in inputLines:
+    curLine = re.sub(commentRE1, &quot;&quot;, curLine)
+    curLine = re.sub(commentRE2, &quot;&quot;, curLine)
+    curLine = curLine.strip()
+    if curLine != &quot;&quot;:
+        newInputLines.append(curLine)
+
+inputLines = newInputLines
+
+# Process each line
+
+# Subexpressions:
+#     1 - IBOutlet decl
+#     2 - Type name (without pointer *&apos;s)
+#     3 - Pointer *&apos;s from type
+#     4 - Leading underbar(s) of variable name
+#     5 - First letter of variable name
+#     6 - Rest of variable name
+declRE = re.compile(r&quot;^(IBOutlet)?[ 	]*([_a-zA-Z][_a-zA-Z0-9]*)[ 	]*(\**)[ 	]*([_]*)([a-zA-Z])([_a-zA-Z0-9]*)[ 	]*;&quot;)
+
+typeRE = re.compile(r&quot;&lt;type&gt;&quot;, re.MULTILINE)
+keyRE = re.compile(r&quot;&lt;key&gt;&quot;, re.MULTILINE)
+capKeyRE = re.compile(r&quot;&lt;capKey&gt;&quot;, re.MULTILINE)
+ivarRE = re.compile(r&quot;&lt;ivar&gt;&quot;, re.MULTILINE)
+
+resultText = &quot;&quot;
+
+for curLine in inputLines:
+    # Match the line and extract the subexpressions
+    matchObj = re.match(declRE, curLine)
+    if matchObj != None:
+        # Note indices are 1 less than subexpression numbers in the comment above
+        subexps = matchObj.groups()
+        
+        isObject = True
+        isArray = False
+        if subexps[1] in knownScalarTypes:
+            isObject = False
+        elif subexps[1] in knownArrayTypes:
+            isArray = True
+        
+        # Figure out the substitution strings for the accessor templates
+        if subexps[2] != &quot;&quot;:
+            curType = subexps[1] + &quot; &quot; + subexps[2]
+        else:
+            curType = subexps[1]
+        curKey = subexps[4] + subexps[5]
+        curCapKey = string.upper(subexps[4]) + subexps[5]
+        curIvar = subexps[3] + subexps[4] + subexps[5]
+        
+        # Build the result
+        if isObject:
+            if isArray:
+                curResultText = indexedAccessorDefs
+            else:
+                curResultText = objectAccessorDefs
+        else:
+            curResultText = scalarAccessorDefs
+
+        curResultText = re.sub(typeRE, curType, curResultText)
+        curResultText = re.sub(keyRE, curKey, curResultText)
+        curResultText = re.sub(capKeyRE, curCapKey, curResultText)
+        curResultText = re.sub(ivarRE, curIvar, curResultText)
+        
+        resultText += curResultText
+
+
+# The comma suppresses adding another newline to the end
+print resultText,
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>6</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>5A5FD548-E00A-4A01-95BA-E4A0653D152D</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>BFBF1DA4-050C-4418-963D-3B796890CB8F</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>Text</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Sort Selection</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Alphabetically sorts the lines of the selection
+
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+sort &lt;&amp;0
+echo -n &quot;%%%{PBXSelection}%%%&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>16F0853F-D545-49A2-83F0-55873F355202</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Remove Duplicate Lines</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Alphabetically sorts the lines of the selection
+
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+uniq &lt;&amp;0
+echo -n &quot;%%%{PBXSelection}%%%&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>2F004890-19F9-473B-978A-E3FF856CD17F</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Remove Non-Printing Characters</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Removes any non-printing characters from the selection
+#
+# WARNING - this does not try to be smart about encodings. If you&apos;re not using ASCII, you may be!
+
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+tr -cd &quot;[:print:]\t\n\r&quot; &lt;&amp;0
+echo -n &quot;%%%{PBXSelection}%%%&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>E4313F08-F228-4078-80E5-7C72213BD22E</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Convert Non-Breaking Spaces</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Converts occurrences of opt-space to space
+
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+sed &apos;s/ / /g&apos; &lt;&amp;0
+echo -n &quot;%%%{PBXSelection}%%%&quot;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>033140A8-F305-4FAA-9A63-9143AEF9468C</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScriptSeparator</string>
+				<key>uuid</key>
+				<string>CEB2A183-8F09-4A8F-9F1B-81FDE9547B86</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Evaluate Expression</string>
+				<key>script</key>
+				<string>#! /bin/sh
+#
+# Evaluate the given mathematical expression using &apos;bc&apos;
+
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+echo -n `( echo &apos;scale = 3;&apos; ; cat ; echo ) | bc` &lt;&amp;0
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>63F6DC00-90C7-4190-B628-86EF5708C805</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScriptSeparator</string>
+				<key>uuid</key>
+				<string>244795A5-C5C3-484B-8F54-A7B2CFA1075A</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Convert Spaces to Tabs</string>
+				<key>script</key>
+				<string>#! /bin/sh
+
+# Convert spaces to tabs in the selected text
+
+# use AppleScript to get the current view&apos;s tab width
+TABWIDTH=`osascript &lt;&lt; ENDOFSCRIPT
+tell application &quot;Xcode&quot;
+	set tabWidth to 4
+	set myFile to associated file name of front window
+	set textDocuments to text documents
+	repeat with i in textDocuments
+		if path of i is myFile then
+			set tabWidth to call method &quot;tabWidth&quot; of i
+		end if
+	end repeat
+	tabWidth
+end tell
+ENDOFSCRIPT
+`
+
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+unexpand -t ${TABWIDTH} &lt;&amp;0
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>792533F0-D98D-44DB-A07D-314BC8B88053</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Convert Tabs to Spaces</string>
+				<key>script</key>
+				<string>#! /bin/sh
+
+# Convert tabs to spaces in the selected text
+
+# use AppleScript to get the current view&apos;s tab width
+TABWIDTH=`osascript &lt;&lt; ENDOFSCRIPT
+tell application &quot;Xcode&quot;
+	set tabWidth to 4
+	set myFile to associated file name of front window
+	set textDocuments to text documents
+	repeat with i in textDocuments
+		if path of i is myFile then
+			set tabWidth to call method &quot;tabWidth&quot; of i
+		end if
+	end repeat
+	tabWidth
+end tell
+ENDOFSCRIPT
+`
+
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+expand -t ${TABWIDTH} &lt;&amp;0
+echo -n &quot;%%%{PBXSelection}%%%&quot;
+</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>FDAE2754-E25B-40E4-973D-9EB272CF7DB2</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScriptSeparator</string>
+				<key>uuid</key>
+				<string>8287220E-C254-4812-A15E-3E6D117D3411</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>1</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Delete Line</string>
+				<key>script</key>
+				<string>/Developer/Library/Xcode/User Scripts/Delete Line.scpt</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>0</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>0</integer>
+				<key>uuid</key>
+				<string>8185FFF5-5B4C-4477-ACD9-212EC9053A5C</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>1</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Move Line Up</string>
+				<key>script</key>
+				<string>/Developer/Library/Xcode/User Scripts/Move Line Up.scpt</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>0</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>0</integer>
+				<key>uuid</key>
+				<string>0829380D-008C-4E16-A54F-0A876C4AF522</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>1</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Move Line Down</string>
+				<key>script</key>
+				<string>/Developer/Library/Xcode/User Scripts/Move Line Down.scpt</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>0</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>0</integer>
+				<key>uuid</key>
+				<string>3691A7B6-6721-4A9E-A337-D2F9210D84DB</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>F32BDD54-D704-4BCD-9E59-F51D5203E345</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>Build</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>1</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Clean and Build</string>
+				<key>script</key>
+				<string>/Developer/Library/Xcode/User Scripts/Clean and Build.scpt</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>0</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>0</integer>
+				<key>uuid</key>
+				<string>3AD8182D-FB34-4F19-93F1-A5753DF27DBB</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>1</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Clean and Build All</string>
+				<key>script</key>
+				<string>/Developer/Library/Xcode/User Scripts/Clean and Build All.scpt</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>0</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>0</integer>
+				<key>uuid</key>
+				<string>A8789F9E-C81E-4A7E-A64B-2FB4DA1D5FF2</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>2AF1BE53-E7E6-4D47-BF5A-36F09A5673C4</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>HeaderDoc</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @header template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc comment for a header
+#
+# Inserts a template HeaderDoc comment for the header.
+use strict;
+
+# get path to document
+my $headerPath = &lt;&lt;&apos;HEADERPATH&apos;;
+%%%{PBXFilePath}%%%
+HEADERPATH
+chomp $headerPath;
+my $rootFileName = &amp;rootFileNameFromPath($headerPath);
+
+print &quot;/*!\n    \@header $rootFileName\n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#abstract#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#description#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+
+sub rootFileNameFromPath {
+    my $path = shift;
+    
+    my @pathParts = split (m&apos;/&apos;, $path);
+    my $filename = pop (@pathParts);
+    my $rootFileName = &quot;$filename&quot;;
+    $rootFileName =~ s/\.h$//;
+    return $rootFileName;
+}
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>4</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>E06CA397-35FF-4D2A-81A9-A06F50900641</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScriptSeparator</string>
+				<key>uuid</key>
+				<string>995D51F0-06EE-4D29-9919-EF99916F273E</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @class template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for class
+use strict;
+
+my $selection = &lt;&lt;&apos;SELECTION&apos;;
+%%%{PBXSelectedText}%%%
+SELECTION
+chomp $selection;
+my $unmodifiedSelection = $selection;
+$selection =~ s/\n/ /sg;     # put on one line, if necessary
+$selection =~ s/\s+$//;      # remove any trailing spaces
+$selection =~ s/\s{2,}/ /g;  # regularize remaining spaces
+
+
+my $type = &quot;\@class&quot;;
+
+my $typeString = &quot;$type&quot;;
+if (($type eq &quot;\@class&quot;) || ($type eq &quot;\@category&quot;)) {
+    if (length($selection) &amp;&amp; ($selection =~ /^\@interface/)) {
+        my $tempString;
+        # get rid of &apos;@interface&apos;
+        ($tempString = $selection) =~ s/\@interface//;
+        # remove spaces
+        $tempString =~ s/\s+//;
+        # find out if there&apos;s a superclass
+        my @classes = split(/:/, $tempString);
+        my $className = $classes[0];
+        $typeString = &quot;$type       $className&quot;;
+
+        my $superclassEtc = &apos;&apos;;
+        if (scalar(@classes) &gt; 1) {
+            $superclassEtc = $classes[1];
+            $typeString .= &quot;\n    \@superclass $superclassEtc&quot;;
+        }
+    }
+}
+
+print &quot;/*!\n&quot;;
+print &quot;    $typeString\n&quot;;
+print &quot;    \@abstract    %%%{PBXSelection}%%%&lt;#(brief description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion  &lt;#(comprehensive description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+print $unmodifiedSelection;
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>2C2D957C-9B31-417B-AA18-2A256EC22BF9</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @category template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for class
+use strict;
+
+my $selection = &lt;&lt;&apos;SELECTION&apos;;
+%%%{PBXSelectedText}%%%
+SELECTION
+chomp $selection;
+my $unmodifiedSelection = $selection;
+$selection =~ s/\n/ /sg;     # put on one line, if necessary
+$selection =~ s/\s+$//;      # remove any trailing spaces
+$selection =~ s/\s{2,}/ /g;  # regularize remaining spaces
+
+
+my $type = &quot;\@category&quot;;
+
+my $typeString = &quot;$type&quot;;
+if (($type eq &quot;\@class&quot;) || ($type eq &quot;\@category&quot;)) {
+    if (length($selection) &amp;&amp; ($selection =~ /^\@interface/)) {
+        my $tempString;
+        # get rid of &apos;@interface&apos;
+        ($tempString = $selection) =~ s/\@interface//;
+        # remove spaces
+        $tempString =~ s/\s+//;
+        # find out if there&apos;s a superclass
+        my @classes = split(/:/, $tempString);
+        my $className = $classes[0];
+        $typeString = &quot;$type       $className&quot;;
+
+        my $superclassEtc = &apos;&apos;;
+        if (scalar(@classes) &gt; 1) {
+            $superclassEtc = $classes[1];
+            $typeString .= &quot;\n    \@superclass $superclassEtc&quot;;
+        }
+    }
+}
+
+print &quot;/*!\n&quot;;
+print &quot;    $typeString\n&quot;;
+print &quot;    \@abstract    %%%{PBXSelection}%%%&lt;#(brief description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion  &lt;#(comprehensive description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+print $unmodifiedSelection;
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>3F4DDAB8-AB92-4A97-8D1F-D8FFED223985</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @protocol template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for class
+use strict;
+
+my $selection = &lt;&lt;&apos;SELECTION&apos;;
+%%%{PBXSelectedText}%%%
+SELECTION
+chomp $selection;
+my $unmodifiedSelection = $selection;
+$selection =~ s/\n/ /sg;     # put on one line, if necessary
+$selection =~ s/\s+$//;      # remove any trailing spaces
+$selection =~ s/\s{2,}/ /g;  # regularize remaining spaces
+
+
+my $type = &quot;\@protocol&quot;;
+
+my $typeString = &quot;$type&quot;;
+if (($type eq &quot;\@class&quot;) || ($type eq &quot;\@category&quot;)) {
+    if (length($selection) &amp;&amp; ($selection =~ /^\@interface/)) {
+        my $tempString;
+        # get rid of &apos;@interface&apos;
+        ($tempString = $selection) =~ s/\@interface//;
+        # remove spaces
+        $tempString =~ s/\s+//;
+        # find out if there&apos;s a superclass
+        my @classes = split(/:/, $tempString);
+        my $className = $classes[0];
+        $typeString = &quot;$type       $className&quot;;
+
+        my $superclassEtc = &apos;&apos;;
+        if (scalar(@classes) &gt; 1) {
+            $superclassEtc = $classes[1];
+            $typeString .= &quot;\n    \@superclass $superclassEtc&quot;;
+        }
+    }
+}
+
+if (length($selection) &amp;&amp; ($selection =~ /^\@protocol/)) {
+    my $protocolNameEtc;
+    # get rid of &apos;@protocol&apos;
+    ($protocolNameEtc = $selection) =~ s/\@protocol//;
+    #remove leading spaces
+    $protocolNameEtc =~ s/^\s+//;
+    $typeString = &quot;$type       $protocolNameEtc&quot;;
+}
+
+print &quot;/*!\n&quot;;
+print &quot;    $typeString\n&quot;;
+print &quot;    \@abstract    %%%{PBXSelection}%%%&lt;#(brief description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion  &lt;#(comprehensive description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+print $unmodifiedSelection;
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>B24B2E91-2CFD-4C19-8888-120C1E7AAD3B</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @method template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# 
+# Inserts a template HeaderDoc comment for an
+# Objective-C method.
+# If the user selects a method declaration and
+# chooses this command, the template includes
+# the method name and the names of each parameter.
+# If the user doesn&apos;t select a declaration before issuing
+# this command, a default template is inserted.
+
+use strict;
+
+my $selection = &lt;&lt;&apos;SELECTION&apos;;
+%%%{PBXSelectedText}%%%
+SELECTION
+chomp $selection;
+my $unmodifiedSelection = $selection; # used to retain linebreaks in output
+
+$selection =~ s/\n/ /sg;     # put on one line, if necessary
+$selection =~ s/\s+$//;      # remove any trailing spaces
+$selection =~ s/\s{2,}/ /g;  # regularize remaining spaces
+
+my $displayMethodName= &apos;&apos;;
+my $returnsAValue= 0;
+my @params = ();
+
+# is it a method declaration that we understand?
+if (length($selection) &amp;&amp; ($selection =~ /^[+-]/) &amp;&amp; ($selection =~ /;$/)) {
+    # determine if it returns a value
+    $selection =~ m/[+-]\s+(\((.*?)\))?(.*);/;
+	my $return = $2;
+	my $fullMethodName = $3;
+	if ((defined($return)) &amp;&amp; ($return ne &apos;void&apos;)) {$returnsAValue=1;};
+	
+	if (defined($fullMethodName)) {
+	    # get rid of type info for args
+	    $fullMethodName =~ s/\(.*?\)//g;
+	    
+		if ($fullMethodName =~ /:/) {
+			# get keyword:arg pairs
+			my @keyArgPairs = split(/\s+/, $fullMethodName);
+			
+			foreach my $pair (@keyArgPairs) {
+				if ($pair =~ /:/) { # don&apos;t treat parameters with spaces as method names
+				    my @parts = split(/:/, $pair);
+				    while (@parts) {
+					    $displayMethodName .= shift(@parts).&quot;:&quot;;
+					    push (@params, shift @parts);
+				    }
+				} else {
+				    if (length($pair)) { # but do add them to the parameter list
+					push (@params, $pair);
+				    }
+				}
+			}
+		} else {
+			$displayMethodName = $fullMethodName;
+		}
+	}
+}
+
+print &quot;/*!\n&quot;;
+print &quot;    \@method     $displayMethodName\n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#(brief description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#(comprehensive description)#&gt;\n&quot;;
+
+foreach my $param (@params) {
+	print &quot;    \@param      $param &lt;#(description)#&gt;\n&quot; if (defined($param));
+}
+
+print &quot;    \@result     &lt;#(description)#&gt;\n&quot; if ($returnsAValue);
+print &quot;*/\n&quot;;
+print $unmodifiedSelection;
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>1</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>A301DDBF-6E6A-49C4-95D4-117CD007EB72</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScriptSeparator</string>
+				<key>uuid</key>
+				<string>B098FD4B-EA28-4916-97B6-CC6B2A527810</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @function template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for functions, types, enums, etc.
+# 
+# insertTypeCmt.pl - inserts a template HeaderDoc comment for a class/protocol/category.
+use strict;
+
+print &quot;/*!\n    \@function\n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#(description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#(description)#&gt;\n&quot;;
+print &quot;    \@param      &lt;#(name) (description)#&gt;\n&quot;;
+print &quot;    \@result     &lt;#(description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>4</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>CFAD240A-6B2C-46EE-A2EB-5534DE538A0C</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @typedef template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for functions, types, enums, etc.
+# 
+# insertTypeCmt.pl - inserts a template HeaderDoc comment for a class/protocol/category.
+use strict;
+
+print &quot;/*!\n    \@typedef \n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#(description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#(description)#&gt;\n&quot;;
+print &quot;    \@field      &lt;#(name) (description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>4</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>A0B2B24E-D98B-4A8D-BB09-53A3BB7A1A11</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @struct template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for functions, types, enums, etc.
+# 
+# insertTypeCmt.pl - inserts a template HeaderDoc comment for a class/protocol/category.
+use strict;
+
+print &quot;/*!\n    \@struct \n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#(description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#(description)#&gt;\n&quot;;
+print &quot;    \@field      &lt;#(name) (description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>4</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>D215F4BA-DF0A-4ECD-8A6F-A99861BFAFDD</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @enum template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for functions, types, enums, etc.
+# 
+# insertTypeCmt.pl - inserts a template HeaderDoc comment for a class/protocol/category.
+use strict;
+
+print &quot;/*!\n    \@enum \n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#(description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#(description)#&gt;\n&quot;;
+print &quot;    \@constant   &lt;#(name) (description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>4</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>64F7FCC0-1A01-450C-B2A2-EAA1C959C305</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @const template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for functions, types, enums, etc.
+# 
+# insertTypeCmt.pl - inserts a template HeaderDoc comment for a class/protocol/category.
+use strict;
+
+print &quot;/*!\n    \@const \n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#(description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#(description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>4</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>07C19F58-DD0B-464D-826D-F8E609D76D78</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>Insert @defined template</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# Insert HeaderDoc template for functions, types, enums, etc.
+# 
+# insertTypeCmt.pl - inserts a template HeaderDoc comment for a class/protocol/category.
+use strict;
+
+print &quot;/*!\n    \@defined \n&quot;;
+print &quot;    \@abstract   %%%{PBXSelection}%%%&lt;#(description)#&gt;%%%{PBXSelection}%%%\n&quot;;
+print &quot;    \@discussion &lt;#(description)#&gt;\n&quot;;
+print &quot;*/\n&quot;;
+
+exit 0;</string>
+				<key>scriptError</key>
+				<integer>1</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>4</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>0822B60B-A967-4057-9023-90F828CB43B5</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScriptSeparator</string>
+				<key>uuid</key>
+				<string>1B10F843-23C5-46CB-8DA0-EF97F2A8BD2B</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>shell.perl</string>
+				<key>name</key>
+				<string>View HeaderDoc for this Header</string>
+				<key>script</key>
+				<string>#! /usr/bin/perl -w
+# 
+# generateHD.pl - Generate and display headerdoc for the current file.
+
+use strict;
+use File::Path;
+
+# get path to document
+my $headerPath = &lt;&lt;&apos;HEADERPATH&apos;;
+%%%{PBXFilePath}%%%
+HEADERPATH
+chomp $headerPath;
+
+if (length($headerPath)) {
+    my $outputDir = &quot;/tmp/pb-tmp/Documentation&quot;;
+    if (! -d $outputDir) { mkpath($outputDir); };
+    
+    my $stdOut = `/usr/bin/headerdoc2html -o $outputDir \&quot;$headerPath\&quot;`;
+    
+    my $rootFileName = &amp;rootFileNameFromPath($headerPath);
+    my $framesetFile = &quot;$outputDir/$rootFileName/index.html&quot;;
+    
+    if (-e $framesetFile) {
+        `open \&quot;$framesetFile\&quot;`;
+    } else {
+        warn &quot;Couldn&apos;t find $framesetFile.\n&quot;;
+    }
+}
+
+
+sub rootFileNameFromPath {
+    my $path = shift;
+    my @pathParts = split (m&apos;/&apos;, $path);
+    my $filename = pop (@pathParts);
+    my $rootFileName = &quot;$filename&quot;;
+    $rootFileName =~ s/\.h$//;
+    return $rootFileName;
+}
+
+exit 0;
+</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>0</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>7CA7DF41-1B47-4142-B870-0090F88271E7</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>78C8B197-B2F4-4963-A252-FBCBE125E732</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>XCUserScriptGroup</string>
+		<key>name</key>
+		<string>Property Lists</string>
+		<key>subNodes</key>
+		<array>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Parse File as Property List</string>
+				<key>script</key>
+				<string>#!/usr/bin/perl -w
+#
+# Uses plutil to verify that the current file is a valid plist
+
+use FileHandle;
+use File::Temp (&quot;mkdtemp&quot;);
+use File::Copy (&quot;copy&quot;);
+use File::Basename (&quot;basename&quot;);
+use Cwd (&quot;chdir&quot;);
+
+my $filename = basename(&quot;%%%{PBXFilePath}%%%&quot;);
+my $temporary_directory = mkdtemp(&quot;/tmp/plistparseXXXX&quot;);
+
+open(OUTFILE, &quot;&gt; $temporary_directory/$filename&quot;) or die &quot;Unable to create temporary file: $!&quot;;
+print OUTFILE while(&lt;STDIN&gt;);
+close(OUTFILE);
+
+chdir(&quot;$temporary_directory&quot;);
+
+my $output = `plutil -lint &quot;$filename&quot;`;
+unlink &quot;$temporary_directory/$filename&quot;;
+rmdir &quot;$temporary_directory&quot;;
+print &quot;$output&quot;;</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>2</integer>
+				<key>scriptOutput</key>
+				<integer>3</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>1AFADB89-4F7A-4EC2-A7C1-8D6F53EF01CF</string>
+			</dict>
+			<dict>
+				<key>ClassName</key>
+				<string>XCUserScript</string>
+				<key>isFileScript</key>
+				<integer>0</integer>
+				<key>keyEquivalent</key>
+				<string></string>
+				<key>language</key>
+				<string>xcode.lang.sh</string>
+				<key>name</key>
+				<string>Parse Selection as Property List</string>
+				<key>script</key>
+				<string>#!/usr/bin/perl -w
+#
+# Uses plutil to verify that the current file is a valid plist
+
+use FileHandle;
+use File::Temp (&quot;mkdtemp&quot;);
+use File::Copy (&quot;copy&quot;);
+use File::Basename (&quot;basename&quot;);
+use Cwd (&quot;chdir&quot;);
+
+my $filename = basename(&quot;%%%{PBXFilePath}%%%&quot;);
+my $temporary_directory = mkdtemp(&quot;/tmp/plistparseXXXX&quot;);
+
+open(OUTFILE, &quot;&gt; $temporary_directory/$filename&quot;) or die &quot;Unable to create temporary file: $!&quot;;
+print OUTFILE while(&lt;STDIN&gt;);
+close(OUTFILE);
+
+chdir(&quot;$temporary_directory&quot;);
+
+my $output = `plutil -lint &quot;$filename&quot;`;
+unlink &quot;$temporary_directory/$filename&quot;;
+rmdir &quot;$temporary_directory&quot;;
+print &quot;$output&quot;;</string>
+				<key>scriptError</key>
+				<integer>0</integer>
+				<key>scriptInput</key>
+				<integer>1</integer>
+				<key>scriptOutput</key>
+				<integer>3</integer>
+				<key>scriptWorkingDirectory</key>
+				<integer>3</integer>
+				<key>uuid</key>
+				<string>E4EED4E0-6A21-4BF7-8A67-4FA36E48581D</string>
+			</dict>
+		</array>
+		<key>uuid</key>
+		<string>114FF8DD-E900-42F9-B2E2-C79A8EF9931D</string>
+	</dict>
+</array>
+</plist>

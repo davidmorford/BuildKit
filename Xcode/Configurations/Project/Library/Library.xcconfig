@@ -1,0 +1,32 @@
+
+//
+// ___PROJECTNAME___/Configurations/Library.xcconfig
+//
+
+#include "../../../Configurations/Library.xcconfig"
+#include "../../../Configurations/Libraries.xcconfig"
+
+// Product Name
+
+PRODUCT_NAME					= ___PROJECTNAME___
+
+// Library Version
+
+BUILD_LIBRARY_VERSION			= A
+
+// Library Resource Bundle
+
+LIBRARY_RESOURCE_BUNDLE_NAME	= ___PROJECTNAME___.bundle
+
+// Linker Flags
+
+OTHER_LDFLAGS					= $(OBJC_LIBRARY)
+
+// Search Paths
+
+HEADER_SEARCH_PATHS				= $(STDLIB_HEADER)
+LIBRARY_SEARCH_PATHS			= $(STDLIB_LIBRARY)
+
+// Clang
+
+RUN_CLANG_STATIC_ANALYZER		= YES

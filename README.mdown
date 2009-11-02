@@ -1,6 +1,7 @@
 BuildKit
 ========
 
+A structured project tree for iPhone OS and Mac OS X applications, librarys and frameworks.
 
 Xcode Configurations
 ====================
