@@ -1,0 +1,32 @@
+BuildKit
+========
+
+
+Xcode Configurations
+====================
+
+1. ...
+
+2. ...
+  
+Project Tree
+============
+
+
+Library Builds
+==============
+
+
+Library Resource Bundles
+========================
+
+
+Xcode Project Templates
+=======================
+
+Application
+-----------
+
+
+Library
+-------
