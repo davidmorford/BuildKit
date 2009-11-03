@@ -5,6 +5,6 @@
 
 #include "../../../Configurations/Project.xcconfig"
 
-SDKROOT							= iphoneos3.1
+IPHONEOS_DEPLOYMENT_TARGET		= iphoneos3.1
 CODE_SIGN_IDENTITY				= iPhone Developer
 SYMROOT							= Build
