@@ -205,14 +205,6 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		635D444B12286F47003886FB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Classes;
-			path = Source/Classes/Views/Classes;
-			sourceTree = SOURCE_ROOT;
-		};
 		638438001040EADF00D29404 /* References */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +231,6 @@
 			children = (
 				6384380A1040EB5400D29404 /* ApplicationDelegate */,
 				638438111040EB5400D29404 /* Controllers */,
-				638438131040EB5400D29404 /* Views */,
 			);
 			name = Classes;
 			path = Source/Classes;
@@ -295,15 +286,6 @@
 			);
 			name = Controllers;
 			path = Source/Classes/Controllers;
-			sourceTree = SOURCE_ROOT;
-		};
-		638438131040EB5400D29404 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				635D444B12286F47003886FB /* Classes */,
-			);
-			name = Views;
-			path = Source/Classes/Views;
 			sourceTree = SOURCE_ROOT;
 		};
 		638438141040EB5400D29404 /* Project */ = {
