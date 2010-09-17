@@ -3,7 +3,7 @@
 
 @implementation ___PROJECTNAMEASIDENTIFIER___DetailViewController
 
-#pragma mark UIViewController
+#pragma mark Initializer
 
 -(id) init {
 	if (self = [super initWithNibName:nil bundle:nil]) {
@@ -11,8 +11,11 @@
 	return self;
 }
 
+#pragma mark UIViewController
+
 -(void) loadView {
 	[super loadView];
+	self.title = @"Detail";
 	self.view.backgroundColor = [UIColor lightGrayColor];
 }
 
@@ -40,10 +43,14 @@
 	return TRUE;
 }
 
-#pragma mark Memory
+#pragma mark Gozer
 
 -(void) didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
+}
+
+-(void) viewDidUnload {
+	// You know the drill
 }
 
 -(void) dealloc {

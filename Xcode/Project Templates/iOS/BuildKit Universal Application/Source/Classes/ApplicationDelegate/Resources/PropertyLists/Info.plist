@@ -47,7 +47,7 @@
 	<key>UILaunchImageFile~ipad</key>
 	<string>LaunchPad.png</string>
 	<key>UIFileSharingEnabled</key>
-	<true/>
+	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

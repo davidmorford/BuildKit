@@ -13,9 +13,6 @@
 
 @synthesize window;
 @synthesize splitViewController;
-@synthesize navigationController;
-@synthesize masterViewController;
-@synthesize detailViewController;
 @synthesize applicationDocumentsDirectoryPath;
 
 #pragma mark Shared Delegate
@@ -28,35 +25,37 @@
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-	self.window.userInteractionEnabled = TRUE;
-	self.window.backgroundColor = [UIColor blackColor];
-	self.window.contentMode = UIViewContentModeScaleToFill;
-	self.window.autoresizesSubviews = TRUE;
+	
+	window.userInteractionEnabled = TRUE;
+	window.backgroundColor = [UIColor blackColor];
+	window.contentMode = UIViewContentModeScaleToFill;
+	window.autoresizesSubviews = TRUE;
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		self.splitViewController = [[UISplitViewController alloc] init];
-		self.splitViewController.delegate = self;
-		
-		self.masterViewController = [[___PROJECTNAMEASIDENTIFIER___MasterViewController alloc] init];
-		self.navigationController = [[[UINavigationController alloc] initWithRootViewController:self.masterViewController] autorelease];
-		self.detailViewController = [[[___PROJECTNAMEASIDENTIFIER___DetailViewController alloc] init] autorelease];
+		splitViewController.delegate = self;
+
+		___PROJECTNAMEASIDENTIFIER___MasterViewController *masterViewController = [[___PROJECTNAMEASIDENTIFIER___MasterViewController alloc] init];
+		UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+		[masterViewController release];
+		___PROJECTNAMEASIDENTIFIER___DetailViewController *detailViewController = [[[___PROJECTNAMEASIDENTIFIER___DetailViewController alloc] init] autorelease];
 		
 		self.splitViewController.viewControllers = [NSArray arrayWithObjects:navigationController, detailViewController, nil];
 		
-		[self.window addSubview:splitViewController.view];
-		[self.window makeKeyAndVisible];
+		[window addSubview:splitViewController.view];
 	}
 	else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-		self.masterViewController = [[___PROJECTNAMEASIDENTIFIER___MasterViewController alloc] init];
-		self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.masterViewController];
-		self.window.rootViewController = self.navigationController;
-		[self.window makeKeyAndVisible];
-	}	
+		___PROJECTNAMEASIDENTIFIER___MasterViewController *masterViewController = [[___PROJECTNAMEASIDENTIFIER___MasterViewController alloc] init];
+		UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+		[masterViewController release];
+		window.rootViewController = navigationController;
+	}
+	[window makeKeyAndVisible];
 	return TRUE;
 }
 
 -(void) applicationDidEnterBackground:(UIApplication *)application {
-	[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"StuffLastActiveInForegroundDateKey"];
+	[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"___PROJECTNAMEASIDENTIFIER___LastActiveInForegroundDateKey"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -109,11 +108,8 @@
 #pragma mark -
 
 -(void) dealloc {
-	self.masterViewController = nil;
-	self.detailViewController = nil;
-	self.splitViewController = nil;
-	self.navigationController = nil;
-	self.window = nil;
+	[splitViewController release];
+	[window release];
 	[super dealloc];
 }
 

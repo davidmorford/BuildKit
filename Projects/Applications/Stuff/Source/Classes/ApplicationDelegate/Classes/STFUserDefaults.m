@@ -3,6 +3,6 @@
 
 #pragma mark Application Preference Keys
 
-NSString * const StuffApplicationVersionKey			= @"StuffApplicationVersionKey";
-NSString * const StuffApplicationBuildNumberKey		= @"StuffApplicationBuildNumberKey";
-NSString * const StuffApplicationResetKey			= @"StuffApplicationResetKey";
+NSString * const STFApplicationVersionKey			= @"STFApplicationVersionKey";
+NSString * const STFApplicationBuildNumberKey		= @"STFApplicationBuildNumberKey";
+NSString * const STFApplicationResetKey			= @"STFApplicationResetKey";

@@ -19,7 +19,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.semantap.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>com.com.yourcompany.${PRODUCT_NAME:rfc1034identifier}</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>stuff</string>
@@ -47,7 +47,7 @@
 	<key>UILaunchImageFile~ipad</key>
 	<string>LaunchPad.png</string>
 	<key>UIFileSharingEnabled</key>
-	<true/>
+	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

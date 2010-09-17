@@ -14,12 +14,11 @@
 }
 
 
-#pragma mark -
+#pragma mark UIViewController
 
 -(void) loadView {
 	[super loadView];
 	self.title = @"Stuff";
-	self.item = [[STFItem alloc] init];
 }
 
 -(void) viewDidLoad {
@@ -51,7 +50,7 @@
 }
 
 
-#pragma mark UITableViewDelegate
+#pragma mark <UITableViewDataSource>
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)aTableView {
 	return 1;
@@ -72,20 +71,23 @@
 	return cell;
 }
 
-#pragma mark Table view delegate
+#pragma mark <UITableViewDelegate>
 
 -(void) tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 
-#pragma mark -
+#pragma mark Gozer
 
 -(void) didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 }
 
+-(void) viewDidUnload {
+
+}
+
 -(void) dealloc {
-	self.item = nil;
 	[super dealloc];
 }
 

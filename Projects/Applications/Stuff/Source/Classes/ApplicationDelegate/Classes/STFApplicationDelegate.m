@@ -1,60 +1,56 @@
 
-#import "STApplicationDelegate.h"
+#import "STFApplicationDelegate.h"
 #import "STFMasterViewController.h"
 #import "STFDetailViewController.h"
 #import "STFUserDefaults.h"
 
-@interface STApplicationDelegate ()
+@interface STFApplicationDelegate ()
 @end
 
 #pragma mark -
 
-@implementation STApplicationDelegate
+@implementation STFApplicationDelegate
 
 @synthesize window;
 @synthesize splitViewController;
-@synthesize navigationController;
-@synthesize masterViewController;
-@synthesize detailViewController;
 @synthesize applicationDocumentsDirectoryPath;
 
 #pragma mark Shared Delegate
 
-+(STApplicationDelegate *) sharedApplicationDelegate {
-	return (STApplicationDelegate *)[UIApplication sharedApplication].delegate;
++(STFApplicationDelegate *) sharedApplicationDelegate {
+	return (STFApplicationDelegate *)[UIApplication sharedApplication].delegate;
 }
-
 
 #pragma mark <UIApplicationDelegate>
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-	self.window.userInteractionEnabled = TRUE;
-	self.window.backgroundColor = [UIColor blackColor];
-	self.window.contentMode = UIViewContentModeScaleToFill;
-	self.window.autoresizesSubviews = TRUE;
+	
+	window.userInteractionEnabled = TRUE;
+	window.backgroundColor = [UIColor blackColor];
+	window.contentMode = UIViewContentModeScaleToFill;
+	window.autoresizesSubviews = TRUE;
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		self.splitViewController = [[UISplitViewController alloc] init];
-		self.splitViewController.delegate = self;
-		
-		self.masterViewController = [[STFMasterViewController alloc] init];
-		self.navigationController = [[[UINavigationController alloc] initWithRootViewController:self.masterViewController] autorelease];
-		self.detailViewController = [[[STFDetailViewController alloc] init] autorelease];
+		splitViewController.delegate = self;
+
+		STFMasterViewController *masterViewController = [[STFMasterViewController alloc] init];
+		UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+		[masterViewController release];
+		STFDetailViewController *detailViewController = [[[STFDetailViewController alloc] init] autorelease];
 		
 		self.splitViewController.viewControllers = [NSArray arrayWithObjects:navigationController, detailViewController, nil];
 		
-		[self.window addSubview:splitViewController.view];
-		[self.window makeKeyAndVisible];
+		[window addSubview:splitViewController.view];
 	}
 	else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-		self.masterViewController = [[STFMasterViewController alloc] init];
-		self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.masterViewController];
-		self.window.rootViewController = self.navigationController;
-		[self.window makeKeyAndVisible];
+		STFMasterViewController *masterViewController = [[STFMasterViewController alloc] init];
+		UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+		[masterViewController release];
+		window.rootViewController = navigationController;
 	}
-	
+	[window makeKeyAndVisible];
 	return TRUE;
 }
 
@@ -101,7 +97,6 @@
 	
 }
 
-
 #pragma mark -
 
 -(NSString *) applicationDocumentsDirectoryPath {
@@ -110,15 +105,11 @@
 	return basePath;
 }
 
-
 #pragma mark -
 
 -(void) dealloc {
-	self.masterViewController = nil;
-	self.detailViewController = nil;
-	self.splitViewController = nil;
-	self.navigationController = nil;
-	self.window = nil;
+	[splitViewController release];
+	[window release];
 	[super dealloc];
 }
 

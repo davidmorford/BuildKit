@@ -3,21 +3,30 @@
 
 @implementation STFDetailViewController
 
-#pragma mark UIViewController
+#pragma mark Initializer
 
 -(id) init {
-	if (self = [super initWithNibName:nil bundle:nil]) {
+	self = [super initWithNibName:nil bundle:nil];
+	if (!self) {
+		return nil;
 	}
+	self.item = [[STFItem alloc] init];
+	self.item.name = @"Foo";
+	self.item.age  = [NSNumber numberWithInt:42];
 	return self;
 }
 
+#pragma mark UIViewController
+
 -(void) loadView {
 	[super loadView];
+	self.title = @"Detail";
 	self.view.backgroundColor = [UIColor lightGrayColor];
 }
 
 -(void) viewDidLoad {
 	[super viewDidLoad];
+	NSLog(@"%@", self.item);
 }
 
 -(void) viewWillAppear:(BOOL)animated {
@@ -40,13 +49,19 @@
 	return TRUE;
 }
 
-#pragma mark Memory
+#pragma mark Gozer
 
 -(void) didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 }
 
+-(void) viewDidUnload {
+	// You know the drill
+}
+
 -(void) dealloc {
+	// Look ma, no ivar and no @synthesize
+	self.item = nil;
 	[super dealloc];
 }
 

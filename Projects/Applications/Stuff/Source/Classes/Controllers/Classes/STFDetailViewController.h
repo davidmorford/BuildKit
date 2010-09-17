@@ -2,12 +2,10 @@
 /*!
 @project	Stuff
 @header     STFDetailViewController.h
-@copyright	(c) 2010, Semantap
-@created	9/17/10
 */
 
-#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
+#import <StuffKit/StuffKit.h>
 
 /*!
 @class STFDetailViewController
@@ -18,5 +16,7 @@
 @interface STFDetailViewController : UIViewController {
 
 }
+
+	@property (nonatomic, retain) STFItem *item;
 
 @end

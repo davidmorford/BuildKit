@@ -8,21 +8,13 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSGroupSpecifier</string>
+			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>General</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Name</string>
+			<string>Reset Application</string>
 			<key>Key</key>
-			<string>___PROJECTNAMEASIDENTIFIER___UserNameKey</string>
+			<string>___PROJECTNAMEASIDENTIFIER___ApplicationResetKey</string>
 			<key>DefaultValue</key>
-			<string>Your Name</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -60,27 +52,11 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>ApplicationKit Version</string>
+			<string>NavigationKit Version</string>
 			<key>DefaultValue</key>
-			<string>4A01</string>
+			<string>4B10</string>
 			<key>Key</key>
-			<string>APKApplicationKitLibraryVersionKey</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Reset Application</string>
-			<key>Key</key>
-			<string>___PROJECTNAMEASIDENTIFIER___ApplicationResetKey</string>
-			<key>DefaultValue</key>
-			<false/>
+			<string>NavigationKitLibraryVersionKey</string>
 		</dict>
 		<dict>
 			<key>Type</key>

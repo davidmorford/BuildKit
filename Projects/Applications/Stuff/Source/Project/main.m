@@ -2,8 +2,6 @@
 /*!
 @file		main.m
 @project	Stuff
-@copyright	(c) 2010, Semantap
-@created	9/17/10 - David
 */
 
 #import <UIKit/UIKit.h>
@@ -17,7 +15,7 @@ UIApplication class is used. The delegate class will be instantiated using init.
 int
 main(int argc, char *argv[]) {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	int retVal = UIApplicationMain(argc, argv, nil, @"STApplicationDelegate");
+	int retVal = UIApplicationMain(argc, argv, nil, @"STFApplicationDelegate");
 	[pool release];
 	return retVal;
 }

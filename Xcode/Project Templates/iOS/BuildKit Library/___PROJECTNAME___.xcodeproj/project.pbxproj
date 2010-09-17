@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		634EC8B411966CCF003426E7 /* ___PROJECTNAME___.bundle in Deploy Resource Bundle */ = {isa = PBXBuildFile; fileRef = 63843ADE10412D8800D29404 /* ___PROJECTNAME___.bundle */; };
-		634EC8C511966F44003426E7 /* ___PROJECTNAMEASIDENTIFIER___Library.h in Headers */ = {isa = PBXBuildFile; fileRef = 634EC8C311966F44003426E7 /* ___PROJECTNAMEASIDENTIFIER___Library.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		634EC8C511966F44003426E7 /* ___PROJECTNAMEASIDENTIFIER___Library.h in Headers */ = {isa = PBXBuildFile; fileRef = 634EC8C311966F44003426E7 /* ___PROJECTNAMEASIDENTIFIER___Library.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		634EC8C611966F44003426E7 /* ___PROJECTNAMEASIDENTIFIER___Library.m in Sources */ = {isa = PBXBuildFile; fileRef = 634EC8C411966F44003426E7 /* ___PROJECTNAMEASIDENTIFIER___Library.m */; };
 		634EC8C911967102003426E7 /* ___PROJECTNAMEASIDENTIFIER___LibraryUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 634EC8C811967102003426E7 /* ___PROJECTNAMEASIDENTIFIER___LibraryUnitTest.m */; };
 		63843AB2104120A300D29404 /* ___PROJECTNAMEASIDENTIFIER___.h in Headers */ = {isa = PBXBuildFile; fileRef = 63894BEB103BD5C1007C9CC9 /* ___PROJECTNAMEASIDENTIFIER___.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -409,6 +409,7 @@
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
 				GCC_OPTIMIZATION_LEVEL = 0;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -416,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};
@@ -441,6 +443,7 @@
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
 				GCC_OPTIMIZATION_LEVEL = 0;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Profile;
 		};
@@ -466,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
+				SDKROOT = iphoneos4.1;
 			};
 			name = Distribution;
 		};

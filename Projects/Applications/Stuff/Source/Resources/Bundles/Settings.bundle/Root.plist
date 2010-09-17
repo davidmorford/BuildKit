@@ -8,21 +8,13 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSGroupSpecifier</string>
+			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>General</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Name</string>
+			<string>Reset Application</string>
 			<key>Key</key>
-			<string>StuffUserNameKey</string>
+			<string>StuffApplicationResetKey</string>
 			<key>DefaultValue</key>
-			<string>Your Name</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -48,7 +40,7 @@
 			<key>DefaultValue</key>
 			<string>1A01</string>
 			<key>Key</key>
-			<string>StuffApplicationBuildNumberKey</string>
+			<string>STFApplicationBuildNumberKey</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -60,35 +52,19 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>ApplicationKit Version</string>
+			<string>NavigationKit Version</string>
 			<key>DefaultValue</key>
-			<string>4A01</string>
+			<string>4B10</string>
 			<key>Key</key>
-			<string>APKApplicationKitLibraryVersionKey</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Reset Application</string>
-			<key>Key</key>
-			<string>StuffApplicationResetKey</string>
-			<key>DefaultValue</key>
-			<false/>
+			<string>NavigationKitLibraryVersionKey</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>© 2010 Semantap Inc. All Rights Reserved.</string>
+			<string>© 2010 Your Company. All Rights Reserved.</string>
 			<key>Key</key>
-			<string>StuffApplicationCopyrightNoticeKey</string>
+			<string>STFApplicationCopyrightNoticeKey</string>
 		</dict>
 	</array>
 </dict>

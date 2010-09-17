@@ -1,13 +1,11 @@
 
 /*!
-@project	StuffKit
 @header		StuffKitLibraryUnitTest.h
-@copyright	(c) 2010, Semantap
-@created	9/17/10
+@project	StuffKit
 */
 
-#import <Foundation/Foundation.h>
 #import <SenTestingKit/SenTestingKit.h>
+#import <Foundation/Foundation.h>
 #import <StuffKit/StuffKit.h>
 
 @interface StuffKitLibraryUnitTest : SenTestCase {
@@ -24,7 +22,8 @@
 
 	-(void) testItem {
 		STFItem *item = [[STFItem alloc] init];
-		STAssertNotNil(item, @"Can not be nil.");
+		item.name = @"Foo";
+		item.age = [NSNumber numberWithInt:69];
 	}
 
 @end
