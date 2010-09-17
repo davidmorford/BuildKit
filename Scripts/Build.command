@@ -124,7 +124,7 @@ CleanDeployedLibrary()
     rm -dRfv $BUILD_SDK_DIR/$BUILD_CONFIGURATION/$BUILD_SIMULATOR_SDK_NAME$BUILD_SDK_VERSION/$1
 }
 
-CleanDeployedLibrary NavigationKit
+CleanDeployedLibrary StuffKit
 
 # Add libraries to clean
 
@@ -151,6 +151,6 @@ BuildLibrary()
 # arg3 = Project Target
 # ================================================================================
 
-BuildLibrary $LIBRARIES_ROOT NavigationKit NavigationKit
+BuildLibrary $LIBRARIES_ROOT StuffKit StuffKit
 
 # Add libraries

@@ -10,6 +10,14 @@
 
 // Add Local Libraries... see NavigationKit exammple projecdt on Github
 
+// StuffKit
+
+STUFFKIT_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/Headers/
+STUFFKIT_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/PrivateHeaders/
+STUFFKIT_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/
+STUFFKIT_LIBRARY_FLAG         = -lStuffKit
+STUFFKIT_RESOURCE_BUNDLE_NAME = StuffKit.bundle
+
 // NavigationKit
 
 NAVIGATIONKIT_HEADER_PATH             = $(BUILD_PLATFORM_NAME_PATH)/NavigationKit/Headers/

@@ -120,14 +120,6 @@
 			path = Source/Project/Library;
 			sourceTree = SOURCE_ROOT;
 		};
-		63843AB11041209C00D29404 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Fixtures;
-			path = Source/UnitTests/Resources/Fixtures;
-			sourceTree = SOURCE_ROOT;
-		};
 		63843AB71041212700D29404 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +215,6 @@
 		63894BF2103BE15E007C9CC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				63843AB11041209C00D29404 /* Fixtures */,
 				63894BF4103BE15E007C9CC9 /* PropertyLists */,
 			);
 			name = Resources;

@@ -37,6 +37,15 @@ The source is organized with **BuildKit**, a way to structure creating, sharing,
 
 ---
 
+### September 17, 2010
+
+- Add simple examples
+- Release updates to Github
+
+### September 2, 2010 (Internal)
+
+- Update to iOS 4.1 SDK
+
 ### June 18, 2010 (Internal)
 
 - Migrate from Subversion to Git.
