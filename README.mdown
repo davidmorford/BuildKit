@@ -1,33 +1,61 @@
-BuildKit
-========
 
-A structured project tree for iPhone OS and Mac OS X applications, librarys and frameworks.
+# BuildKit
 
-Xcode Configurations
-====================
+---
 
-1. ...
+The source is organized with **BuildKit**, a way to structure creating, sharing, using and building multiple libraries. It consists of:
 
-2. ...
-  
-Project Tree
-============
-
-
-Library Builds
-==============
-
-
-Library Resource Bundles
-========================
+ * A collection of Xcode configurations shared by all projects that leverage multi-layered build settings provided by the Xcode build system.
+  (For more info, see "Build Setting Evaluation and Configuration Files" at 
+  http://developer.apple.com/library/ios/#documentation/DeveloperTools/Conceptual/XcodeBuildSystem/400-Build_Configurations/build_configs.html)
+ * Directory layouts for different project kinds including **Applications**, **Libraries** and *Catalogs*.
+ * Single location for libraries builds shared by all application projects. 
+ * Structure for library projects and projects with resource bundles that mimics the layout of frameworks on Mac OS X.
+ * Facilitates using #import <YURLibrary/YURClass.h> in any project, application or library, that references another library.
+ * Scripts for copying built libraries and resource bundles to shared location and for inclusion into application target bundles.
+ * Support for targeting incremental iOS SDK versions.
+ * Defaults to Apple recommendation of always using the latest iOS SDK and setting Deployment Target as appropriate. Configurable
+ * Xcode project templates for Static Libraries and Univeral Application.
 
 
-Xcode Project Templates
-=======================
+## Usage Notes
 
-Application
------------
+---
+
+ * Currently defaults of interest:
+   * SDK: iOS 4.1
+   * Deployment Target SDK: 3.2
+   * LLVM/Clang 1.5
+   * -Xclang -fobjc-nonfragile-abi2 (allows removal of @synthesize with modern runtime ABI)
+   * -D__IPHONE_OS_VERSION_MIN_REQUIRED=030200 (because 4.1 SDK simulator settings was fraked)
+
+ * See forthcoming NavigationKit on github.com/davidmorford for example usage and kick ass library and example app ta boot.
+
+ * No testing has been done on iOS 4.2 SDK and only limited tests with Xcode 4. Both are still under NDA so changes will come as appropriate.
+
+## History
+
+---
+
+### June 18, 2010 (Internal)
+
+- Migrate from Subversion to Git.
+
+### June 1, 2010 (Internal)
+
+- Deal with iOS 4.0 and Xcode 3.2.4 *ignoring* SDK_ROOT set from .xcconfig on project root.
+
+### November 3, 2008
+
+- Push basics to Github to share with interested people at Seattle iPhone Tech Talk.
+
+### October 2009
+
+- Formalize from projects and Mac OS X build structure.
 
 
-Library
--------
+## License and Copyright
+
+In general, MIT License
+
+Copy, modify and share back any additions you find useful...

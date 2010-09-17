@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Content</string>
+		<key>description</key>
+		<string>A Content View Controller</string>
+		<key>controller</key>
+		<string>___PROJECTNAMEASIDENTIFIER___ContentViewController</string>
+		<key>navigationURL</key>
+		<string>___PROJECTNAMEASIDENTIFIER___://content</string>
+	</dict>
+</array>
+</plist>

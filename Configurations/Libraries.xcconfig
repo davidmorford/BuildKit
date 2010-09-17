@@ -1,156 +1,19 @@
 
 //
-//  Libraries.xcconfig
+// Libraries.xcconfig
+// Local Libraries - Declarations by alpha. Order unimportant.
+// (c) 2005 - 2008, Semanteme
+// (c) 2008 - 2010, Semantap
 //
 
-OBJC_LIBRARY			= -ObjC
-OBJC_ALLLOAD			= -all_load
+#include "Frameworks.xcconfig"
 
-// stdlib / libSystem
+// Add Local Libraries... see NavigationKit exammple projecdt on Github
 
-STDLIB_HEADERS			= /usr/include
-STDLIB_LIBRARY			= /usr/lib
+// NavigationKit
 
-// ObjC Runtime
-
-OBJC_LIB				= -lobjc
-
-// Lib Z compression
-
-LIBZ_LIB				= -lz
-
-// LibXML2
-
-LIBXML2_HEADERS			= /usr/include/libxml2
-LIBXML2_LIBRARY			= /usr/lib
-LIBXML2_LIB				= -lxml2
-
-// Frameworks
-
-AVFOUNDATION_FX			= -framework AVFoundation
-ADDRESSBOOK_FX			= -framework AddressBook
-ADDRESSBOOKUI_FX		= -framework AddressBookUI
-CFNETWORK_FX			= -framework CFNetwork
-COREDATA_FX				= -framework CoreData
-COREFOUNDATION_FX		= -framework CoreFoundation
-COREGRAPHICS_FX			= -framework CoreGraphics
-CORELOCATION_FX			= -framework CoreLocation
-FOUNDATION_FX			= -framework Foundation
-GAMEKIT_FX				= -framework GameKit
-MAPKIT_FX				= -framework MapKit
-MEDIAPLAYER_FX			= -framework MediaPlayer
-MESSAGEUI_FX			= -framework MessageUI
-MOBILECORESERVICES_FX	= -framework MobileCoreServices
-OPENGLES_FX				= -framework OpenGLES
-QUARTZCORE_FX			= -framework QuartzCore
-SECURITY_FX				= -framework Security
-STOREKIT_FX				= -framework StoreKit
-SYSTEMCONFIGURATION_FX	= -framework SystemConfiguration
-UIKIT_FX				= -framework UIKit
-
-SENTESTINGKIT_FX		= -framework SenTestingKit
-
-//
-// Libraries
-//
-
-// AnimationKit
-
-ANIMATION_KIT_HEADER_PATH		= $(BUILD_PLATFORM_VERSION)/AnimationKit/$(BUILD_HEADERS)/
-ANIMATION_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/AnimationKit/
-ANIMATION_KIT_LIBRARY_FLAG		= -lAnimationKit
-
-// AudioKit
-
-AUDIO_KIT_HEADER_PATH			= $(BUILD_PLATFORM_VERSION)/AudioKit/$(BUILD_HEADERS)/
-AUDIO_KIT_LIBRARY_PATH			= $(BUILD_PLATFORM_VERSION)/AudioKit/
-AUDIO_KIT_LIBRARY_FLAG			= -lAudioKit
-
-// FoundationKit
-
-FOUNDATION_KIT_HEADER_PATH		= $(BUILD_PLATFORM_VERSION)/FoundationKit/$(BUILD_HEADERS)/
-FOUNDATION_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/FoundationKit/
-FOUNDATION_KIT_LIBRARY_FLAG		= -lFoundationKit
-
-// GraphicsKit
-
-GRAPHICS_KIT_HEADER_PATH		= $(BUILD_PLATFORM_VERSION)/GraphicsKit/$(BUILD_HEADERS)/
-GRAPHICS_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/GraphicsKit/
-GRAPHICS_KIT_LIBRARY_FLAG		= -lGraphicsKit
-
-// LocationKit
-
-LOCATION_KIT_HEADER_PATH		= $(BUILD_PLATFORM_VERSION)/LocationKit/$(BUILD_HEADERS)/
-LOCATION_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/LocationKit/
-LOCATION_KIT_LIBRARY_FLAG		= -lLocationKit
-
-// MediaLibraryKit
-
-MEDIALIBRARY_KIT_HEADER_PATH	= $(BUILD_PLATFORM_VERSION)/MediaLibraryKit/$(BUILD_HEADERS)/
-MEDIALIBRARY_KIT_LIBRARY_PATH	= $(BUILD_PLATFORM_VERSION)/MediaLibraryKit/
-MEDIALIBRARY_KIT_LIBRARY_FLAG	= -lMediaLibraryKit
-
-// NetworkKit
-
-NETWORK_KIT_HEADER_PATH			= $(BUILD_PLATFORM_VERSION)/NetworkKit/$(BUILD_HEADERS)/
-NETWORK_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/NetworkKit/
-NETWORK_KIT_LIBRARY_FLAG		= -lNetworkKit
-
-// StorageKit
-
-STORAGE_KIT_HEADER_PATH			= $(BUILD_PLATFORM_VERSION)/StorageKit/$(BUILD_HEADERS)/
-STORAGE_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/StorageKit/
-STORAGE_KIT_LIBRARY_FLAG		= -lStorageKit
-
-// UIToolkit
-
-UITOOLKIT_HEADER_PATH			= $(BUILD_PLATFORM_VERSION)/UIToolKit/$(BUILD_HEADERS)/
-UITOOLKIT_LIBRARY_PATH			= $(BUILD_PLATFORM_VERSION)/UIToolKit/
-UITOOLKIT_LIBRARY_FLAG			= -lUIToolKit
-
-// WebServiceKit
-
-WEBSERVICE_KIT_HEADER_PATH		= $(BUILD_PLATFORM_VERSION)/WebServiceKit/$(BUILD_HEADERS)/
-WEBSERVICE_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/WebServiceKit/
-WEBSERVICE_KIT_LIBRARY_FLAG		= -lWebServiceKit
-
-
-//
-// Vendor Libraries
-//
-
-// ContactsKit
-
-CONTACTS_KIT_HEADER_PATH		= $(BUILD_PLATFORM_VERSION)/ContactsKit/$(BUILD_HEADERS)/
-CONTACTS_KIT_LIBRARY_PATH		= $(BUILD_PLATFORM_VERSION)/ContactsKit/
-CONTACTS_KIT_LIBRARY_FLAG		= -lContactsKit
-
-// JSONKit
-
-JSON_KIT_HEADER_PATH			= $(BUILD_PLATFORM_VERSION)/JSONKit/$(BUILD_HEADERS)/
-JSON_KIT_LIBRARY_PATH			= $(BUILD_PLATFORM_VERSION)/JSONKit/
-JSON_KIT_LIBRARY_FLAG			= -lJSONKit
-
-// PersistenceKit
-
-PERSISTENCE_KIT_HEADER_PATH		= $(BUILD_PLATFORM_VERSION)/PersistenceKit/$(BUILD_HEADERS)/
-PERSISTENCE_KIT_LIBRARY_PATH	= $(BUILD_PLATFORM_VERSION)/PersistenceKit/
-PERSISTENCE_KIT_LIBRARY_FLAG	= -lPersistenceKit
-
-// RSSKit
-
-RSSKIT_HEADER_PATH				= $(BUILD_PLATFORM_VERSION)/RSSKit/$(BUILD_HEADERS)/
-RSSKIT_LIBRARY_PATH				= $(BUILD_PLATFORM_VERSION)/RSSKit/
-RSSKIT_LIBRARY_FLAG				= -lRSSKit
-
-// UXKit
-
-UXKIT_HEADER_PATH				= $(BUILD_PLATFORM_VERSION)/UXKit/$(BUILD_HEADERS)/
-UXKIT_LIBRARY_PATH				= $(BUILD_PLATFORM_VERSION)/UXKit/
-UXKIT_LIBRARY_FLAG				= -lUXKit
-
-// XMLKit
-
-XML_KIT_HEADER_PATH				= $(BUILD_PLATFORM_VERSION)/XMLKit/$(BUILD_HEADERS)/
-XML_KIT_LIBRARY_PATH			= $(BUILD_PLATFORM_VERSION)/XMLKit/
-XML_KIT_LIBRARY_FLAG			= -lXMLKit
+NAVIGATIONKIT_HEADER_PATH             = $(BUILD_PLATFORM_NAME_PATH)/NavigationKit/Headers/
+NAVIGATIONKIT_PRIVATEHEADER_PATH      = $(BUILD_PLATFORM_NAME_PATH)/NavigationKit/PrivateHeaders/
+NAVIGATIONKIT_LIBRARY_PATH            = $(BUILD_PLATFORM_NAME_PATH)/NavigationKit/
+NAVIGATIONKIT_LIBRARY_FLAG            = -lNavigationKit
+NAVIGATIONKIT_RESOURCE_BUNDLE_NAME    = NavigationKit.bundle
