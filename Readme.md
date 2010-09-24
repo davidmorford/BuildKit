@@ -23,7 +23,7 @@ The default assumption is that of always using the latest released iOS SDK with 
 
 ## Xcode Configuration Files (.xcconfig)
 
-Configuration files... 
+Configuration files are a big topic [Add more here]
 
 
 ## Directory Structure
@@ -80,13 +80,17 @@ The Xcode project templates for Static Libraries and Univeral Application.
 
 ## Xcode Project Templates
 
-Xcode projects created with the BuildKit Application or Static Library project templates
+Xcode projects created with the BuildKit Application or Static Library project templates. (Finish this up…)
 
 
 ### Libraries
 
+Should be created in the Libraries folder. I have a Vendors for libraries from others that I just drop into an empty BuildKit Library project and change the #import headers.
+
 
 ### Applications
+
+Can be created in any top level folder in the Projects root folder. I currently use Applications, Example, Catalogs and Tools.
 
 
 ## Known Issues
