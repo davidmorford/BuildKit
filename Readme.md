@@ -21,6 +21,11 @@ The project, via BuildKit xcconfigs, currently works with Xcode 3.2.4 with these
 The default assumption is that of always using the latest released iOS SDK with the minimum deployment version target set, weak linking frameworks and using proper symbol and class checking techniques in applications and libraries.
 
 
+## Known Issues
+
+  * New iOS SDK releases require the SDKROOT value be changed manually for each Xcode project at the **project** level. This will get Simulator and Device SDKs to show up in the Overview drop down (and others) in the Xcode toolbar.  Xcode began ignoring the value set for SDKROOT at the project level with the release of iOS 4.0 SDK, thus requiring this tedious task be done for every Xcode project for each final SDK release with a new iOS version number instead of changing a few characters or the imported Platform-n.n.xcconfig file in Configurations/Platform.xcconfig. Radar issue number : [rdar://8192536](http://openradar.appspot.com/8192536)
+
+
 ## Xcode Configuration Files (.xcconfig)
 
 Configuration files are a big topic [Add more here]
@@ -30,18 +35,30 @@ Configuration files are a big topic [Add more here]
 
 Defined in /Configurations/Settings.xcconfig
 
-  * **Applications** -
-
-  * **Catalogs** -
-
-  * **Libraries** -
+* **Applications** -
+* **Catalogs** -
+* **Libraries** -
 
 
 ## Framework "Like" Static Libraries
 
-BuildKit Cocoa static library projects mirror the structure Mac OS X frameworks. This brings the #import <YURLibrary/YURClass.h> header import style in any project that references a static library, application or library. A Run Script Target Phase for Library projects creates the library directory, copies public and private headers to a versioned directory and symlinks Headers, PrivateHeaders and the .a library file to the top of the folder with the library name.(similar to .frameworks). Library projects can also can resource bundles to shared location and for inclusion into application target bundles.
+Header and linker paths for Cocoa static library projects are  artibrary. In BuildKit, they mirror the structure of Mac OS X frameworks. A Run Script Target Phase for Library projects creates the library directory, copies public and private headers to a versioned directory and then symlinks the Headers, PrivateHeaders and the .a library file to the top of the folder with the library name.(similar to .frameworks). Library projects can also can resource bundles to shared location and for inclusion into application target bundles. The single exception to mirroring the directory layout of Mac OS X frameworks involves the placement of an additional folder with with static libraries name inside Headers and PrivateHeaders folders of the deployed libraries.
 
-Libraries should always be built with the latest SDK with proper class and symbol checking and weak linking of frameworks when multiple shared libraries are merged and linked into an application binary.
+Benefits:
+
+* Use of #import <YURLibrary/YURClass.h> header import style in any project that references a static library, application or library. 
+
+* Libraries re-use by multiple applications (and by multiple libraries).
+
+* Proper code completion in Xcode.
+
+Guidelines:
+
+* Libraries should always be built with the latest SDK. Class and symbol existence checks and weak linking frameworks allow user in current Universal applications (ie., iOS 3.2 and 4.1).
+
+* Libraries referencing other libraries need only header and library paths not the library linker flag.
+
+* When adding new classes to a library, be sure to set the header's role to Public or Private. If Private, ensure other libraries or applications using the private headers have the libraries PrivateHeader path specified in the header search paths.
 
 
 ## Shared Library Build Deployment
@@ -62,7 +79,7 @@ The Xcode project templates for Static Libraries and Univeral Application.
 ## Build and Utility Scripts
 
 
-* Build.command - A shell script for building shared libraries. Will clean and build all library project targets specified in the script for the simulator and device SDK. Start inside the Scripts directory like this: 
+* Build.command - A shell script for building shared libraries. Will clean and build all library project targets specified in the script for the simulator and device SDK. Add you shared libraries to the script to have them included in the build. Start inside the Scripts directory like this: 
 
   * ./Build.command 4.1 Debug
 
@@ -93,37 +110,36 @@ Should be created in the Libraries folder. I have a Vendors for libraries from o
 Can be created in any top level folder in the Projects root folder. I currently use Applications, Example, Catalogs and Tools.
 
 
-## Known Issues
-
-  * New iOS SDK releases require the SDKROOT value be changed manually for each Xcode project at the **project** level. This will get Simulator and Device SDKs to show up in the Overview drop down (and others) in the Xcode toolbar.  Xcode began ignoring the value set for SDKROOT at the project level with the release of iOS 4.0 SDK, thus requiring this tedious task be done for every Xcode project for each final SDK release with a new iOS version number instead of changing a few characters or the imported Platform-n.n.xcconfig file in Configurations/Platform.xcconfig. Radar issue number : [rdar://8192536](http://openradar.appspot.com/8192536)
-
-
 ## History
+
+### September 27, 2010
+
+* Update readme.
 
 ### September 17, 2010
 
-  * Add simple examples
-  * Release updates to Github
+* Add simple examples
+* Release updates to Github
 
 ### September 2, 2010 (Internal)
 
-  * Update to iOS 4.1 SDK
+* Update to iOS 4.1 SDK
 
 ### June 18, 2010 (Internal)
 
-  * Migrate from Subversion to Git.
+* Migrate from Subversion to Git.
 
 ### June 1, 2010 (Internal)
 
-  * Deal with iOS 4.0 and Xcode 3.2.4 *ignoring* SDK_ROOT set from .xcconfig on project root.
+* Deal with iOS 4.0 and Xcode 3.2.4 *ignoring* SDK_ROOT set from .xcconfig on project root.
 
 ### November 3, 2009
 
-  * Push basics to Github to share with interested people at Seattle iPhone Tech Talk.
+* Push basics to Github to share with interested people at Seattle iPhone Tech Talk.
 
 ### June 2009
 
-  * Formalize from projects and exiting Mac OS X build structure.
+* Formalize from projects and exiting Mac OS X build structure.
 
 
 ## License and Copyright
