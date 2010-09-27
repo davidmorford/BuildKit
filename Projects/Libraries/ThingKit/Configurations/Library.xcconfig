@@ -1,0 +1,36 @@
+
+//
+// ThingKit/Configurations/Library.xcconfig
+//
+
+#include "../../../Configurations/Library.xcconfig"
+#include "../../../Configurations/Libraries.xcconfig"
+
+// Product Name
+PRODUCT_NAME					= ThingKit
+
+// Library Version
+BUILD_LIBRARY_VERSION			= A
+
+// Library Resource Bundle
+LIBRARY_RESOURCE_BUNDLE_NAME	= ThingKit.bundle
+
+// Clang
+RUN_CLANG_STATIC_ANALYZER		= YES
+
+// Search Paths
+HEADER_SEARCH_PATHS				= $(STDLIB_HEADER)
+LIBRARY_SEARCH_PATHS			= $(STDLIB_LIBRARY)
+
+
+//
+// Cut and paste into Configurations/Libraries.xcconfig
+//
+
+// ThingKit
+
+//ThingKit_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/Headers/
+//ThingKit_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/PrivateHeaders/
+//ThingKit_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/
+//ThingKit_LIBRARY_FLAG         = -lThingKit
+//ThingKit_RESOURCE_BUNDLE_NAME = ThingKit.bundle

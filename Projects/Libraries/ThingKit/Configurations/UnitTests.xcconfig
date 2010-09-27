@@ -1,0 +1,27 @@
+
+//
+// ThingKit/Configurations/UnitTests.xcconfig
+//
+
+#include "../../../Configurations/UnitTests.xcconfig"
+#include "../../../Configurations/Libraries.xcconfig"
+
+// Bundle Name
+PRODUCT_NAME			= ThingKitUnitTests
+
+// PropertyList
+INFOPLIST_FILE			= Source/UnitTests/Resources/PropertyLists/UnitTests-Info.plist
+
+// Bundle Version
+BUILD_BUNDLE_VERSION	= 1.0
+CURRENT_PROJECT_VERSION	= $(BUILD_BUNDLE_VERSION)
+
+// Clang
+RUN_CLANG_STATIC_ANALYZER = YES
+
+// Search Paths
+HEADER_SEARCH_PATHS		= $(STDLIB_HEADERS) $(ThingKit_HEADER_PATH) $(ThingKit_PRIVATEHEADER_PATH)
+LIBRARY_SEARCH_PATHS	= $(STDLIB_LIBRARY) $(ThingKit_LIBRARY_PATH)
+
+// Linker Flags
+OTHER_LDFLAGS			= $(OBJC_LIBRARY) $(OBJC_ALLLOAD) $(FOUNDATION_FX) $(SENTESTINGKIT_FX) $(ThingKit_LIBRARY_FLAG)

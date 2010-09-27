@@ -8,7 +8,7 @@
 
 #include "Frameworks.xcconfig"
 
-// Add Local Libraries... see NavigationKit exammple projecdt on Github
+// Add Local Libraries...
 
 // StuffKit
 
@@ -17,3 +17,11 @@ STUFFKIT_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/PrivateHead
 STUFFKIT_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/
 STUFFKIT_LIBRARY_FLAG         = -lStuffKit
 STUFFKIT_RESOURCE_BUNDLE_NAME = StuffKit.bundle
+
+// ThingKit
+
+THINGKIT_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/Headers/
+THINGKIT_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/PrivateHeaders/
+THINGKIT_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/
+THINGKIT_LIBRARY_FLAG         = -lThingKit
+THINGKIT_RESOURCE_BUNDLE_NAME = ThingKit.bundle

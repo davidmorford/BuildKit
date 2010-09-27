@@ -6,6 +6,7 @@
 */
 
 #import <Foundation/Foundation.h>
+#import <ThingKit/THGItem.h>
 
 /*!
 @class STFItem
@@ -15,6 +16,7 @@
 */
 @interface STFItem : NSObject
 
+@property (nonatomic, copy) THGItem *thing;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) NSNumber *age;
 
