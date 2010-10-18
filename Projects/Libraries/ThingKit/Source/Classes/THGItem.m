@@ -1,8 +1,9 @@
 
 #import <ThingKit/THGItem.h>
 
-@interface THGItem ()
-	@property (nonatomic, assign) BOOL likesStuff;
+@interface THGItem () {
+
+}
 @end
 
 #pragma mark -

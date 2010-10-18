@@ -33,6 +33,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		63470B2F126CCCFE00C99D53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libThingKit.a */;
+			remoteInfo = ThingKit;
+		};
+		63470B31126CCCFE00C99D53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63894BFB103BE194007C9CC9 /* ThingKitUnitTests.octest */;
+			remoteInfo = ThingKitUnitTests;
+		};
+		63470B33126CCD0D00C99D53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ThingKit */;
+			remoteInfo = ThingKit;
+		};
 		63AB86D71243E8A700BD8093 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */;
@@ -61,6 +82,7 @@
 		1D6058910D05DD3D006BFB54 /* Stuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThingKit.xcodeproj; path = ../../Libraries/ThingKit/ThingKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		635031C911D6F11500A2AE81 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon-72.png"; sourceTree = SOURCE_ROOT; };
 		635031CA11D6F11500A2AE81 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
 		635031CB11D6F11500A2AE81 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
@@ -192,6 +214,15 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63470B28126CCCFE00C99D53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63470B30126CCCFE00C99D53 /* libThingKit.a */,
+				63470B32126CCCFE00C99D53 /* ThingKitUnitTests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		635D437412285F01003886FB /* Classes */ = {
@@ -330,6 +361,7 @@
 		6384390E1040F20A00D29404 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */,
 				63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */,
 			);
 			name = Projects;
@@ -421,6 +453,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				63470B34126CCD0D00C99D53 /* PBXTargetDependency */,
 				63AB86DC1243E8B100BD8093 /* PBXTargetDependency */,
 			);
 			name = Stuff;
@@ -454,6 +487,10 @@
 					ProductGroup = 63AB86D01243E8A700BD8093 /* Products */;
 					ProjectRef = 63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */;
 				},
+				{
+					ProductGroup = 63470B28126CCCFE00C99D53 /* Products */;
+					ProjectRef = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -463,6 +500,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		63470B30126CCCFE00C99D53 /* libThingKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThingKit.a;
+			remoteRef = 63470B2F126CCCFE00C99D53 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63470B32126CCCFE00C99D53 /* ThingKitUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThingKitUnitTests.octest;
+			remoteRef = 63470B31126CCCFE00C99D53 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		63AB86D81243E8A700BD8093 /* libStuffKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -537,6 +588,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		63470B34126CCD0D00C99D53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ThingKit;
+			targetProxy = 63470B33126CCD0D00C99D53 /* PBXContainerItemProxy */;
+		};
 		63AB86DC1243E8B100BD8093 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = StuffKit;
@@ -639,7 +695,6 @@
 			baseConfigurationReference = 638438071040EB4100D29404 /* Project.xcconfig */;
 			buildSettings = {
 				GCC_OPTIMIZATION_LEVEL = 0;
-				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};

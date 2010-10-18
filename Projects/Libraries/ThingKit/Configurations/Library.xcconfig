@@ -19,13 +19,12 @@ LIBRARY_RESOURCE_BUNDLE_NAME	= ThingKit.bundle
 RUN_CLANG_STATIC_ANALYZER		= YES
 
 // Search Paths
-HEADER_SEARCH_PATHS				= $(STDLIB_HEADER)
-LIBRARY_SEARCH_PATHS			= $(STDLIB_LIBRARY)
-
+HEADER_SEARCH_PATHS				= $(STDLIB_HEADER_PATH)
+LIBRARY_SEARCH_PATHS			= $(STDLIB_LIBRARY_PATH)
 
 //
 // Cut and paste into Configurations/Libraries.xcconfig
-//
+// Change name to match conventions, ie., ThingKit -> THINGKIT
 
 // ThingKit
 

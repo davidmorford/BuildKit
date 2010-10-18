@@ -10,5 +10,5 @@
 @interface THGItem : NSObject
 
 @property (copy) NSString *name;
-
+@property (nonatomic, assign) BOOL likesStuff;
 @end
