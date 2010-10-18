@@ -2,21 +2,10 @@
 //
 // Libraries.xcconfig
 // Local Libraries - Declarations by alpha. Order unimportant.
-// (c) 2005 - 2008, Semanteme
 // (c) 2008 - 2010, Semantap
 //
 
 #include "Frameworks.xcconfig"
-
-// Add Local Libraries...
-
-// StuffKit
-
-STUFFKIT_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/Headers/
-STUFFKIT_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/PrivateHeaders/
-STUFFKIT_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/
-STUFFKIT_LIBRARY_FLAG         = -lStuffKit
-STUFFKIT_RESOURCE_BUNDLE_NAME = StuffKit.bundle
 
 // ThingKit
 
@@ -25,3 +14,11 @@ THINGKIT_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/PrivateHead
 THINGKIT_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/ThingKit/
 THINGKIT_LIBRARY_FLAG         = -lThingKit
 THINGKIT_RESOURCE_BUNDLE_NAME = ThingKit.bundle
+
+// StuffKit
+
+STUFFKIT_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/Headers/
+STUFFKIT_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/PrivateHeaders/
+STUFFKIT_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/
+STUFFKIT_LIBRARY_FLAG         = -lStuffKit
+STUFFKIT_RESOURCE_BUNDLE_NAME = StuffKit.bundle
