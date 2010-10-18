@@ -1,29 +1,25 @@
 
 # BuildKit
 
-BuildKit is a collection of configurations, scripts and Xcode project templates organization to manage creating, using, building and sharing static libraries and iOS applications. BuildKit leverages multi-layered build settings in Xcode. 
+BuildKit is a collection of configurations, scripts and Xcode project templates organization to manage creating, building and using multiple static libraries for iOS applications. BuildKit leverages Xcode multi-layered build settings and always using the latest iOS SDK best practice including minimum deployment version target set and weak linking.
 
 For more information on multi-layered configuration files see : [Build Setting Evaluation and Configuration Files](http://developer.apple.com/library/ios/#documentation/DeveloperTools/Conceptual/XcodeBuildSystem/400-Build_Configurations/build_configs.html)
 
-
 ## Requirements
 
-The project, via BuildKit xcconfigs, currently works with Xcode 3.2.4 with theses settings:
+  * Xcode : 3.2.5
+  * SDK : 4.2
 
-  * SDK : iOS 4.1
-  * Minimim Deployment Target : 3.2
-  * Weak Linked : UIKit.framework
-  * Compiler : LLVM/Clang 1.5
-  * Compiler Flags :
-    * -Xclang -fobjc-nonfragile-abi2
-    * -D__IPHONE_OS_VERSION_MIN_REQUIRED=030200
+## Configuration Defaults
 
-The default assumption is that of always using the latest released iOS SDK with the minimum deployment version target set, weak linking frameworks and using proper symbol and class checking techniques in applications and libraries.
-
+  * Compiler : LLVM/Clang 1.6
+  * Compiler Flags : -Xclang -fobjc-nonfragile-abi2
 
 ## Known Issues
 
-  * New iOS SDK releases require the SDKROOT value be changed manually for each Xcode project at the **project** level. This will get Simulator and Device SDKs to show up in the Overview drop down (and others) in the Xcode toolbar.  Xcode began ignoring the value set for SDKROOT at the project level with the release of iOS 4.0 SDK, thus requiring this tedious task be done for every Xcode project for each final SDK release with a new iOS version number instead of changing a few characters or the imported Platform-n.n.xcconfig file in Configurations/Platform.xcconfig. Radar issue number : [rdar://8192536](http://openradar.appspot.com/8192536)
+  * iOS 4.2 SDK – Issues with manually changing SDKROOT and Xcode ignorning this value if set in a .xcconfig file at the Project level seem to be resolved in beta 3 of the SDKs.
+
+  * iOS 4.1 SDK – New iOS SDK releases require the SDKROOT value be changed manually for each Xcode project at the **project** level. This will get Simulator and Device SDKs to show up in the Overview drop down (and others) in the Xcode toolbar.  Xcode began ignoring the value set for SDKROOT at the project level with the release of iOS 4.0 SDK, thus requiring this tedious task be done for every Xcode project for each final SDK release with a new iOS version number instead of changing a few characters or the imported Platform-n.n.xcconfig file in Configurations/Platform.xcconfig. Radar issue number : [rdar://8192536](http://openradar.appspot.com/8192536)
 
 
 ## Xcode Configuration Files (.xcconfig)
@@ -111,6 +107,10 @@ Can be created in any top level folder in the Projects root folder. I currently 
 
 
 ## History
+
+### October 16, 2010
+
+* Update and refactor for iOS 4.2 and Xcode 3.2.5 (based on Beta 3)
 
 ### September 27, 2010
 
