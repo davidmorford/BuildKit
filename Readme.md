@@ -15,13 +15,6 @@ For more information on multi-layered configuration files see : [Build Setting E
   * Compiler : LLVM/Clang 1.6
   * Compiler Flags : -Xclang -fobjc-nonfragile-abi2
 
-## Known Issues
-
-  * iOS 4.2 SDK – Issues with manually changing SDKROOT and Xcode ignorning this value if set in a .xcconfig file at the Project level seem to be resolved in beta 3 of the SDKs.
-
-  * iOS 4.1 SDK – New iOS SDK releases require the SDKROOT value be changed manually for each Xcode project at the **project** level. This will get Simulator and Device SDKs to show up in the Overview drop down (and others) in the Xcode toolbar.  Xcode began ignoring the value set for SDKROOT at the project level with the release of iOS 4.0 SDK, thus requiring this tedious task be done for every Xcode project for each final SDK release with a new iOS version number instead of changing a few characters or the imported Platform-n.n.xcconfig file in Configurations/Platform.xcconfig. Radar issue number : [rdar://8192536](http://openradar.appspot.com/8192536)
-
-
 ## Xcode Configuration Files (.xcconfig)
 
 Configuration files are a big topic [Add more here]
@@ -93,7 +86,7 @@ The Xcode project templates for Static Libraries and Univeral Application.
 
 ## Xcode Project Templates
 
-Xcode projects created with the BuildKit Application or Static Library project templates. (Finish this up…)
+Xcode projects created with the BuildKit Application or Static Library project templates. (Finish this up...)
 
 
 ### Libraries
@@ -107,6 +100,10 @@ Can be created in any top level folder in the Projects root folder. I currently 
 
 
 ## History
+
+### November 23, 2010
+
+* Merge develop into master. Major changes include use of the Latest SDK setting available in iOS 4.2 and Xcode 3.2.5.
 
 ### October 16, 2010
 
