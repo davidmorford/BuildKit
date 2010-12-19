@@ -15,11 +15,12 @@
 # Updated: Sept. 15, 2010
 # Updated: Sept. 27, 2010
 # Updated: Oct.  16, 2010
+# Updated: Nov.  23, 2010
 # ================================================================================
 
 Usage()
 {
-    builtin echo "iPhone Build Script, version 1.0\n"
+    builtin echo "iPhone Build Script, version 4.2\n"
     builtin echo "Usage: Build.command <SDKVersion> <BuildConfiguration>"
     builtin echo "\t<SDKVersion>         = A SDK Version"
     builtin echo "\t\tAvailable          = [4.2]"
@@ -116,7 +117,7 @@ echo "\n"
 
 
 # ================================================================================
-# Libraries
+# Library Building
 # ================================================================================ 
 
 CleanDeployedLibrary()
@@ -126,15 +127,7 @@ CleanDeployedLibrary()
     rm -dRfv $BUILD_SDK_DIR/$BUILD_CONFIGURATION/$BUILD_SIMULATOR_SDK_NAME$BUILD_SDK_VERSION/$1
 }
 
-CleanDeployedLibrary ThingKit
-CleanDeployedLibrary StuffKit
-
-# Add libraries to clean
-
-# ================================================================================
-# Libraries
-# ================================================================================ 
-
+# arg1 = Project Directory Path, arg2 = Xcode Project, arg3 = Project Target
 BuildLibrary()
 {
     echo "Building " $2
@@ -149,12 +142,11 @@ BuildLibrary()
 }
 
 # ================================================================================
-# arg1 = Project Directory Path
-# arg2 = Xcode Project
-# arg3 = Project Target
-# ================================================================================
+# Add Library projects to clean and build
+# ================================================================================ 
+
+CleanDeployedLibrary ThingKit
+CleanDeployedLibrary StuffKit
 
 BuildLibrary $LIBRARIES_ROOT ThingKit ThingKit
 BuildLibrary $LIBRARIES_ROOT StuffKit StuffKit
-
-# Add libraries to build.
