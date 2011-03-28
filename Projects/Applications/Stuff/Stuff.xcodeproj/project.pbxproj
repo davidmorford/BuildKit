@@ -8,72 +8,73 @@
 
 /* Begin PBXBuildFile section */
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		635031D011D6F11500A2AE81 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 635031C911D6F11500A2AE81 /* Icon-72.png */; };
-		635031D111D6F11500A2AE81 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 635031CA11D6F11500A2AE81 /* Icon-Small-50.png */; };
-		635031D211D6F11500A2AE81 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 635031CB11D6F11500A2AE81 /* Icon-Small.png */; };
-		635031D311D6F11500A2AE81 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 635031CC11D6F11500A2AE81 /* Icon-Small@2x.png */; };
-		635031D411D6F11500A2AE81 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 635031CD11D6F11500A2AE81 /* Icon.png */; };
-		635031D511D6F11500A2AE81 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 635031CE11D6F11500A2AE81 /* Icon@2x.png */; };
-		635031D611D6F11500A2AE81 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 635031CF11D6F11500A2AE81 /* iTunesArtwork */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		6313405613403657006373AB /* STFApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313405313403657006373AB /* STFApplicationDelegate.m */; };
+		6313405713403657006373AB /* STFUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313405513403657006373AB /* STFUserDefaults.m */; };
+		6313405C13403662006373AB /* STFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313405913403662006373AB /* STFDetailViewController.m */; };
+		6313405D13403662006373AB /* STFMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313405B13403662006373AB /* STFMasterViewController.m */; };
+		6313406F1340367A006373AB /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 6313405F1340367A006373AB /* Icon-72.png */; };
+		631340701340367A006373AB /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 631340601340367A006373AB /* Icon-Small-50.png */; };
+		631340711340367A006373AB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 631340611340367A006373AB /* Icon-Small.png */; };
+		631340721340367A006373AB /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 631340621340367A006373AB /* Icon-Small@2x.png */; };
+		631340741340367A006373AB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 631340641340367A006373AB /* Icon.png */; };
+		631340751340367A006373AB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 631340651340367A006373AB /* Icon@2x.png */; };
+		631340761340367A006373AB /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 631340661340367A006373AB /* iTunesArtwork */; };
+		631340771340367A006373AB /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 631340681340367A006373AB /* Default@2x~iphone.png */; };
+		631340781340367A006373AB /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 631340691340367A006373AB /* Default~iphone.png */; };
+		631340791340367A006373AB /* LaunchPad-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 6313406A1340367A006373AB /* LaunchPad-Landscape.png */; };
+		6313407A1340367A006373AB /* LaunchPad-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6313406B1340367A006373AB /* LaunchPad-Portrait.png */; };
+		6313407C1340367A006373AB /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6313406E1340367A006373AB /* UserDefaults.plist */; };
+		63383AD913405EA7008B4717 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		6384383F1040F1D700D29404 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6384383E1040F1D700D29404 /* QuartzCore.framework */; };
-		6384395D1040F72C00D29404 /* STFApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6384380D1040EB5400D29404 /* STFApplicationDelegate.m */; };
 		6384395E1040F72D00D29404 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638438161040EB5400D29404 /* main.m */; };
 		6384395F1040F75F00D29404 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6384381B1040EB5400D29404 /* Localizable.strings */; };
 		638439601040F76100D29404 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 638438191040EB5400D29404 /* InfoPlist.strings */; };
 		638F2F1B108AD8DF0021685E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 638F2F1A108AD8DF0021685E /* Settings.bundle */; };
-		63AB84021243BA6A00BD8093 /* STFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AB83FF1243BA6A00BD8093 /* STFDetailViewController.m */; };
-		63AB84031243BA6A00BD8093 /* STFMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AB84011243BA6A00BD8093 /* STFMasterViewController.m */; };
-		63B5AC6311D6EB34005368DA /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63B5AC6211D6EB34005368DA /* UserDefaults.plist */; };
-		63E58AC611DED79300D122B4 /* STFUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E58AC511DED79300D122B4 /* STFUserDefaults.m */; };
-		63E7A03211DF7B6A0078A405 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 63E7A02E11DF7B6A0078A405 /* Default@2x~iphone.png */; };
-		63E7A03311DF7B6A0078A405 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 63E7A02F11DF7B6A0078A405 /* Default~iphone.png */; };
-		63E7A03411DF7B6A0078A405 /* LaunchPad-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 63E7A03011DF7B6A0078A405 /* LaunchPad-Landscape.png */; };
-		63E7A03511DF7B6A0078A405 /* LaunchPad-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 63E7A03111DF7B6A0078A405 /* LaunchPad-Portrait.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		63470B2F126CCCFE00C99D53 /* PBXContainerItemProxy */ = {
+		63383A8913405AF5008B4717 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = ThingKit;
-		};
-		63470B31126CCCFE00C99D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 63894BFB103BE194007C9CC9;
-			remoteInfo = ThingKitUnitTests;
-		};
-		63470B33126CCD0D00C99D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = ThingKit;
-		};
-		63AB86D71243E8A700BD8093 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */;
+			containerPortal = 63383A7A13405AF5008B4717 /* StuffKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = StuffKit;
 		};
-		63AB86D91243E8A700BD8093 /* PBXContainerItemProxy */ = {
+		63383A8B13405AF5008B4717 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */;
+			containerPortal = 63383A7A13405AF5008B4717 /* StuffKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 63894BFB103BE194007C9CC9;
 			remoteInfo = StuffKitUnitTests;
 		};
-		63AB86DB1243E8B100BD8093 /* PBXContainerItemProxy */ = {
+		63383A8F13405AF5008B4717 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */;
+			containerPortal = 63383A7D13405AF5008B4717 /* ThingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ThingKit;
+		};
+		63383A9113405AF5008B4717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63383A7D13405AF5008B4717 /* ThingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63894BFB103BE194007C9CC9;
+			remoteInfo = ThingKitUnitTests;
+		};
+		63383A9313405B01008B4717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63383A7A13405AF5008B4717 /* StuffKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = StuffKit;
+		};
+		63383A9513405B01008B4717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63383A7D13405AF5008B4717 /* ThingKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ThingKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,18 +83,31 @@
 		1D6058910D05DD3D006BFB54 /* Stuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThingKit.xcodeproj; path = ../../Libraries/ThingKit/ThingKit.xcodeproj; sourceTree = SOURCE_ROOT; };
-		635031C911D6F11500A2AE81 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon-72.png"; sourceTree = SOURCE_ROOT; };
-		635031CA11D6F11500A2AE81 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
-		635031CB11D6F11500A2AE81 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
-		635031CC11D6F11500A2AE81 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
-		635031CD11D6F11500A2AE81 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Source/Classes/ApplicationDelegate/Resources/Icon/Icon.png; sourceTree = SOURCE_ROOT; };
-		635031CE11D6F11500A2AE81 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Source/Classes/ApplicationDelegate/Resources/Icon/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
-		635031CF11D6F11500A2AE81 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		6313405213403657006373AB /* STFApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFApplicationDelegate.h; sourceTree = "<group>"; };
+		6313405313403657006373AB /* STFApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFApplicationDelegate.m; sourceTree = "<group>"; };
+		6313405413403657006373AB /* STFUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFUserDefaults.h; sourceTree = "<group>"; };
+		6313405513403657006373AB /* STFUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFUserDefaults.m; sourceTree = "<group>"; };
+		6313405813403662006373AB /* STFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFDetailViewController.h; sourceTree = "<group>"; };
+		6313405913403662006373AB /* STFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFDetailViewController.m; sourceTree = "<group>"; };
+		6313405A13403662006373AB /* STFMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFMasterViewController.h; sourceTree = "<group>"; };
+		6313405B13403662006373AB /* STFMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFMasterViewController.m; sourceTree = "<group>"; };
+		6313405F1340367A006373AB /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Source/Resources/Icon/Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		631340601340367A006373AB /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Source/Resources/Icon/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
+		631340611340367A006373AB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Source/Resources/Icon/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		631340621340367A006373AB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Source/Resources/Icon/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		631340641340367A006373AB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Source/Resources/Icon/Icon.png; sourceTree = SOURCE_ROOT; };
+		631340651340367A006373AB /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Source/Resources/Icon/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		631340661340367A006373AB /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Source/Resources/Icon/iTunesArtwork; sourceTree = SOURCE_ROOT; };
+		631340681340367A006373AB /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x~iphone.png"; path = "Source/Resources/Launch/Default@2x~iphone.png"; sourceTree = SOURCE_ROOT; };
+		631340691340367A006373AB /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iphone.png"; path = "Source/Resources/Launch/Default~iphone.png"; sourceTree = SOURCE_ROOT; };
+		6313406A1340367A006373AB /* LaunchPad-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchPad-Landscape.png"; path = "Source/Resources/Launch/LaunchPad-Landscape.png"; sourceTree = SOURCE_ROOT; };
+		6313406B1340367A006373AB /* LaunchPad-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchPad-Portrait.png"; path = "Source/Resources/Launch/LaunchPad-Portrait.png"; sourceTree = SOURCE_ROOT; };
+		6313406D1340367A006373AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Resources/PropertyLists/Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
+		6313406E1340367A006373AB /* UserDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserDefaults.plist; path = Source/Resources/PropertyLists/UserDefaults.plist; sourceTree = SOURCE_ROOT; };
+		63383A7A13405AF5008B4717 /* StuffKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StuffKit.xcodeproj; path = ../../Libraries/StuffKit/StuffKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		63383A7D13405AF5008B4717 /* ThingKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThingKit.xcodeproj; path = ../../Libraries/ThingKit/ThingKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		638438061040EB4100D29404 /* Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Application.xcconfig; path = Configurations/Application.xcconfig; sourceTree = SOURCE_ROOT; };
 		638438071040EB4100D29404 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Configurations/Project.xcconfig; sourceTree = SOURCE_ROOT; };
-		6384380C1040EB5400D29404 /* STFApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFApplicationDelegate.h; sourceTree = "<group>"; };
-		6384380D1040EB5400D29404 /* STFApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFApplicationDelegate.m; sourceTree = "<group>"; };
 		638438151040EB5400D29404 /* Stuff.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stuff.pch; path = Source/Project/Stuff.pch; sourceTree = SOURCE_ROOT; };
 		638438161040EB5400D29404 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/Project/main.m; sourceTree = SOURCE_ROOT; };
 		6384381A1040EB5400D29404 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -116,15 +130,12 @@
 		638439131040F24D00D29404 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6384392B1040F3BE00D29404 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
 		638F2F1A108AD8DF0021685E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Source/Resources/Bundles/Settings.bundle; sourceTree = SOURCE_ROOT; };
-		63A8D84211B81D8100232AA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63A8D95A11B8237200232AA8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		63AB83FE1243BA6A00BD8093 /* STFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFDetailViewController.h; sourceTree = "<group>"; };
-		63AB83FF1243BA6A00BD8093 /* STFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFDetailViewController.m; sourceTree = "<group>"; };
-		63AB84001243BA6A00BD8093 /* STFMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFMasterViewController.h; sourceTree = "<group>"; };
-		63AB84011243BA6A00BD8093 /* STFMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFMasterViewController.m; sourceTree = "<group>"; };
-		63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StuffKit.xcodeproj; path = ../../Libraries/StuffKit/StuffKit.xcodeproj; sourceTree = SOURCE_ROOT; };
-		63B5AC6211D6EB34005368DA /* UserDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserDefaults.plist; path = Source/Classes/ApplicationDelegate/Resources/PropertyLists/UserDefaults.plist; sourceTree = SOURCE_ROOT; };
-		63B6A8BB104146B10049EC9C /* Settings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Settings.xcconfig; path = Configurations/Settings.xcconfig; sourceTree = SOURCE_ROOT; };
+		63BD06CA134024E00055227C /* AdHoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = Configurations/AdHoc.xcconfig; sourceTree = SOURCE_ROOT; };
+		63BD06CB134024E00055227C /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		63BD06CC134024E00055227C /* Distribution.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Distribution.xcconfig; path = Configurations/Distribution.xcconfig; sourceTree = SOURCE_ROOT; };
+		63BD06CD134024E00055227C /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Configurations/Profile.xcconfig; sourceTree = SOURCE_ROOT; };
+		63BD06CE134024E00055227C /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		63DF3BA411DE51DC00A70D91 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		63DF3BA611DE51DC00A70D91 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		63DF3BA811DE51DC00A70D91 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -137,12 +148,6 @@
 		63DF3BBB11DE51DC00A70D91 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		63DF3BC011DE51DC00A70D91 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		63DF3BC211DE51DC00A70D91 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		63E58AC411DED79300D122B4 /* STFUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFUserDefaults.h; sourceTree = "<group>"; };
-		63E58AC511DED79300D122B4 /* STFUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFUserDefaults.m; sourceTree = "<group>"; };
-		63E7A02E11DF7B6A0078A405 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x~iphone.png"; path = "Source/Classes/ApplicationDelegate/Resources/Launch/Default@2x~iphone.png"; sourceTree = SOURCE_ROOT; };
-		63E7A02F11DF7B6A0078A405 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iphone.png"; path = "Source/Classes/ApplicationDelegate/Resources/Launch/Default~iphone.png"; sourceTree = SOURCE_ROOT; };
-		63E7A03011DF7B6A0078A405 /* LaunchPad-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchPad-Landscape.png"; sourceTree = "<group>"; };
-		63E7A03111DF7B6A0078A405 /* LaunchPad-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchPad-Portrait.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				6384383F1040F1D700D29404 /* QuartzCore.framework in Frameworks */,
+				63383AD913405EA7008B4717 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,25 +222,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		63470B28126CCCFE00C99D53 /* Products */ = {
+		6313405E1340367A006373AB /* Icon */ = {
 			isa = PBXGroup;
 			children = (
-				63470B30126CCCFE00C99D53 /* libThingKit.a */,
-				63470B32126CCCFE00C99D53 /* ThingKitUnitTests.octest */,
+				6313405F1340367A006373AB /* Icon-72.png */,
+				631340601340367A006373AB /* Icon-Small-50.png */,
+				631340611340367A006373AB /* Icon-Small.png */,
+				631340621340367A006373AB /* Icon-Small@2x.png */,
+				631340641340367A006373AB /* Icon.png */,
+				631340651340367A006373AB /* Icon@2x.png */,
+				631340661340367A006373AB /* iTunesArtwork */,
+			);
+			name = Icon;
+			path = Source/Resources/Icon;
+			sourceTree = SOURCE_ROOT;
+		};
+		631340671340367A006373AB /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				631340681340367A006373AB /* Default@2x~iphone.png */,
+				631340691340367A006373AB /* Default~iphone.png */,
+				6313406A1340367A006373AB /* LaunchPad-Landscape.png */,
+				6313406B1340367A006373AB /* LaunchPad-Portrait.png */,
+			);
+			name = Launch;
+			path = Source/Resources/Launch;
+			sourceTree = SOURCE_ROOT;
+		};
+		6313406C1340367A006373AB /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				6313406D1340367A006373AB /* Info.plist */,
+				6313406E1340367A006373AB /* UserDefaults.plist */,
+			);
+			name = PropertyLists;
+			path = Source/Resources/PropertyLists;
+			sourceTree = SOURCE_ROOT;
+		};
+		63383A7B13405AF5008B4717 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63383A8A13405AF5008B4717 /* libStuffKit.a */,
+				63383A8C13405AF5008B4717 /* StuffKitUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		635D437412285F01003886FB /* Classes */ = {
+		63383A7E13405AF5008B4717 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63AB83FE1243BA6A00BD8093 /* STFDetailViewController.h */,
-				63AB84001243BA6A00BD8093 /* STFMasterViewController.h */,
-				63AB86661243E6A600BD8093 /* Souce */,
+				63383A9013405AF5008B4717 /* libThingKit.a */,
+				63383A9213405AF5008B4717 /* ThingKitUnitTests.octest */,
 			);
-			name = Classes;
-			path = Source/Classes/Controllers/Classes;
-			sourceTree = SOURCE_ROOT;
+			name = Products;
+			sourceTree = "<group>";
 		};
 		638438001040EADF00D29404 /* References */ = {
 			isa = PBXGroup;
@@ -252,7 +293,11 @@
 			children = (
 				638438061040EB4100D29404 /* Application.xcconfig */,
 				638438071040EB4100D29404 /* Project.xcconfig */,
-				63B6A8BB104146B10049EC9C /* Settings.xcconfig */,
+				63BD06CB134024E00055227C /* Debug.xcconfig */,
+				63BD06CD134024E00055227C /* Profile.xcconfig */,
+				63BD06CE134024E00055227C /* Release.xcconfig */,
+				63BD06CA134024E00055227C /* AdHoc.xcconfig */,
+				63BD06CC134024E00055227C /* Distribution.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -270,49 +315,22 @@
 		6384380A1040EB5400D29404 /* ApplicationDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				6384380B1040EB5400D29404 /* Classes */,
-				6384380E1040EB5400D29404 /* Resources */,
+				6313405213403657006373AB /* STFApplicationDelegate.h */,
+				6313405413403657006373AB /* STFUserDefaults.h */,
+				6313405313403657006373AB /* STFApplicationDelegate.m */,
+				6313405513403657006373AB /* STFUserDefaults.m */,
 			);
 			name = ApplicationDelegate;
 			path = Source/Classes/ApplicationDelegate;
 			sourceTree = SOURCE_ROOT;
 		};
-		6384380B1040EB5400D29404 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				6384380C1040EB5400D29404 /* STFApplicationDelegate.h */,
-				63E58AC411DED79300D122B4 /* STFUserDefaults.h */,
-				63B91F8910BB9FB8009DC340 /* Source */,
-			);
-			name = Classes;
-			path = Source/Classes/ApplicationDelegate/Classes;
-			sourceTree = SOURCE_ROOT;
-		};
-		6384380E1040EB5400D29404 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				63E58AA711DED77D00D122B4 /* Launch */,
-				63B91F8510BB9F66009DC340 /* Icon */,
-				6384380F1040EB5400D29404 /* PropertyLists */,
-			);
-			name = Resources;
-			path = Source/Classes/ApplicationDelegate/Resources;
-			sourceTree = SOURCE_ROOT;
-		};
-		6384380F1040EB5400D29404 /* PropertyLists */ = {
-			isa = PBXGroup;
-			children = (
-				63A8D84211B81D8100232AA8 /* Info.plist */,
-				63B5AC6211D6EB34005368DA /* UserDefaults.plist */,
-			);
-			name = PropertyLists;
-			path = Source/Classes/ApplicationDelegate/Resources/PropertyLists;
-			sourceTree = SOURCE_ROOT;
-		};
 		638438111040EB5400D29404 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				635D437412285F01003886FB /* Classes */,
+				6313405813403662006373AB /* STFDetailViewController.h */,
+				6313405A13403662006373AB /* STFMasterViewController.h */,
+				6313405913403662006373AB /* STFDetailViewController.m */,
+				6313405B13403662006373AB /* STFMasterViewController.m */,
 			);
 			name = Controllers;
 			path = Source/Classes/Controllers;
@@ -332,7 +350,10 @@
 			isa = PBXGroup;
 			children = (
 				638F2F19108AD8DF0021685E /* Bundles */,
+				6313405E1340367A006373AB /* Icon */,
+				631340671340367A006373AB /* Launch */,
 				638438181040EB5400D29404 /* Localizations */,
+				6313406C1340367A006373AB /* PropertyLists */,
 			);
 			name = Resources;
 			path = Source/Resources;
@@ -361,8 +382,8 @@
 		6384390E1040F20A00D29404 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */,
-				63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */,
+				63383A7A13405AF5008B4717 /* StuffKit.xcodeproj */,
+				63383A7D13405AF5008B4717 /* ThingKit.xcodeproj */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -384,60 +405,6 @@
 			path = Source/Resources/Bundles;
 			sourceTree = SOURCE_ROOT;
 		};
-		63AB86661243E6A600BD8093 /* Souce */ = {
-			isa = PBXGroup;
-			children = (
-				63AB83FF1243BA6A00BD8093 /* STFDetailViewController.m */,
-				63AB84011243BA6A00BD8093 /* STFMasterViewController.m */,
-			);
-			name = Souce;
-			sourceTree = "<group>";
-		};
-		63AB86D01243E8A700BD8093 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				63AB86D81243E8A700BD8093 /* libStuffKit.a */,
-				63AB86DA1243E8A700BD8093 /* StuffKitUnitTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		63B91F8510BB9F66009DC340 /* Icon */ = {
-			isa = PBXGroup;
-			children = (
-				635031C911D6F11500A2AE81 /* Icon-72.png */,
-				635031CA11D6F11500A2AE81 /* Icon-Small-50.png */,
-				635031CB11D6F11500A2AE81 /* Icon-Small.png */,
-				635031CC11D6F11500A2AE81 /* Icon-Small@2x.png */,
-				635031CD11D6F11500A2AE81 /* Icon.png */,
-				635031CE11D6F11500A2AE81 /* Icon@2x.png */,
-				635031CF11D6F11500A2AE81 /* iTunesArtwork */,
-			);
-			name = Icon;
-			path = Source/Classes/ApplicationDelegate/Resources/Icon;
-			sourceTree = SOURCE_ROOT;
-		};
-		63B91F8910BB9FB8009DC340 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				6384380D1040EB5400D29404 /* STFApplicationDelegate.m */,
-				63E58AC511DED79300D122B4 /* STFUserDefaults.m */,
-			);
-			name = Source;
-			sourceTree = "<group>";
-		};
-		63E58AA711DED77D00D122B4 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-				63E7A02E11DF7B6A0078A405 /* Default@2x~iphone.png */,
-				63E7A02F11DF7B6A0078A405 /* Default~iphone.png */,
-				63E7A03011DF7B6A0078A405 /* LaunchPad-Landscape.png */,
-				63E7A03111DF7B6A0078A405 /* LaunchPad-Portrait.png */,
-			);
-			name = Launch;
-			path = Source/Classes/ApplicationDelegate/Resources/Launch;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -453,8 +420,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				63470B34126CCD0D00C99D53 /* PBXTargetDependency */,
-				63AB86DC1243E8B100BD8093 /* PBXTargetDependency */,
+				63383A9413405B01008B4717 /* PBXTargetDependency */,
+				63383A9613405B01008B4717 /* PBXTargetDependency */,
 			);
 			name = Stuff;
 			productName = Stuff;
@@ -484,12 +451,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 63AB86D01243E8A700BD8093 /* Products */;
-					ProjectRef = 63AB86CF1243E8A700BD8093 /* StuffKit.xcodeproj */;
+					ProductGroup = 63383A7B13405AF5008B4717 /* Products */;
+					ProjectRef = 63383A7A13405AF5008B4717 /* StuffKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 63470B28126CCCFE00C99D53 /* Products */;
-					ProjectRef = 63470B27126CCCFE00C99D53 /* ThingKit.xcodeproj */;
+					ProductGroup = 63383A7E13405AF5008B4717 /* Products */;
+					ProjectRef = 63383A7D13405AF5008B4717 /* ThingKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -500,32 +467,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		63470B30126CCCFE00C99D53 /* libThingKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libThingKit.a;
-			remoteRef = 63470B2F126CCCFE00C99D53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		63470B32126CCCFE00C99D53 /* ThingKitUnitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ThingKitUnitTests.octest;
-			remoteRef = 63470B31126CCCFE00C99D53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		63AB86D81243E8A700BD8093 /* libStuffKit.a */ = {
+		63383A8A13405AF5008B4717 /* libStuffKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libStuffKit.a;
-			remoteRef = 63AB86D71243E8A700BD8093 /* PBXContainerItemProxy */;
+			remoteRef = 63383A8913405AF5008B4717 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		63AB86DA1243E8A700BD8093 /* StuffKitUnitTests.octest */ = {
+		63383A8C13405AF5008B4717 /* StuffKitUnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = StuffKitUnitTests.octest;
-			remoteRef = 63AB86D91243E8A700BD8093 /* PBXContainerItemProxy */;
+			remoteRef = 63383A8B13405AF5008B4717 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63383A9013405AF5008B4717 /* libThingKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThingKit.a;
+			remoteRef = 63383A8F13405AF5008B4717 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63383A9213405AF5008B4717 /* ThingKitUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThingKitUnitTests.octest;
+			remoteRef = 63383A9113405AF5008B4717 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -538,18 +505,18 @@
 				6384395F1040F75F00D29404 /* Localizable.strings in Resources */,
 				638439601040F76100D29404 /* InfoPlist.strings in Resources */,
 				638F2F1B108AD8DF0021685E /* Settings.bundle in Resources */,
-				63B5AC6311D6EB34005368DA /* UserDefaults.plist in Resources */,
-				635031D011D6F11500A2AE81 /* Icon-72.png in Resources */,
-				635031D111D6F11500A2AE81 /* Icon-Small-50.png in Resources */,
-				635031D211D6F11500A2AE81 /* Icon-Small.png in Resources */,
-				635031D311D6F11500A2AE81 /* Icon-Small@2x.png in Resources */,
-				635031D411D6F11500A2AE81 /* Icon.png in Resources */,
-				635031D511D6F11500A2AE81 /* Icon@2x.png in Resources */,
-				635031D611D6F11500A2AE81 /* iTunesArtwork in Resources */,
-				63E7A03211DF7B6A0078A405 /* Default@2x~iphone.png in Resources */,
-				63E7A03311DF7B6A0078A405 /* Default~iphone.png in Resources */,
-				63E7A03411DF7B6A0078A405 /* LaunchPad-Landscape.png in Resources */,
-				63E7A03511DF7B6A0078A405 /* LaunchPad-Portrait.png in Resources */,
+				6313406F1340367A006373AB /* Icon-72.png in Resources */,
+				631340701340367A006373AB /* Icon-Small-50.png in Resources */,
+				631340711340367A006373AB /* Icon-Small.png in Resources */,
+				631340721340367A006373AB /* Icon-Small@2x.png in Resources */,
+				631340741340367A006373AB /* Icon.png in Resources */,
+				631340751340367A006373AB /* Icon@2x.png in Resources */,
+				631340761340367A006373AB /* iTunesArtwork in Resources */,
+				631340771340367A006373AB /* Default@2x~iphone.png in Resources */,
+				631340781340367A006373AB /* Default~iphone.png in Resources */,
+				631340791340367A006373AB /* LaunchPad-Landscape.png in Resources */,
+				6313407A1340367A006373AB /* LaunchPad-Portrait.png in Resources */,
+				6313407C1340367A006373AB /* UserDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/tcsh;
-			shellScript = "${SCRIPT_COPY_RESOURCE_BUNDLE} ${STUFFKIT_RESOURCE_BUNDLE_NAME}";
+			shellScript = "#${SCRIPT_COPY_RESOURCE_BUNDLE} ${MYLIBRARYKIT_RESOURCE_BUNDLE_NAME}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -577,26 +544,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6384395D1040F72C00D29404 /* STFApplicationDelegate.m in Sources */,
 				6384395E1040F72D00D29404 /* main.m in Sources */,
-				63E58AC611DED79300D122B4 /* STFUserDefaults.m in Sources */,
-				63AB84021243BA6A00BD8093 /* STFDetailViewController.m in Sources */,
-				63AB84031243BA6A00BD8093 /* STFMasterViewController.m in Sources */,
+				6313405613403657006373AB /* STFApplicationDelegate.m in Sources */,
+				6313405713403657006373AB /* STFUserDefaults.m in Sources */,
+				6313405C13403662006373AB /* STFDetailViewController.m in Sources */,
+				6313405D13403662006373AB /* STFMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		63470B34126CCD0D00C99D53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ThingKit;
-			targetProxy = 63470B33126CCD0D00C99D53 /* PBXContainerItemProxy */;
-		};
-		63AB86DC1243E8B100BD8093 /* PBXTargetDependency */ = {
+		63383A9413405B01008B4717 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = StuffKit;
-			targetProxy = 63AB86DB1243E8B100BD8093 /* PBXContainerItemProxy */;
+			targetProxy = 63383A9313405B01008B4717 /* PBXContainerItemProxy */;
+		};
+		63383A9613405B01008B4717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ThingKit;
+			targetProxy = 63383A9513405B01008B4717 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,19 +591,15 @@
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 638438061040EB4100D29404 /* Application.xcconfig */;
+			baseConfigurationReference = 63BD06CB134024E00055227C /* Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Debug;
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 638438061040EB4100D29404 /* Application.xcconfig */;
+			baseConfigurationReference = 63BD06CE134024E00055227C /* Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
 			};
 			name = Release;
 		};
@@ -644,17 +607,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 638438071040EB4100D29404 /* Project.xcconfig */;
 			buildSettings = {
-				SDKROOT = iphoneos4.1;
 			};
 			name = Profile;
 		};
 		638438271040F0FF00D29404 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 638438061040EB4100D29404 /* Application.xcconfig */;
+			baseConfigurationReference = 63BD06CD134024E00055227C /* Profile.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Profile;
 		};
@@ -662,15 +621,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 638438071040EB4100D29404 /* Project.xcconfig */;
 			buildSettings = {
-				SDKROOT = iphoneos4.1;
 			};
 			name = Distribution;
 		};
 		638438291040F10400D29404 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 638438061040EB4100D29404 /* Application.xcconfig */;
+			baseConfigurationReference = 63BD06CC134024E00055227C /* Distribution.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
 			};
 			name = Distribution;
 		};
@@ -678,15 +635,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 638438071040EB4100D29404 /* Project.xcconfig */;
 			buildSettings = {
-				SDKROOT = iphoneos4.1;
 			};
 			name = AdHoc;
 		};
 		63AB85561243D8FA00BD8093 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 638438061040EB4100D29404 /* Application.xcconfig */;
+			baseConfigurationReference = 63BD06CA134024E00055227C /* AdHoc.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
 			};
 			name = AdHoc;
 		};
@@ -694,7 +649,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 638438071040EB4100D29404 /* Project.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Debug;
 		};
@@ -702,7 +656,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 638438071040EB4100D29404 /* Project.xcconfig */;
 			buildSettings = {
-				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};

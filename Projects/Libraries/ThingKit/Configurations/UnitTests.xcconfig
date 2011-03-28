@@ -7,24 +7,21 @@
 #include "../../../Configurations/Libraries.xcconfig"
 
 // Bundle Name
-PRODUCT_NAME			= ThingKitUnitTests
+PRODUCT_NAME = ThingKitUnitTests
 
 // PropertyList
-INFOPLIST_FILE			= Source/UnitTests/Resources/PropertyLists/UnitTests-Info.plist
+INFOPLIST_FILE = Source/UnitTests/Resources/PropertyLists/UnitTests-Info.plist
 
 // Bundle Version
-BUILD_BUNDLE_VERSION	= 1.0
+BUILD_BUNDLE_VERSION = 1.0
 CURRENT_PROJECT_VERSION	= $(BUILD_BUNDLE_VERSION)
 
 // Clang
 RUN_CLANG_STATIC_ANALYZER = YES
 
 // Search Paths
-HEADER_SEARCH_PATHS		= $(STDLIB_HEADER_PATH) $(THINGKIT_HEADER_PATH) $(THINGKIT_PRIVATEHEADER_PATH)
-LIBRARY_SEARCH_PATHS	= $(STDLIB_LIBRARY_PATH) $(THINGKIT_LIBRARY_PATH)
+HEADER_SEARCH_PATHS = $(STDLIB_HEADER_PATH) $(THINGKIT_HEADER_PATH) $(THINGKIT_PRIVATEHEADER_PATH)
+LIBRARY_SEARCH_PATHS = $(STDLIB_LIBRARY_PATH) $(THINGKIT_LIBRARY_PATH)
 
 // Linker Flags
-OTHER_LDFLAGS			= $(OBJC_LIBRARY) $(OBJC_ALLLOAD) $(FOUNDATION_FX) $(THINGKIT_LIBRARY_FLAG)
-
-// Temp hack for frameworks not being in /Developer
-FRAMEWORK_SEARCH_PATHS		= /Local/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks/
+OTHER_LDFLAGS = $(OBJC_LIBRARY) $(OBJC_ALLLOAD) $(FOUNDATION_FX) $(THINGKIT_LIBRARY_FLAG)

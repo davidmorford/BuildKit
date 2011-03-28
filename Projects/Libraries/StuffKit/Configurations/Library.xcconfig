@@ -7,17 +7,52 @@
 #include "../../../Configurations/Libraries.xcconfig"
 
 // Product Name
-PRODUCT_NAME					= StuffKit
+PRODUCT_NAME = StuffKit
 
 // Library Version
-BUILD_LIBRARY_VERSION			= A
+BUILD_LIBRARY_VERSION = A
 
 // Library Resource Bundle
-LIBRARY_RESOURCE_BUNDLE_NAME	= StuffKit.bundle
+LIBRARY_RESOURCE_BUNDLE_NAME = StuffKit.bundle
 
 // Clang
-RUN_CLANG_STATIC_ANALYZER		= YES
+RUN_CLANG_STATIC_ANALYZER = YES
 
 // Search Paths
-HEADER_SEARCH_PATHS				= $(STDLIB_HEADER_PATH) $(THINGKIT_HEADER_PATH) $(THINGKIT_PRIVATEHEADER_PATH)
-LIBRARY_SEARCH_PATHS			= $(STDLIB_LIBRARY_PATH) $(THINGKIT_LIBRARY_PATH)
+
+HEADER_SEARCH_PATHS = $(STDLIB_HEADER_PATH) $(THINGKIT_HEADER_PATH) $(THINGKIT_PRIVATEHEADER_PATH)
+LIBRARY_SEARCH_PATHS = $(STDLIB_LIBRARY_PATH) $(THINGKIT_LIBRARY_PATH)
+
+//
+// Cut and paste this to Configurations/Libraries.xcconfig and rename. Suggested convention is StuffKit == STUFFKIT
+//
+
+// StuffKit
+
+//STUFFKIT_HEADER_PATH          = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/Headers/
+//STUFFKIT_PRIVATEHEADER_PATH   = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/PrivateHeaders/
+//STUFFKIT_LIBRARY_PATH         = $(BUILD_PLATFORM_NAME_PATH)/StuffKit/
+//STUFFKIT_LIBRARY_FLAG         = -lStuffKit
+//STUFFKIT_RESOURCE_BUNDLE_NAME = StuffKit.bundle
+
+//
+// To add references to other static libraries in the project tree:
+//
+// 1. In References/Project,  right click, select Existing Files and select another library Xcode project 
+//    in <Root>/Projects/Libraries
+// 2. Add *Relative* to the project
+// 3. Right click on the library target and select 'Get Info'.
+// 4. Click + underneath Direct Dependencies.
+// 5. Select the other static libraries target and click 'Add Target'.
+// 6. Copy and Paste the <LIBRARYNAME>_HEADER_PATH and <LIBRARYNAME>_LIBRARY_PATH values for an existing library you have 
+//    added to <Root>/Configurations/Libraries.xcconfig
+// 7. Application projects work almost exactly the same with the additional requirement of adding <LIBRARYNAME>_LIBRARY_FLAG to
+//    OTHER_LDFLAGS in an app projects local Application.xcconfig, allowing the app to link and merge the static libraries into
+//    the app binary.
+// 8. The unit test target adds any <LIBRARYNAME>_LIBRARY_FLAG to OTHER_LDFLAGS.
+//
+// - Dependent library projects will then build on demand for the selected platform iPhoneOS or iPhoneSimulator for the current SDK.
+// - Dependendent libraries can be dragged up and down in the direct dependencies list to ensure proper build order.
+// - Xcode references and indexes headers for an library projects from the Search Paths above and allows code completion and jump to
+//   definitions.
+//

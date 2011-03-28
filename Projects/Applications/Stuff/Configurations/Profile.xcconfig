@@ -1,0 +1,9 @@
+
+//
+// Stuff/Configurations/Profile.xcconfig
+//
+// Customize with settings specific to profiling
+//
+
+#include "Application.xcconfig"
+#include "../../../Configurations/Profile.xcconfig"

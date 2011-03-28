@@ -2,7 +2,7 @@
 /*!
 @header		ThingKitLibrary.h
 @project	ThingKit
-@copyright	(c) 2010, Semantap
+@copyright	(c) 2011, Semantap
 */
 
 @class NSString;

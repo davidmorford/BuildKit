@@ -1,0 +1,9 @@
+
+//
+// StuffKit/Configurations/Profile.xcconfig
+//
+// Customize with settings specific to profiling
+//
+
+#include "Library.xcconfig"
+#include "../../../Configurations/Profile.xcconfig"

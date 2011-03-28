@@ -3,7 +3,17 @@
 // Stuff/Configurations/Project.xcconfig
 //
 
+#include "../../../Configurations/Paths.xcconfig"
 #include "../../../Configurations/Platform.xcconfig"
 #include "../../../Configurations/Project.xcconfig"
 
+INFOPLIST_ORGANIZATION_NAME	= Semantap
 CODE_SIGN_IDENTITY = iPhone Developer
+
+//
+// Project level settings that may need adjustment
+//
+
+//IPHONEOS_DEPLOYMENT_TARGET = 
+//GCC_VERSION = 
+//ARCHS = 

@@ -7,24 +7,25 @@
 #include "../../../Configurations/Libraries.xcconfig"
 
 // Product Name
-PRODUCT_NAME					= ThingKit
+PRODUCT_NAME = ThingKit
 
 // Library Version
-BUILD_LIBRARY_VERSION			= A
+BUILD_LIBRARY_VERSION = A
 
 // Library Resource Bundle
-LIBRARY_RESOURCE_BUNDLE_NAME	= ThingKit.bundle
+LIBRARY_RESOURCE_BUNDLE_NAME = ThingKit.bundle
 
 // Clang
-RUN_CLANG_STATIC_ANALYZER		= YES
+RUN_CLANG_STATIC_ANALYZER = YES
 
 // Search Paths
-HEADER_SEARCH_PATHS				= $(STDLIB_HEADER_PATH)
-LIBRARY_SEARCH_PATHS			= $(STDLIB_LIBRARY_PATH)
+HEADER_SEARCH_PATHS  = $(STDLIB_HEADER_PATH)
+LIBRARY_SEARCH_PATHS = $(STDLIB_LIBRARY_PATH)
 
 //
-// Cut and paste into Configurations/Libraries.xcconfig
-// Change name to match conventions, ie., ThingKit -> THINGKIT
+// Cut and paste this to Configurations/Libraries.xcconfig
+// and rename to match conventions
+// FooKit to FOOKIT
 
 // ThingKit
 

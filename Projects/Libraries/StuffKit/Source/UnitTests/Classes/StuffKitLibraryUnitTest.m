@@ -1,29 +1,24 @@
 
 /*!
-@header		StuffKitLibraryUnitTest.h
 @project	StuffKit
+@header		StuffKitLibrary.h
+@created	3/27/11
 */
 
 #import <SenTestingKit/SenTestingKit.h>
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <StuffKit/StuffKit.h>
 
-@interface StuffKitLibraryUnitTest : SenTestCase {
-
-}
-
-	-(void) testItem;
-
+@interface StuffKitLibraryUnitTest : SenTestCase
+-(void) testMath;
 @end
 
 #pragma mark -
 
 @implementation StuffKitLibraryUnitTest
 
-	-(void) testItem {
-		STFItem *item = [[STFItem alloc] init];
-		item.name = @"Foo";
-		item.age = [NSNumber numberWithInt:69];
-	}
+-(void) testMath {
+	STAssertTrue((1 + 1) == 2, @"Compiler isn't feeling well today :-(" );
+}
 
 @end

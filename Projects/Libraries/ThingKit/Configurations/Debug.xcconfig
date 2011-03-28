@@ -1,0 +1,9 @@
+
+//
+// ThingKit/Configurations/Debug.xcconfig
+//
+// Customize with settings specific to debug
+//
+
+#include "Library.xcconfig"
+#include "../../../Configurations/Debug.xcconfig"

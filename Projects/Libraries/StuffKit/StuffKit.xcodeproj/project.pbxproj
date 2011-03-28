@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633839571340568D008B4717 /* STFItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 633839551340568D008B4717 /* STFItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		633839581340568D008B4717 /* STFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 633839561340568D008B4717 /* STFItem.m */; };
 		634EC8B411966CCF003426E7 /* StuffKit.bundle in Deploy Resource Bundle */ = {isa = PBXBuildFile; fileRef = 63843ADE10412D8800D29404 /* StuffKit.bundle */; };
 		634EC8C511966F44003426E7 /* StuffKitLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 634EC8C311966F44003426E7 /* StuffKitLibrary.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		634EC8C611966F44003426E7 /* StuffKitLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 634EC8C411966F44003426E7 /* StuffKitLibrary.m */; };
@@ -14,12 +16,31 @@
 		63843AB2104120A300D29404 /* StuffKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 63894BEB103BD5C1007C9CC9 /* StuffKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63843AB61041212000D29404 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		63843ACD1041218700D29404 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63843AB91041214400D29404 /* SenTestingKit.framework */; };
-		63AB86161243E26200BD8093 /* STFItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 63AB86141243E26200BD8093 /* STFItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63AB86171243E26200BD8093 /* STFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AB86151243E26200BD8093 /* STFItem.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6338394113405125008B4717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6338393913405125008B4717 /* ThingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libThingKit.a */;
+			remoteInfo = ThingKit;
+		};
+		6338394313405125008B4717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6338393913405125008B4717 /* ThingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63894BFB103BE194007C9CC9 /* ThingKitUnitTests.octest */;
+			remoteInfo = ThingKitUnitTests;
+		};
+		633839451340512C008B4717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6338393913405125008B4717 /* ThingKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ThingKit */;
+			remoteInfo = ThingKit;
+		};
 		63843AB3104120FE00D29404 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -44,6 +65,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		63133F74134034E2006373AB /* AdHoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = Configurations/AdHoc.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F75134034E2006373AB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F76134034E2006373AB /* Distribution.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Distribution.xcconfig; path = Configurations/Distribution.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F77134034E2006373AB /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Configurations/Profile.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F78134034E2006373AB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		6338393913405125008B4717 /* ThingKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThingKit.xcodeproj; path = ../ThingKit/ThingKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		633839551340568D008B4717 /* STFItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STFItem.h; path = Source/Classes/STFItem.h; sourceTree = SOURCE_ROOT; };
+		633839561340568D008B4717 /* STFItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STFItem.m; path = Source/Classes/STFItem.m; sourceTree = SOURCE_ROOT; };
 		634EC8C311966F44003426E7 /* StuffKitLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StuffKitLibrary.h; path = Source/Project/Library/StuffKitLibrary.h; sourceTree = SOURCE_ROOT; };
 		634EC8C411966F44003426E7 /* StuffKitLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StuffKitLibrary.m; path = Source/Project/Library/StuffKitLibrary.m; sourceTree = SOURCE_ROOT; };
 		634EC8C811967102003426E7 /* StuffKitLibraryUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuffKitLibraryUnitTest.m; sourceTree = "<group>"; };
@@ -55,9 +84,6 @@
 		63894BEB103BD5C1007C9CC9 /* StuffKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StuffKit.h; path = Source/Project/StuffKit.h; sourceTree = SOURCE_ROOT; };
 		63894BF5103BE15E007C9CC9 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "Source/UnitTests/Resources/PropertyLists/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		63894BFB103BE194007C9CC9 /* StuffKitUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StuffKitUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		63AB86141243E26200BD8093 /* STFItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFItem.h; sourceTree = "<group>"; };
-		63AB86151243E26200BD8093 /* STFItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFItem.m; sourceTree = "<group>"; };
-		63B6A8911041465B0049EC9C /* Settings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Settings.xcconfig; path = Configurations/Settings.xcconfig; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libStuffKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStuffKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +140,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6338393A13405125008B4717 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6338394213405125008B4717 /* libThingKit.a */,
+				6338394413405125008B4717 /* ThingKitUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		634EC8C211966F44003426E7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +170,7 @@
 		63843AB81041213200D29404 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				6338393913405125008B4717 /* ThingKit.xcodeproj */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -142,9 +178,9 @@
 		63894BE0103BD587007C9CC9 /* References */ = {
 			isa = PBXGroup;
 			children = (
+				63843AB81041213200D29404 /* Project */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				63894C11103BE467007C9CC9 /* Libraries */,
-				63843AB81041213200D29404 /* Project */,
 				63843AB71041212700D29404 /* UnitTest */,
 			);
 			name = References;
@@ -153,9 +189,13 @@
 		63894BE2103BD59B007C9CC9 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				63133F74134034E2006373AB /* AdHoc.xcconfig */,
+				63133F75134034E2006373AB /* Debug.xcconfig */,
+				63133F76134034E2006373AB /* Distribution.xcconfig */,
 				63894BE4103BD59B007C9CC9 /* Library.xcconfig */,
-				63B6A8911041465B0049EC9C /* Settings.xcconfig */,
+				63133F77134034E2006373AB /* Profile.xcconfig */,
 				63894BE5103BD59B007C9CC9 /* Project.xcconfig */,
+				63133F78134034E2006373AB /* Release.xcconfig */,
 				63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */,
 			);
 			path = Configurations;
@@ -164,8 +204,8 @@
 		63894BE9103BD5C1007C9CC9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				63AB86141243E26200BD8093 /* STFItem.h */,
-				63AB86151243E26200BD8093 /* STFItem.m */,
+				633839551340568D008B4717 /* STFItem.h */,
+				633839561340568D008B4717 /* STFItem.m */,
 			);
 			name = Classes;
 			path = Source/Classes;
@@ -252,7 +292,7 @@
 			files = (
 				63843AB2104120A300D29404 /* StuffKit.h in Headers */,
 				634EC8C511966F44003426E7 /* StuffKitLibrary.h in Headers */,
-				63AB86161243E26200BD8093 /* STFItem.h in Headers */,
+				633839571340568D008B4717 /* STFItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +331,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				633839461340512C008B4717 /* PBXTargetDependency */,
 			);
 			name = StuffKit;
 			productName = StuffKit;
@@ -318,6 +359,12 @@
 			mainGroup = 0867D691FE84028FC02AAC07 /* StuffKit */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6338393A13405125008B4717 /* Products */;
+					ProjectRef = 6338393913405125008B4717 /* ThingKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* StuffKit */,
@@ -325,6 +372,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6338394213405125008B4717 /* libThingKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThingKit.a;
+			remoteRef = 6338394113405125008B4717 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6338394413405125008B4717 /* ThingKitUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThingKitUnitTests.octest;
+			remoteRef = 6338394313405125008B4717 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		63894BF6103BE194007C9CC9 /* Resources */ = {
@@ -381,13 +445,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				634EC8C611966F44003426E7 /* StuffKitLibrary.m in Sources */,
-				63AB86171243E26200BD8093 /* STFItem.m in Sources */,
+				633839581340568D008B4717 /* STFItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		633839461340512C008B4717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ThingKit;
+			targetProxy = 633839451340512C008B4717 /* PBXContainerItemProxy */;
+		};
 		63843AB4104120FE00D29404 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* StuffKit */;
@@ -398,16 +467,14 @@
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F75134034E2006373AB /* Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Debug;
 		};
 		1DEB922008733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F78134034E2006373AB /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
@@ -416,7 +483,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Debug;
 		};
@@ -426,6 +492,28 @@
 			buildSettings = {
 			};
 			name = Release;
+		};
+		63133FD513403530006373AB /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		63133FD613403530006373AB /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63133F74134034E2006373AB /* AdHoc.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		63133FD713403530006373AB /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = AdHoc;
 		};
 		63894BFD103BE195007C9CC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -448,16 +536,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Profile;
 		};
 		63894C02103BE1FD007C9CC9 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F77134034E2006373AB /* Profile.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Profile;
 		};
@@ -479,7 +564,7 @@
 		};
 		63894C05103BE202007C9CC9 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F76134034E2006373AB /* Distribution.xcconfig */;
 			buildSettings = {
 			};
 			name = Distribution;
@@ -501,6 +586,7 @@
 				1DEB921F08733DC00010E9CD /* Debug */,
 				63894C02103BE1FD007C9CC9 /* Profile */,
 				1DEB922008733DC00010E9CD /* Release */,
+				63133FD613403530006373AB /* AdHoc */,
 				63894C05103BE202007C9CC9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -512,6 +598,7 @@
 				1DEB922308733DC00010E9CD /* Debug */,
 				63894C01103BE1FD007C9CC9 /* Profile */,
 				1DEB922408733DC00010E9CD /* Release */,
+				63133FD513403530006373AB /* AdHoc */,
 				63894C04103BE202007C9CC9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -523,6 +610,7 @@
 				63894BFD103BE195007C9CC9 /* Debug */,
 				63894C03103BE1FD007C9CC9 /* Profile */,
 				63894BFE103BE195007C9CC9 /* Release */,
+				63133FD713403530006373AB /* AdHoc */,
 				63894C06103BE202007C9CC9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;

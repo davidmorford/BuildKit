@@ -1,0 +1,8 @@
+
+//
+// StuffKit/Configurations/Distribution.xcconfig
+//
+// Customize with Distribution Build settings. Uses Release.xcconfig
+//
+
+#include "Release.xcconfig"

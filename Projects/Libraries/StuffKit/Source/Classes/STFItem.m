@@ -4,6 +4,10 @@
 
 @implementation STFItem
 
+@synthesize thing;
+@synthesize name;
+@synthesize age;
+
 -(void) dealloc {
 	self.thing = nil;
 	self.name = nil;

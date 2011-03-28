@@ -3,14 +3,13 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <ThingKit/THGItem.h>
 
-@interface THGItemTestCase : SenTestCase {
-
-}
+@interface THGItemTestCase : SenTestCase
 
 -(void) testName;
 
 @end
 
+#pragma mark -
 
 @implementation THGItemTestCase
 

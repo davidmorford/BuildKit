@@ -2,7 +2,6 @@
 /*!
 @project    StuffKit
 @header     STFItem.h
-@created    
 */
 
 #import <Foundation/Foundation.h>

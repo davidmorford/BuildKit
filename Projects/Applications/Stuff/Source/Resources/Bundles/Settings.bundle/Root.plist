@@ -8,16 +8,6 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Reset Application</string>
-			<key>Key</key>
-			<string>StuffApplicationResetKey</string>
-			<key>DefaultValue</key>
-			<false/>
-		</dict>
-		<dict>
-			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>About</string>
@@ -40,31 +30,7 @@
 			<key>DefaultValue</key>
 			<string>1A01</string>
 			<key>Key</key>
-			<string>STFApplicationBuildNumberKey</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>Libraries</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>NavigationKit Version</string>
-			<key>DefaultValue</key>
-			<string>4B10</string>
-			<key>Key</key>
-			<string>NavigationKitLibraryVersionKey</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>© 2010 Your Company. All Rights Reserved.</string>
-			<key>Key</key>
-			<string>STFApplicationCopyrightNoticeKey</string>
+			<string>StuffApplicationBuildNumberKey</string>
 		</dict>
 	</array>
 </dict>

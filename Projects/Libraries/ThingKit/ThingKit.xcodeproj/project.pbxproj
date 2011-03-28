@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633838E5134048F9008B4717 /* THGItemTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 633838E4134048F9008B4717 /* THGItemTestCase.m */; };
+		633838EC13404946008B4717 /* THGItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 633838E813404946008B4717 /* THGItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		633838ED13404946008B4717 /* THGItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 633838E913404946008B4717 /* THGItem.m */; };
+		633838EE13404946008B4717 /* THGItem+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 633838EA13404946008B4717 /* THGItem+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		633838EF13404946008B4717 /* THGItem+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 633838EB13404946008B4717 /* THGItem+Private.m */; };
 		634EC8B411966CCF003426E7 /* ThingKit.bundle in Deploy Resource Bundle */ = {isa = PBXBuildFile; fileRef = 63843ADE10412D8800D29404 /* ThingKit.bundle */; };
 		634EC8C511966F44003426E7 /* ThingKitLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 634EC8C311966F44003426E7 /* ThingKitLibrary.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		634EC8C611966F44003426E7 /* ThingKitLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 634EC8C411966F44003426E7 /* ThingKitLibrary.m */; };
 		63843AB2104120A300D29404 /* ThingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 63894BEB103BD5C1007C9CC9 /* ThingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63843AB61041212000D29404 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		63843ACD1041218700D29404 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63843AB91041214400D29404 /* SenTestingKit.framework */; };
-		639EF9AA125100D600A1956B /* THGItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 639EF9A8125100D600A1956B /* THGItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		639EF9AB125100D600A1956B /* THGItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EF9A9125100D600A1956B /* THGItem.m */; };
-		639EF9AE125100F400A1956B /* THGItem+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 639EF9AC125100F400A1956B /* THGItem+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		639EF9AF125100F400A1956B /* THGItem+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EF9AD125100F400A1956B /* THGItem+Private.m */; };
-		63C3E8D6126CC24500039701 /* THGItemTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3E8D5126CC24500039701 /* THGItemTestCase.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +46,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		63133F74134034E2006373AB /* AdHoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = Configurations/AdHoc.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F75134034E2006373AB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F76134034E2006373AB /* Distribution.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Distribution.xcconfig; path = Configurations/Distribution.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F77134034E2006373AB /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Configurations/Profile.xcconfig; sourceTree = SOURCE_ROOT; };
+		63133F78134034E2006373AB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		633838E4134048F9008B4717 /* THGItemTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THGItemTestCase.m; path = Source/UnitTests/Classes/THGItemTestCase.m; sourceTree = SOURCE_ROOT; };
+		633838E813404946008B4717 /* THGItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THGItem.h; path = Source/Classes/THGItem.h; sourceTree = SOURCE_ROOT; };
+		633838E913404946008B4717 /* THGItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THGItem.m; path = Source/Classes/THGItem.m; sourceTree = SOURCE_ROOT; };
+		633838EA13404946008B4717 /* THGItem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "THGItem+Private.h"; path = "Source/Classes/THGItem+Private.h"; sourceTree = SOURCE_ROOT; };
+		633838EB13404946008B4717 /* THGItem+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "THGItem+Private.m"; path = "Source/Classes/THGItem+Private.m"; sourceTree = SOURCE_ROOT; };
 		634EC8C311966F44003426E7 /* ThingKitLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThingKitLibrary.h; path = Source/Project/Library/ThingKitLibrary.h; sourceTree = SOURCE_ROOT; };
 		634EC8C411966F44003426E7 /* ThingKitLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThingKitLibrary.m; path = Source/Project/Library/ThingKitLibrary.m; sourceTree = SOURCE_ROOT; };
 		63843AB91041214400D29404 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
@@ -56,12 +66,6 @@
 		63894BEB103BD5C1007C9CC9 /* ThingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThingKit.h; path = Source/Project/ThingKit.h; sourceTree = SOURCE_ROOT; };
 		63894BF5103BE15E007C9CC9 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "Source/UnitTests/Resources/PropertyLists/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		63894BFB103BE194007C9CC9 /* ThingKitUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThingKitUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		639EF9A8125100D600A1956B /* THGItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THGItem.h; sourceTree = "<group>"; };
-		639EF9A9125100D600A1956B /* THGItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THGItem.m; sourceTree = "<group>"; };
-		639EF9AC125100F400A1956B /* THGItem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "THGItem+Private.h"; sourceTree = "<group>"; };
-		639EF9AD125100F400A1956B /* THGItem+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "THGItem+Private.m"; sourceTree = "<group>"; };
-		63B6A8911041465B0049EC9C /* Settings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Settings.xcconfig; path = Configurations/Settings.xcconfig; sourceTree = SOURCE_ROOT; };
-		63C3E8D5126CC24500039701 /* THGItemTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THGItemTestCase.m; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libThingKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libThingKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,9 +161,13 @@
 		63894BE2103BD59B007C9CC9 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				63133F74134034E2006373AB /* AdHoc.xcconfig */,
+				63133F75134034E2006373AB /* Debug.xcconfig */,
+				63133F76134034E2006373AB /* Distribution.xcconfig */,
 				63894BE4103BD59B007C9CC9 /* Library.xcconfig */,
-				63B6A8911041465B0049EC9C /* Settings.xcconfig */,
+				63133F77134034E2006373AB /* Profile.xcconfig */,
 				63894BE5103BD59B007C9CC9 /* Project.xcconfig */,
+				63133F78134034E2006373AB /* Release.xcconfig */,
 				63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */,
 			);
 			path = Configurations;
@@ -168,9 +176,10 @@
 		63894BE9103BD5C1007C9CC9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				639EF9A8125100D600A1956B /* THGItem.h */,
-				639EF9AC125100F400A1956B /* THGItem+Private.h */,
-				639EF9B6125101C200A1956B /* Source */,
+				633838E813404946008B4717 /* THGItem.h */,
+				633838EA13404946008B4717 /* THGItem+Private.h */,
+				633838E913404946008B4717 /* THGItem.m */,
+				633838EB13404946008B4717 /* THGItem+Private.m */,
 			);
 			name = Classes;
 			path = Source/Classes;
@@ -217,7 +226,7 @@
 		63894BF1103BE15E007C9CC9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				63C3E8D5126CC24500039701 /* THGItemTestCase.m */,
+				633838E4134048F9008B4717 /* THGItemTestCase.m */,
 			);
 			name = Classes;
 			path = Source/UnitTests/Classes;
@@ -248,15 +257,6 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		639EF9B6125101C200A1956B /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				639EF9A9125100D600A1956B /* THGItem.m */,
-				639EF9AD125100F400A1956B /* THGItem+Private.m */,
-			);
-			name = Source;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -266,8 +266,8 @@
 			files = (
 				63843AB2104120A300D29404 /* ThingKit.h in Headers */,
 				634EC8C511966F44003426E7 /* ThingKitLibrary.h in Headers */,
-				639EF9AA125100D600A1956B /* THGItem.h in Headers */,
-				639EF9AE125100F400A1956B /* THGItem+Private.h in Headers */,
+				633838EC13404946008B4717 /* THGItem.h in Headers */,
+				633838EE13404946008B4717 /* THGItem+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,8 +377,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/tcsh;
-			shellScript = "# Run the unit tests in this test bundle.\necho  ${SDKROOT}${DEVELOPER_FRAMEWORKS_DIR}\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -387,7 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C3E8D6126CC24500039701 /* THGItemTestCase.m in Sources */,
+				633838E5134048F9008B4717 /* THGItemTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +396,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				634EC8C611966F44003426E7 /* ThingKitLibrary.m in Sources */,
-				639EF9AB125100D600A1956B /* THGItem.m in Sources */,
-				639EF9AF125100F400A1956B /* THGItem+Private.m in Sources */,
+				633838ED13404946008B4717 /* THGItem.m in Sources */,
+				633838EF13404946008B4717 /* THGItem+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,16 +414,14 @@
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F75134034E2006373AB /* Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Debug;
 		};
 		1DEB922008733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F78134034E2006373AB /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
@@ -432,7 +430,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Debug;
 		};
@@ -443,15 +440,33 @@
 			};
 			name = Release;
 		};
+		63133FD513403530006373AB /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		63133FD613403530006373AB /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63133F74134034E2006373AB /* AdHoc.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		63133FD713403530006373AB /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = AdHoc;
+		};
 		63894BFD103BE195007C9CC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Debug;
@@ -461,10 +476,6 @@
 			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
 			};
 			name = Release;
 		};
@@ -472,16 +483,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Profile;
 		};
 		63894C02103BE1FD007C9CC9 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F77134034E2006373AB /* Profile.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Profile;
 		};
@@ -490,10 +498,6 @@
 			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 			};
 			name = Profile;
@@ -507,7 +511,7 @@
 		};
 		63894C05103BE202007C9CC9 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE4103BD59B007C9CC9 /* Library.xcconfig */;
+			baseConfigurationReference = 63133F76134034E2006373AB /* Distribution.xcconfig */;
 			buildSettings = {
 			};
 			name = Distribution;
@@ -517,10 +521,6 @@
 			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
 			};
 			name = Distribution;
 		};
@@ -533,6 +533,7 @@
 				1DEB921F08733DC00010E9CD /* Debug */,
 				63894C02103BE1FD007C9CC9 /* Profile */,
 				1DEB922008733DC00010E9CD /* Release */,
+				63133FD613403530006373AB /* AdHoc */,
 				63894C05103BE202007C9CC9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -544,6 +545,7 @@
 				1DEB922308733DC00010E9CD /* Debug */,
 				63894C01103BE1FD007C9CC9 /* Profile */,
 				1DEB922408733DC00010E9CD /* Release */,
+				63133FD513403530006373AB /* AdHoc */,
 				63894C04103BE202007C9CC9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -555,6 +557,7 @@
 				63894BFD103BE195007C9CC9 /* Debug */,
 				63894C03103BE1FD007C9CC9 /* Profile */,
 				63894BFE103BE195007C9CC9 /* Release */,
+				63133FD713403530006373AB /* AdHoc */,
 				63894C06103BE202007C9CC9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;

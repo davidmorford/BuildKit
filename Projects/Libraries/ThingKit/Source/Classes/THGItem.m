@@ -1,19 +1,22 @@
 
 #import <ThingKit/THGItem.h>
 
-@interface THGItem () {
-
-}
+@interface THGItem ()
 @end
 
 #pragma mark -
 
 @implementation THGItem
 
--(id) init {
+@synthesize name;
+@synthesize likesStuff;
+
+-(id) initWithName:(NSString *)aName {
 	self = [super init];
-	if (self != nil) {
+	if (!self) {
+		return nil;
 	}
+	self.name = aName;
 	return self;
 }
 
