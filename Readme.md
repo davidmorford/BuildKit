@@ -7,25 +7,17 @@ For more information on multi-layered configuration files see : [Build Setting E
 
 ## Requirements
 
-  * Xcode : 3.2.5
-  * SDK : 4.2
-
-## Configuration Defaults
-
-  * Compiler : LLVM/Clang 1.6
-  * Compiler Flags : -Xclang -fobjc-nonfragile-abi2
+  * Xcode : 3.2.6 or Xcode 4.0+
+  * SDK : 4.3
+  * Compiler : LLVM/Clang 1.7 or 2.0
 
 ## Xcode Configuration Files (.xcconfig)
 
-Configuration files are a big topic [Add more here]
-
-
 ## Directory Structure
 
-Defined in /Configurations/Settings.xcconfig
+Defined in /Configurations/Paths.xcconfig
 
 * **Applications** -
-* **Catalogs** -
 * **Libraries** -
 
 
@@ -55,9 +47,9 @@ Guidelines:
 Application and Library projects can be easily referenced by other application and library projects in the directory tree. Static library projects have a Library.xcconfig file used by the static library target. In this file is a text snippet needs to be copied to Configurations/Libraries.xcconfig. Uncomment and change
 
 When built, libraries are copied to a deployment location path assembled from the following bit of information:
-  * Build configiration - Debug, Release, Distribution, etc.
+  * Build configiration - Debug, Profile, Release, AdHoc, Distribution, etc...
   * Target SDK Name - iphoneos, iphonesimulator
-  * Target SDK Version - 4.1, 4.2, etc
+  * Target SDK Version - 4.3, etc
 
 
 ## Project Scripts
@@ -67,12 +59,11 @@ The Xcode project templates for Static Libraries and Univeral Application.
 
 ## Build and Utility Scripts
 
-
 * Build.command - A shell script for building shared libraries. Will clean and build all library project targets specified in the script for the simulator and device SDK. Add you shared libraries to the script to have them included in the build. Start inside the Scripts directory like this: 
 
-  * ./Build.command 4.1 Debug
+  * ./Build.command 4.3 Debug
 
-* developer-*.sh - Convenience methods to check the Xcode tools path and set the active tools path when using Build.command from the shell.
+Using Build.command is useful for automated builds but not required.
 
 * Deploy*.sh - Shell scripts used by Run Script Build Phases in Library project templates to assemble, copy and deploy a static library to the deployment path.
 
@@ -81,17 +72,17 @@ The Xcode project templates for Static Libraries and Univeral Application.
 
 ## Version Control
 
-* BuildKit has been used with Subversion and Git. In Subversion, the entire directory structure is usually placed in /trunk and the contents of the trunk is branched or tagged, creating development snapshots or release version tag that are completely buildable. With Git, BuildKit can be easily used as the root of a project repo with a single library and demo application (as is frequent on many public GitHub projects) or in a manner similar to Subversion where numerous libraries and applications live within a master and multiple branches or tags can be used.
+* BuildKit has been used with Subversion, Git and Mercurial. In Subversion, the entire directory structure is usually placed in /trunk and the contents of the trunk is branched or tagged, creating development snapshots or release version tag that are completely buildable. With Git, BuildKit can be easily used as the root of a project repo with a single library and demo application (as is frequent on many public GitHub projects) or in a manner similar to Subversion where numerous libraries and applications live within a master and multiple branches or tags can be used.
 
 
 ## Xcode Project Templates
 
-Xcode projects created with the BuildKit Application or Static Library project templates. (Finish this up...)
+Xcode projects created with the BuildKit Application or Static Library project templates.
 
 
 ### Libraries
 
-Should be created in the Libraries folder. I have a Vendors for libraries from others that I just drop into an empty BuildKit Library project and change the #import headers.
+Should be created in the Libraries folder. I have a Vendors for libraries from others that I drop into an empty BuildKit Library project, change the #import headers and have something maintainable.
 
 
 ### Applications
@@ -100,6 +91,17 @@ Can be created in any top level folder in the Projects root folder. I currently 
 
 
 ## History
+
+### March 27, 2011
+
+* Updates for Xcode 3.2.6, Xcode 4.0, iOS SDK 4.3 and LLVM/Clang 1.7/2.0
+* Removal of fragile abi compiler flag. No longer required in LLVM/Clang 1.7 in Xcode 3.2.6 with iOS SDK 4.3.
+* Significant refactoring of configurations.
+* Added Debug, Profile, Release, AdHoc and Distribution xcconfig files to master configurations and template projects to support greater build configuration customization. New configurations leverage multi-layer nature of xcconfig's and include Application.xcconfig or Library.xcconfig and set at the *target* level for each configuration.
+* Removal of specific platform xcconfig files at top level in favor of Latest iOS SDK specifier.
+* Settings.xcconfig merged into Project.xcconfig for project level configurations and renamed Paths.config at top level.
+* Update example projects and Xcode 3 projects templates.
+* Add placeholder for Xcode 4 project templates.
 
 ### November 23, 2010
 
@@ -139,6 +141,6 @@ Can be created in any top level folder in the Projects root folder. I currently 
 * Formalize from projects and exiting Mac OS X build structure.
 
 
-## License and Copyright
+## Copyright
 
-BuildKit is BSD licensed. The full text of the license is located in Documents/License.md
+(c) 2009 - 2011 Dave Morford. All Right Reserved.

@@ -2,7 +2,14 @@
 //
 // Libraries.xcconfig
 // Local Libraries - Declarations by alpha. Order unimportant.
-// (c) 2008 - 2011, Semantap
+//
+// A newly created BuildKit Library project template has these declarations
+// in the projects Configuration directory in the file Library.xcconfig. Copy and
+// paste here and library header and linker paths will be available to other library 
+// and application projects in the tree that add the declarations to their own
+// Application.xcconfig or Library.xcconfig.
+//
+// The libraries below are provided as examples of course.
 //
 
 #include "Frameworks.xcconfig"

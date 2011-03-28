@@ -2,30 +2,22 @@
 # ================================================================================
 # Build Kit 
 #
-# (c) 2008 - 2010, Semantap
+# (c) 2008 - 2011, Semantap
 # 
 # iOS Application and Libraries Build Script
 #
-# Created: Aug. 12, 2009
-# Updated: Sep. 08, 2009
-# Updated: Mar. 17, 2010
-# Updated: Apr. 12, 2010
-# Updated: Jun. 20, 2010
-# Updated: Sept. 4, 2010
-# Updated: Sept. 15, 2010
-# Updated: Sept. 27, 2010
-# Updated: Oct.  16, 2010
-# Updated: Nov.  23, 2010
+#      Created: Aug. 12, 2009
+# Last Updated: Mar. 23, 2011
 # ================================================================================
 
 Usage()
 {
-    builtin echo "iPhone Build Script, version 4.2\n"
+    builtin echo "iPhone Build Script, version 4.3\n"
     builtin echo "Usage: Build.command <SDKVersion> <BuildConfiguration>"
     builtin echo "\t<SDKVersion>         = A SDK Version"
-    builtin echo "\t\tAvailable          = [4.2]"
+    builtin echo "\t\tAvailable          = [4.3]"
     builtin echo "\t<BuildConfiguration> = A Build Configuration"
-    builtin echo "\t\tAvailable          = [Debug | Profile | Release | Adhoc | Distribution]"
+    builtin echo "\t\tAvailable          = [Debug | Profile | Release | AdHoc | Distribution]"
     builtin echo "\n"
 }
 
@@ -48,7 +40,7 @@ echo $TARGET_SDK_VERSION
 echo $TARGET_SDK_TYPE
 
 # ================================================================================
-# Debug | Profile | Release | Adhoc | Distribution
+# Debug | Profile | Release | AdHoc | Distribution
 # ================================================================================
 
 export BUILD_CONFIGURATION=$SELECTED_BUILD_CONFIGURATION
