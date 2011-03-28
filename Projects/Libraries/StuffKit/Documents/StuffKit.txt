@@ -1,5 +1,0 @@
-
-StuffKit Library
-
-Author:		David
-Created:	9/17/10

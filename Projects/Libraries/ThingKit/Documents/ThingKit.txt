@@ -1,5 +1,0 @@
-
-ThingKit Library
-
-Author:		David
-Created:	9/27/10
