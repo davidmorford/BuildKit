@@ -161,12 +161,12 @@
 		63894BE2103BD59B007C9CC9 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				63894BE5103BD59B007C9CC9 /* Project.xcconfig */,
+				63894BE4103BD59B007C9CC9 /* Library.xcconfig */,
 				63133F74134034E2006373AB /* AdHoc.xcconfig */,
 				63133F75134034E2006373AB /* Debug.xcconfig */,
 				63133F76134034E2006373AB /* Distribution.xcconfig */,
-				63894BE4103BD59B007C9CC9 /* Library.xcconfig */,
 				63133F77134034E2006373AB /* Profile.xcconfig */,
-				63894BE5103BD59B007C9CC9 /* Project.xcconfig */,
 				63133F78134034E2006373AB /* Release.xcconfig */,
 				63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */,
 			);

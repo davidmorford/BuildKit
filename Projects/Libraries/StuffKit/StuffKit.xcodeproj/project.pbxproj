@@ -24,21 +24,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 6338393913405125008B4717 /* ThingKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libThingKit.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ThingKit;
 		};
 		6338394313405125008B4717 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6338393913405125008B4717 /* ThingKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 63894BFB103BE194007C9CC9 /* ThingKitUnitTests.octest */;
+			remoteGlobalIDString = 63894BFB103BE194007C9CC9;
 			remoteInfo = ThingKitUnitTests;
 		};
 		633839451340512C008B4717 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6338393913405125008B4717 /* ThingKit.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ThingKit */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = ThingKit;
 		};
 		63843AB3104120FE00D29404 /* PBXContainerItemProxy */ = {
