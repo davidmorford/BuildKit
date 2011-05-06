@@ -1,0 +1,9 @@
+
+//
+// ___PROJECTNAME___/Configurations/Release.xcconfig
+//
+// Customize with settings specific to release mode
+//
+
+#include "Library.xcconfig"
+#include "../../../Configurations/Release.xcconfig"

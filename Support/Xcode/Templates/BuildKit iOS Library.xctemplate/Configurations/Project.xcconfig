@@ -1,0 +1,10 @@
+
+//
+// ___PROJECTNAME___/Configurations/Project.xcconfig
+//
+
+#include "../../../Configurations/Paths.xcconfig"
+#include "../../../Configurations/Platform.xcconfig"
+#include "../../../Configurations/Project.xcconfig"
+
+INFOPLIST_ORGANIZATION_NAME	= ___ORGANIZATIONNAME___

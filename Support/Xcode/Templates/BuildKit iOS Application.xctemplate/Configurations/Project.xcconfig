@@ -1,0 +1,11 @@
+
+//
+// ___PACKAGENAME___/Configurations/Project.xcconfig
+//
+
+#include "../../../Configurations/Paths.xcconfig"
+#include "../../../Configurations/Platform.xcconfig"
+#include "../../../Configurations/Project.xcconfig"
+
+INFOPLIST_ORGANIZATION_NAME	= ___ORGANIZATIONNAME___
+CODE_SIGN_IDENTITY = iPhone Developer
