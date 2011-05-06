@@ -9,5 +9,5 @@ WRAPPER_EXTENSION = octest
 
 // $(DEVELOPER_FRAMEWORKS_DIR) seems to be set to a top level value instead for the 
 // that does not play well when tools are not installed in /Developer.
-//FRAMEWORK_SEARCH_PATHS = $(SDKROOT)
-FRAMEWORK_SEARCH_PATHS = $(SDKROOT)/Developer/Library/Frameworks
+
+FRAMEWORK_SEARCH_PATHS = $(FRAMEWORK_SEARCH_PATHS) $(DEVELOPER_LIBRARY_DIR)/Frameworks

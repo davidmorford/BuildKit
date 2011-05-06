@@ -1,6 +1,7 @@
 
 //
 // Scripts.xcconfig
+//
 // Scripts that create the top level Build directory for a project tree
 // and deploy static libraries and resource bundles
 //

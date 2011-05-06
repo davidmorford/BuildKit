@@ -76,3 +76,7 @@ UIKIT_FX                = -framework UIKit
 // Frameworks - Testing
 
 SENTESTINGKIT_FX        = -framework SenTestingKit
+
+// Framework Search Paths
+
+//FRAMEWORK_SEARCH_PATHS  = $(SDKROOT)/Developer/Library/Frameworks

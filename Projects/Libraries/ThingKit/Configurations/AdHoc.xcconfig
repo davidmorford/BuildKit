@@ -1,8 +1,0 @@
-
-//
-// ThingKit/Configurations/AdHoc.xcconfig
-//
-// Customize with AdHoc Build settings. Uses Release.xcconfig
-//
-
-#include "Release.xcconfig"

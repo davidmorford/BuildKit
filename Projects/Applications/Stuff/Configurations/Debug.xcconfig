@@ -1,9 +1,0 @@
-
-//
-// Stuff/Configurations/Debug.xcconfig
-//
-// Customize with settings specific to debug
-//
-
-#include "Application.xcconfig"
-#include "../../../Configurations/Debug.xcconfig"

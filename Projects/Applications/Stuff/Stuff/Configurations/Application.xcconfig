@@ -1,0 +1,30 @@
+
+//
+// Stuff/Configurations/Application.xcconfig
+//
+
+#include "../../../Configurations/Application.xcconfig"
+#include "../../../Configurations/Libraries.xcconfig"
+
+// Product Name
+PRODUCT_NAME = Stuff
+
+// Application Info.plist
+INFOPLIST_FILE = $(XCODE4_APPLICATIONDELEGATE_INFOPLIST_PATH)/Info.plist
+
+// Application Version
+BUILD_APPLICATION_VERSION = 1.0
+CURRENT_PROJECT_VERSION = $(BUILD_APPLICATION_VERSION)
+
+// Precompiled Header
+GCC_PREFIX_HEADER = $(XCODE4_PROJECT_TREE_PROJECT_PATH)/Stuff.pch
+
+// Clang
+RUN_CLANG_STATIC_ANALYZER = YES
+
+// Search Paths
+HEADER_SEARCH_PATHS = $(STDLIB_HEADER_PATH)  $(THINGKIT_HEADER_PATH) $(THINGKIT_PRIVATEHEADER_PATH) $(STUFFKIT_HEADER_PATH)
+LIBRARY_SEARCH_PATHS = $(STDLIB_LIBRARY_PATH) $(STUFFKIT_LIBRARY_PATH) $(THINGKIT_LIBRARY_PATH)
+
+// Linker Flags
+OTHER_LDFLAGS = $(OBJC_LIBRARY) $(OBJC_ALLLOAD) $(STUFFKIT_LIBRARY_FLAG) $(THINGKIT_LIBRARY_FLAG) 

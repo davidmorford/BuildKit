@@ -1,0 +1,11 @@
+
+//
+// Stuff/Configurations/Project.xcconfig
+//
+
+#include "../../../Configurations/Paths.xcconfig"
+#include "../../../Configurations/Platform.xcconfig"
+#include "../../../Configurations/Project.xcconfig"
+
+INFOPLIST_ORGANIZATION_NAME	= Semantap
+CODE_SIGN_IDENTITY = iPhone Developer

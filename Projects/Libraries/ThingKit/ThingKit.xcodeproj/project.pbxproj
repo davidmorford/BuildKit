@@ -7,301 +7,220 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		633838E5134048F9008B4717 /* THGItemTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 633838E4134048F9008B4717 /* THGItemTestCase.m */; };
-		633838EC13404946008B4717 /* THGItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 633838E813404946008B4717 /* THGItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		633838ED13404946008B4717 /* THGItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 633838E913404946008B4717 /* THGItem.m */; };
-		633838EE13404946008B4717 /* THGItem+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 633838EA13404946008B4717 /* THGItem+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		633838EF13404946008B4717 /* THGItem+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 633838EB13404946008B4717 /* THGItem+Private.m */; };
-		634EC8B411966CCF003426E7 /* ThingKit.bundle in Deploy Resource Bundle */ = {isa = PBXBuildFile; fileRef = 63843ADE10412D8800D29404 /* ThingKit.bundle */; };
-		634EC8C511966F44003426E7 /* ThingKitLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 634EC8C311966F44003426E7 /* ThingKitLibrary.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		634EC8C611966F44003426E7 /* ThingKitLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 634EC8C411966F44003426E7 /* ThingKitLibrary.m */; };
-		63843AB2104120A300D29404 /* ThingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 63894BEB103BD5C1007C9CC9 /* ThingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63843AB61041212000D29404 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		63843ACD1041218700D29404 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63843AB91041214400D29404 /* SenTestingKit.framework */; };
-		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		63C080721373AE4800352C94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C080711373AE4800352C94 /* Foundation.framework */; };
+		63C0809B1373AE4800352C94 /* ThingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C0809A1373AE4800352C94 /* ThingKit.h */; };
+		63C0809E1373AE4800352C94 /* ThingKitLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C0809D1373AE4800352C94 /* ThingKitLibrary.h */; };
+		63C080A01373AE4800352C94 /* ThingKitLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0809F1373AE4800352C94 /* ThingKitLibrary.m */; };
+		63C0811E1373B8B700352C94 /* THGItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C0811A1373B8B700352C94 /* THGItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63C0811F1373B8B700352C94 /* THGItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0811B1373B8B700352C94 /* THGItem.m */; };
+		63C081201373B8B700352C94 /* THGItem+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C0811C1373B8B700352C94 /* THGItem+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		63C081211373B8B700352C94 /* THGItem+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0811D1373B8B700352C94 /* THGItem+Private.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		63843AB3104120FE00D29404 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = ThingKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		634EC8B511966CED003426E7 /* Deploy Resource Bundle */ = {
+		63C0806B1373AE4800352C94 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(BUILD_SHARED_BUNDLES_PATH)";
 			dstSubfolderSpec = 0;
 			files = (
-				634EC8B411966CCF003426E7 /* ThingKit.bundle in Deploy Resource Bundle */,
 			);
-			name = "Deploy Resource Bundle";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		63133F74134034E2006373AB /* AdHoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = Configurations/AdHoc.xcconfig; sourceTree = SOURCE_ROOT; };
-		63133F75134034E2006373AB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
-		63133F76134034E2006373AB /* Distribution.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Distribution.xcconfig; path = Configurations/Distribution.xcconfig; sourceTree = SOURCE_ROOT; };
-		63133F77134034E2006373AB /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Profile.xcconfig; path = Configurations/Profile.xcconfig; sourceTree = SOURCE_ROOT; };
-		63133F78134034E2006373AB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = SOURCE_ROOT; };
-		633838E4134048F9008B4717 /* THGItemTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THGItemTestCase.m; path = Source/UnitTests/Classes/THGItemTestCase.m; sourceTree = SOURCE_ROOT; };
-		633838E813404946008B4717 /* THGItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THGItem.h; path = Source/Classes/THGItem.h; sourceTree = SOURCE_ROOT; };
-		633838E913404946008B4717 /* THGItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THGItem.m; path = Source/Classes/THGItem.m; sourceTree = SOURCE_ROOT; };
-		633838EA13404946008B4717 /* THGItem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "THGItem+Private.h"; path = "Source/Classes/THGItem+Private.h"; sourceTree = SOURCE_ROOT; };
-		633838EB13404946008B4717 /* THGItem+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "THGItem+Private.m"; path = "Source/Classes/THGItem+Private.m"; sourceTree = SOURCE_ROOT; };
-		634EC8C311966F44003426E7 /* ThingKitLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThingKitLibrary.h; path = Source/Project/Library/ThingKitLibrary.h; sourceTree = SOURCE_ROOT; };
-		634EC8C411966F44003426E7 /* ThingKitLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThingKitLibrary.m; path = Source/Project/Library/ThingKitLibrary.m; sourceTree = SOURCE_ROOT; };
-		63843AB91041214400D29404 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
-		63843ADE10412D8800D29404 /* ThingKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ThingKit.bundle; path = Source/Resources/Bundles/ThingKit.bundle; sourceTree = SOURCE_ROOT; };
-		63894BE4103BD59B007C9CC9 /* Library.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Library.xcconfig; path = Configurations/Library.xcconfig; sourceTree = SOURCE_ROOT; };
-		63894BE5103BD59B007C9CC9 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Configurations/Project.xcconfig; sourceTree = SOURCE_ROOT; };
-		63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = UnitTests.xcconfig; path = Configurations/UnitTests.xcconfig; sourceTree = SOURCE_ROOT; };
-		63894BEB103BD5C1007C9CC9 /* ThingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThingKit.h; path = Source/Project/ThingKit.h; sourceTree = SOURCE_ROOT; };
-		63894BF5103BE15E007C9CC9 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "Source/UnitTests/Resources/PropertyLists/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		63894BFB103BE194007C9CC9 /* ThingKitUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThingKitUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libThingKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libThingKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C0806E1373AE4800352C94 /* libThingKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libThingKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C080711373AE4800352C94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63C080741373AE4800352C94 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		63C080751373AE4800352C94 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		63C080761373AE4800352C94 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		63C080771373AE4800352C94 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		63C080781373AE4800352C94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		63C080791373AE4800352C94 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		63C0807A1373AE4800352C94 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		63C0807B1373AE4800352C94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63C0807C1373AE4800352C94 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		63C0807D1373AE4800352C94 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		63C0807E1373AE4800352C94 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		63C0807F1373AE4800352C94 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		63C080801373AE4800352C94 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		63C080811373AE4800352C94 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		63C080821373AE4800352C94 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		63C080831373AE4800352C94 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		63C080841373AE4800352C94 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		63C080851373AE4800352C94 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		63C080861373AE4800352C94 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		63C080871373AE4800352C94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		63C080881373AE4800352C94 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		63C080891373AE4800352C94 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		63C0808A1373AE4800352C94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		63C0808B1373AE4800352C94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63C0808E1373AE4800352C94 /* Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Library.xcconfig; path = Configurations/Library.xcconfig; sourceTree = "<group>"; };
+		63C0808F1373AE4800352C94 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Configurations/Project.xcconfig; sourceTree = "<group>"; };
+		63C080901373AE4800352C94 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = "<group>"; };
+		63C080911373AE4800352C94 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = "<group>"; };
+		63C080921373AE4800352C94 /* UnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTests.xcconfig; path = Configurations/UnitTests.xcconfig; sourceTree = "<group>"; };
+		63C080931373AE4800352C94 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Version.xcconfig; path = Configurations/Version.xcconfig; sourceTree = "<group>"; };
+		63C0809A1373AE4800352C94 /* ThingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThingKit.h; path = Project/ThingKit.h; sourceTree = "<group>"; };
+		63C0809D1373AE4800352C94 /* ThingKitLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThingKitLibrary.h; path = Project/Library/ThingKitLibrary.h; sourceTree = "<group>"; };
+		63C0809F1373AE4800352C94 /* ThingKitLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ThingKitLibrary.m; path = Project/Library/ThingKitLibrary.m; sourceTree = "<group>"; };
+		63C0811A1373B8B700352C94 /* THGItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THGItem.h; path = Classes/THGItem.h; sourceTree = "<group>"; };
+		63C0811B1373B8B700352C94 /* THGItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THGItem.m; path = Classes/THGItem.m; sourceTree = "<group>"; };
+		63C0811C1373B8B700352C94 /* THGItem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "THGItem+Private.h"; path = "Classes/THGItem+Private.h"; sourceTree = "<group>"; };
+		63C0811D1373B8B700352C94 /* THGItem+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "THGItem+Private.m"; path = "Classes/THGItem+Private.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		63894BF8103BE194007C9CC9 /* Frameworks */ = {
+		63C0806A1373AE4800352C94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63843AB61041212000D29404 /* Foundation.framework in Frameworks */,
-				63843ACD1041218700D29404 /* SenTestingKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2AAC07C0554694100DB518D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				63C080721373AE4800352C94 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		034768DFFF38A50411DB9C8B /* Products */ = {
+		63C080611373AE4800352C94 = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libThingKit.a */,
-				63894BFB103BE194007C9CC9 /* ThingKitUnitTests.octest */,
+				63C0806F1373AE4800352C94 /* Products */,
+				63C080701373AE4800352C94 /* Frameworks */,
+				63C0808C1373AE4800352C94 /* ThingKit */,
+			);
+			sourceTree = "<group>";
+		};
+		63C0806F1373AE4800352C94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63C0806E1373AE4800352C94 /* libThingKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* ThingKit */ = {
+		63C080701373AE4800352C94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				034768DFFF38A50411DB9C8B /* Products */,
-				63894BE0103BD587007C9CC9 /* References */,
-				63894BE2103BD59B007C9CC9 /* Configurations */,
-				63894BEC103BD5C1007C9CC9 /* Resources */,
-				63894BEA103BD5C1007C9CC9 /* Project */,
-				63894BF0103BE15E007C9CC9 /* UnitTests */,
-				63894BE9103BD5C1007C9CC9 /* Classes */,
-			);
-			name = ThingKit;
-			sourceTree = "<group>";
-		};
-		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				63C080711373AE4800352C94 /* Foundation.framework */,
+				63C080731373AE4800352C94 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		634EC8C211966F44003426E7 /* Library */ = {
+		63C080731373AE4800352C94 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				634EC8C311966F44003426E7 /* ThingKitLibrary.h */,
-				634EC8C411966F44003426E7 /* ThingKitLibrary.m */,
+				63C080741373AE4800352C94 /* AddressBook.framework */,
+				63C080751373AE4800352C94 /* AddressBookUI.framework */,
+				63C080761373AE4800352C94 /* AssetsLibrary.framework */,
+				63C080771373AE4800352C94 /* AVFoundation.framework */,
+				63C080781373AE4800352C94 /* CFNetwork.framework */,
+				63C080791373AE4800352C94 /* CoreData.framework */,
+				63C0807A1373AE4800352C94 /* CoreFoundation.framework */,
+				63C0807B1373AE4800352C94 /* CoreGraphics.framework */,
+				63C0807C1373AE4800352C94 /* CoreLocation.framework */,
+				63C0807D1373AE4800352C94 /* CoreMotion.framework */,
+				63C0807E1373AE4800352C94 /* CoreText.framework */,
+				63C0807F1373AE4800352C94 /* EventKit.framework */,
+				63C080801373AE4800352C94 /* EventKitUI.framework */,
+				63C080811373AE4800352C94 /* GameKit.framework */,
+				63C080821373AE4800352C94 /* ImageIO.framework */,
+				63C080831373AE4800352C94 /* MapKit.framework */,
+				63C080841373AE4800352C94 /* MediaPlayer.framework */,
+				63C080851373AE4800352C94 /* MessageUI.framework */,
+				63C080861373AE4800352C94 /* MobileCoreServices.framework */,
+				63C080871373AE4800352C94 /* QuartzCore.framework */,
+				63C080881373AE4800352C94 /* QuickLook.framework */,
+				63C080891373AE4800352C94 /* StoreKit.framework */,
+				63C0808A1373AE4800352C94 /* SystemConfiguration.framework */,
+				63C0808B1373AE4800352C94 /* UIKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		63C0808C1373AE4800352C94 /* ThingKit */ = {
+			isa = PBXGroup;
+			children = (
+				63C0808D1373AE4800352C94 /* Configurations */,
+				63C080991373AE4800352C94 /* Project */,
+				63C080941373AE4800352C94 /* Classes */,
+			);
+			path = ThingKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		63C0808D1373AE4800352C94 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				63C0808F1373AE4800352C94 /* Project.xcconfig */,
+				63C0808E1373AE4800352C94 /* Library.xcconfig */,
+				63C080921373AE4800352C94 /* UnitTests.xcconfig */,
+				63C080901373AE4800352C94 /* Debug.xcconfig */,
+				63C080911373AE4800352C94 /* Release.xcconfig */,
+				63C080931373AE4800352C94 /* Version.xcconfig */,
+			);
+			name = Configurations;
+			path = ThingKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		63C080941373AE4800352C94 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63C0811A1373B8B700352C94 /* THGItem.h */,
+				63C0811B1373B8B700352C94 /* THGItem.m */,
+				63C0811C1373B8B700352C94 /* THGItem+Private.h */,
+				63C0811D1373B8B700352C94 /* THGItem+Private.m */,
+			);
+			name = Classes;
+			path = ThingKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		63C080991373AE4800352C94 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				63C0809A1373AE4800352C94 /* ThingKit.h */,
+				63C0809C1373AE4800352C94 /* Library */,
+			);
+			name = Project;
+			path = ThingKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		63C0809C1373AE4800352C94 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				63C0809D1373AE4800352C94 /* ThingKitLibrary.h */,
+				63C0809F1373AE4800352C94 /* ThingKitLibrary.m */,
 			);
 			name = Library;
-			path = Source/Project/Library;
-			sourceTree = SOURCE_ROOT;
-		};
-		63843AB71041212700D29404 /* UnitTest */ = {
-			isa = PBXGroup;
-			children = (
-				63843AB91041214400D29404 /* SenTestingKit.framework */,
-			);
-			name = UnitTest;
-			sourceTree = "<group>";
-		};
-		63843AB81041213200D29404 /* Project */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Project;
-			sourceTree = "<group>";
-		};
-		63894BE0103BD587007C9CC9 /* References */ = {
-			isa = PBXGroup;
-			children = (
-				63843AB81041213200D29404 /* Project */,
-				0867D69AFE84028FC02AAC07 /* Frameworks */,
-				63894C11103BE467007C9CC9 /* Libraries */,
-				63843AB71041212700D29404 /* UnitTest */,
-			);
-			name = References;
-			sourceTree = "<group>";
-		};
-		63894BE2103BD59B007C9CC9 /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				63894BE5103BD59B007C9CC9 /* Project.xcconfig */,
-				63894BE4103BD59B007C9CC9 /* Library.xcconfig */,
-				63133F74134034E2006373AB /* AdHoc.xcconfig */,
-				63133F75134034E2006373AB /* Debug.xcconfig */,
-				63133F76134034E2006373AB /* Distribution.xcconfig */,
-				63133F77134034E2006373AB /* Profile.xcconfig */,
-				63133F78134034E2006373AB /* Release.xcconfig */,
-				63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */,
-			);
-			path = Configurations;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BE9103BD5C1007C9CC9 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				633838E813404946008B4717 /* THGItem.h */,
-				633838EA13404946008B4717 /* THGItem+Private.h */,
-				633838E913404946008B4717 /* THGItem.m */,
-				633838EB13404946008B4717 /* THGItem+Private.m */,
-			);
-			name = Classes;
-			path = Source/Classes;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BEA103BD5C1007C9CC9 /* Project */ = {
-			isa = PBXGroup;
-			children = (
-				63894BEB103BD5C1007C9CC9 /* ThingKit.h */,
-				634EC8C211966F44003426E7 /* Library */,
-			);
-			name = Project;
-			path = Source/Project;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BEC103BD5C1007C9CC9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				63894BED103BD5C1007C9CC9 /* Bundles */,
-			);
-			name = Resources;
-			path = Source/Resources;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BED103BD5C1007C9CC9 /* Bundles */ = {
-			isa = PBXGroup;
-			children = (
-				63843ADE10412D8800D29404 /* ThingKit.bundle */,
-			);
-			name = Bundles;
-			path = Source/Resources/Bundles;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BF0103BE15E007C9CC9 /* UnitTests */ = {
-			isa = PBXGroup;
-			children = (
-				63894BF1103BE15E007C9CC9 /* Classes */,
-				63894BF2103BE15E007C9CC9 /* Resources */,
-			);
-			name = UnitTests;
-			path = Source/UnitTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BF1103BE15E007C9CC9 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				633838E4134048F9008B4717 /* THGItemTestCase.m */,
-			);
-			name = Classes;
-			path = Source/UnitTests/Classes;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BF2103BE15E007C9CC9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				63894BF4103BE15E007C9CC9 /* PropertyLists */,
-			);
-			name = Resources;
-			path = Source/UnitTests/Resources;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894BF4103BE15E007C9CC9 /* PropertyLists */ = {
-			isa = PBXGroup;
-			children = (
-				63894BF5103BE15E007C9CC9 /* UnitTests-Info.plist */,
-			);
-			name = PropertyLists;
-			path = Source/UnitTests/Resources/PropertyLists;
-			sourceTree = SOURCE_ROOT;
-		};
-		63894C11103BE467007C9CC9 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D2AAC07A0554694100DB518D /* Headers */ = {
+		63C080681373AE4800352C94 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63843AB2104120A300D29404 /* ThingKit.h in Headers */,
-				634EC8C511966F44003426E7 /* ThingKitLibrary.h in Headers */,
-				633838EC13404946008B4717 /* THGItem.h in Headers */,
-				633838EE13404946008B4717 /* THGItem+Private.h in Headers */,
+				63C0809B1373AE4800352C94 /* ThingKit.h in Headers */,
+				63C0809E1373AE4800352C94 /* ThingKitLibrary.h in Headers */,
+				63C0811E1373B8B700352C94 /* THGItem.h in Headers */,
+				63C081201373B8B700352C94 /* THGItem+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63894BFA103BE194007C9CC9 /* ThingKitUnitTests */ = {
+		63C0806D1373AE4800352C94 /* ThingKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63894BFF103BE195007C9CC9 /* Build configuration list for PBXNativeTarget "ThingKitUnitTests" */;
+			buildConfigurationList = 63C080A31373AE4800352C94 /* Build configuration list for PBXNativeTarget "ThingKit" */;
 			buildPhases = (
-				63894BF6103BE194007C9CC9 /* Resources */,
-				63894BF7103BE194007C9CC9 /* Sources */,
-				63894BF8103BE194007C9CC9 /* Frameworks */,
-				63894BF9103BE194007C9CC9 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				63843AB4104120FE00D29404 /* PBXTargetDependency */,
-			);
-			name = ThingKitUnitTests;
-			productName = ThingKitUnitTests;
-			productReference = 63894BFB103BE194007C9CC9 /* ThingKitUnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-		D2AAC07D0554694100DB518D /* ThingKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ThingKit" */;
-			buildPhases = (
-				D2AAC07A0554694100DB518D /* Headers */,
-				D2AAC07B0554694100DB518D /* Sources */,
-				D2AAC07C0554694100DB518D /* Frameworks */,
-				634EC8B511966CED003426E7 /* Deploy Resource Bundle */,
-				63843AD0104121F600D29404 /* Deploy Library */,
+				63C080681373AE4800352C94 /* Headers */,
+				63C080691373AE4800352C94 /* Sources */,
+				63C0806A1373AE4800352C94 /* Frameworks */,
+				63C0806B1373AE4800352C94 /* CopyFiles */,
+				63C0806C1373AE4800352C94 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -309,261 +228,116 @@
 			);
 			name = ThingKit;
 			productName = ThingKit;
-			productReference = D2AAC07E0554694100DB518D /* libThingKit.a */;
+			productReference = 63C0806E1373AE4800352C94 /* libThingKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0867D690FE84028FC02AAC07 /* Project object */ = {
+		63C080631373AE4800352C94 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Semantap;
 			};
-			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ThingKit" */;
+			buildConfigurationList = 63C080661373AE4800352C94 /* Build configuration list for PBXProject "ThingKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
 			);
-			mainGroup = 0867D691FE84028FC02AAC07 /* ThingKit */;
-			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			mainGroup = 63C080611373AE4800352C94;
+			productRefGroup = 63C0806F1373AE4800352C94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* ThingKit */,
-				63894BFA103BE194007C9CC9 /* ThingKitUnitTests */,
+				63C0806D1373AE4800352C94 /* ThingKit */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		63894BF6103BE194007C9CC9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		63843AD0104121F600D29404 /* Deploy Library */ = {
+		63C0806C1373AE4800352C94 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Deploy Library";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/tcsh;
 			shellScript = "${SCRIPT_DEPLOY_LIBRARY}";
-			showEnvVarsInLog = 0;
-		};
-		63894BF9103BE194007C9CC9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		63894BF7103BE194007C9CC9 /* Sources */ = {
+		63C080691373AE4800352C94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				633838E5134048F9008B4717 /* THGItemTestCase.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2AAC07B0554694100DB518D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				634EC8C611966F44003426E7 /* ThingKitLibrary.m in Sources */,
-				633838ED13404946008B4717 /* THGItem.m in Sources */,
-				633838EF13404946008B4717 /* THGItem+Private.m in Sources */,
+				63C080A01373AE4800352C94 /* ThingKitLibrary.m in Sources */,
+				63C0811F1373B8B700352C94 /* THGItem.m in Sources */,
+				63C081211373B8B700352C94 /* THGItem+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		63843AB4104120FE00D29404 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* ThingKit */;
-			targetProxy = 63843AB3104120FE00D29404 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		1DEB921F08733DC00010E9CD /* Debug */ = {
+		63C080A11373AE4800352C94 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63133F75134034E2006373AB /* Debug.xcconfig */;
+			baseConfigurationReference = 63C0808F1373AE4800352C94 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63C080A21373AE4800352C94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C0808F1373AE4800352C94 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		63C080A41373AE4800352C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C080901373AE4800352C94 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		1DEB922008733DC00010E9CD /* Release */ = {
+		63C080A51373AE4800352C94 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63133F78134034E2006373AB /* Release.xcconfig */;
+			baseConfigurationReference = 63C080911373AE4800352C94 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
-		};
-		1DEB922308733DC00010E9CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		1DEB922408733DC00010E9CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		63133FD513403530006373AB /* AdHoc */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
-			buildSettings = {
-			};
-			name = AdHoc;
-		};
-		63133FD613403530006373AB /* AdHoc */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63133F74134034E2006373AB /* AdHoc.xcconfig */;
-			buildSettings = {
-			};
-			name = AdHoc;
-		};
-		63133FD713403530006373AB /* AdHoc */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-			};
-			name = AdHoc;
-		};
-		63894BFD103BE195007C9CC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-			};
-			name = Debug;
-		};
-		63894BFE103BE195007C9CC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-			};
-			name = Release;
-		};
-		63894C01103BE1FD007C9CC9 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
-			buildSettings = {
-			};
-			name = Profile;
-		};
-		63894C02103BE1FD007C9CC9 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63133F77134034E2006373AB /* Profile.xcconfig */;
-			buildSettings = {
-			};
-			name = Profile;
-		};
-		63894C03103BE1FD007C9CC9 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-			};
-			name = Profile;
-		};
-		63894C04103BE202007C9CC9 /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE5103BD59B007C9CC9 /* Project.xcconfig */;
-			buildSettings = {
-			};
-			name = Distribution;
-		};
-		63894C05103BE202007C9CC9 /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63133F76134034E2006373AB /* Distribution.xcconfig */;
-			buildSettings = {
-			};
-			name = Distribution;
-		};
-		63894C06103BE202007C9CC9 /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63894BE6103BD59B007C9CC9 /* UnitTests.xcconfig */;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-			};
-			name = Distribution;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ThingKit" */ = {
+		63C080661373AE4800352C94 /* Build configuration list for PBXProject "ThingKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB921F08733DC00010E9CD /* Debug */,
-				63894C02103BE1FD007C9CC9 /* Profile */,
-				1DEB922008733DC00010E9CD /* Release */,
-				63133FD613403530006373AB /* AdHoc */,
-				63894C05103BE202007C9CC9 /* Distribution */,
+				63C080A11373AE4800352C94 /* Debug */,
+				63C080A21373AE4800352C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ThingKit" */ = {
+		63C080A31373AE4800352C94 /* Build configuration list for PBXNativeTarget "ThingKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB922308733DC00010E9CD /* Debug */,
-				63894C01103BE1FD007C9CC9 /* Profile */,
-				1DEB922408733DC00010E9CD /* Release */,
-				63133FD513403530006373AB /* AdHoc */,
-				63894C04103BE202007C9CC9 /* Distribution */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		63894BFF103BE195007C9CC9 /* Build configuration list for PBXNativeTarget "ThingKitUnitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				63894BFD103BE195007C9CC9 /* Debug */,
-				63894C03103BE1FD007C9CC9 /* Profile */,
-				63894BFE103BE195007C9CC9 /* Release */,
-				63133FD713403530006373AB /* AdHoc */,
-				63894C06103BE202007C9CC9 /* Distribution */,
+				63C080A41373AE4800352C94 /* Debug */,
+				63C080A51373AE4800352C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+	rootObject = 63C080631373AE4800352C94 /* Project object */;
 }
