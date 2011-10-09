@@ -2,7 +2,6 @@
 /*!
 @project	Stuff
 @header		StuffMasterViewController.h
-@created	5/5/11
 */
 
 #import <UIKit/UIKit.h>

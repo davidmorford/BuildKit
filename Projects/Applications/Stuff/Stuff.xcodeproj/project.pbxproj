@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6344DD7B14424DD900D3437C /* AdHoc.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6344DD7914424DD900D3437C /* AdHoc.xcconfig */; };
+		6344DD7C14424DD900D3437C /* Distribution.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6344DD7A14424DD900D3437C /* Distribution.xcconfig */; };
 		63C080B71373AEA100352C94 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C080B61373AEA100352C94 /* CoreData.framework */; };
 		63C080B91373AEA100352C94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C080B81373AEA100352C94 /* CoreGraphics.framework */; };
 		63C080BB1373AEA100352C94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C080BA1373AEA100352C94 /* Foundation.framework */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6344DD7914424DD900D3437C /* AdHoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = Configurations/AdHoc.xcconfig; sourceTree = "<group>"; };
+		6344DD7A14424DD900D3437C /* Distribution.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Distribution.xcconfig; path = Configurations/Distribution.xcconfig; sourceTree = "<group>"; };
 		63C080B21373AEA100352C94 /* Stuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C080B61373AEA100352C94 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		63C080B81373AEA100352C94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,11 +175,13 @@
 		63C080D61373AEA100352C94 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				63C080D71373AEA100352C94 /* Application.xcconfig */,
 				63C080D81373AEA100352C94 /* Project.xcconfig */,
+				63C080DB1373AEA100352C94 /* Version.xcconfig */,
+				63C080D71373AEA100352C94 /* Application.xcconfig */,
 				63C080D91373AEA100352C94 /* Debug.xcconfig */,
 				63C080DA1373AEA100352C94 /* Release.xcconfig */,
-				63C080DB1373AEA100352C94 /* Version.xcconfig */,
+				6344DD7914424DD900D3437C /* AdHoc.xcconfig */,
+				6344DD7A14424DD900D3437C /* Distribution.xcconfig */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -193,8 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				63C080DE1373AEA100352C94 /* StuffApplicationDelegate.h */,
-				63C080DF1373AEA100352C94 /* StuffApplicationDelegate.m */,
 				63C080E11373AEA100352C94 /* StuffUserDefaults.h */,
+				63C080DF1373AEA100352C94 /* StuffApplicationDelegate.m */,
 				63C080E21373AEA100352C94 /* StuffUserDefaults.m */,
 			);
 			name = ApplicationDelegate;
@@ -203,10 +209,10 @@
 		63C080E41373AEA100352C94 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				63C080E51373AEA100352C94 /* StuffMasterViewController.h */,
-				63C080E61373AEA100352C94 /* StuffMasterViewController.m */,
 				63C080E81373AEA100352C94 /* StuffDetailViewController.h */,
+				63C080E51373AEA100352C94 /* StuffMasterViewController.h */,
 				63C080E91373AEA100352C94 /* StuffDetailViewController.m */,
+				63C080E61373AEA100352C94 /* StuffMasterViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -331,6 +337,8 @@
 				63C081021373AEA100352C94 /* Default~iphone.png in Resources */,
 				63C081041373AEA100352C94 /* Default@2x~iphone.png in Resources */,
 				63C081081373AEA100352C94 /* UserDefaults.plist in Resources */,
+				6344DD7B14424DD900D3437C /* AdHoc.xcconfig in Resources */,
+				6344DD7C14424DD900D3437C /* Distribution.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +376,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6344DD7F14424E4300D3437C /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C080D81373AEA100352C94 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = AdHoc;
+		};
+		6344DD8014424E4300D3437C /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6344DD7914424DD900D3437C /* AdHoc.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		6344DD8114424E4C00D3437C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C080D81373AEA100352C94 /* Project.xcconfig */;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		6344DD8214424E4C00D3437C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6344DD7A14424DD900D3437C /* Distribution.xcconfig */;
+			buildSettings = {
+			};
+			name = Distribution;
+		};
 		63C081091373AEA100352C94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C080D81373AEA100352C94 /* Project.xcconfig */;
@@ -406,6 +444,8 @@
 			buildConfigurations = (
 				63C081091373AEA100352C94 /* Debug */,
 				63C0810A1373AEA100352C94 /* Release */,
+				6344DD7F14424E4300D3437C /* AdHoc */,
+				6344DD8114424E4C00D3437C /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -415,6 +455,8 @@
 			buildConfigurations = (
 				63C0810C1373AEA100352C94 /* Debug */,
 				63C0810D1373AEA100352C94 /* Release */,
+				6344DD8014424E4300D3437C /* AdHoc */,
+				6344DD8214424E4C00D3437C /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

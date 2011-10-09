@@ -18,17 +18,17 @@
 #pragma mark <UIApplicationDelegate>
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-	self.window.userInteractionEnabled = TRUE;
-	self.window.backgroundColor = [UIColor blackColor];
-	self.window.contentMode = UIViewContentModeScaleToFill;
-	self.window.autoresizesSubviews = TRUE;
+    window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+	window.userInteractionEnabled = TRUE;
+	window.backgroundColor = [UIColor blackColor];
+	window.contentMode = UIViewContentModeScaleToFill;
+	window.autoresizesSubviews = TRUE;
 
     StuffMasterViewController *masterViewController = [[StuffMasterViewController alloc] init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
-    self.window.rootViewController = self.navigationController;
+    navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    window.rootViewController = navigationController;
     [masterViewController release];
-	[self.window makeKeyAndVisible];
+	[window makeKeyAndVisible];
 
 	return TRUE;
 }

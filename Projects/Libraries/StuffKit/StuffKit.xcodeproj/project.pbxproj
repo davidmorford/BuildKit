@@ -140,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				63C07FBA1373AB5700352C94 /* Configurations */,
-				63C07FC11373AB5700352C94 /* Classes */,
 				63C07FC61373AB5700352C94 /* Project */,
+				63C07FC11373AB5700352C94 /* Classes */,
 			);
 			path = StuffKit;
 			sourceTree = "<group>";

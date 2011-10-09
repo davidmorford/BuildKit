@@ -18,7 +18,7 @@
 		<string>Icon-Small@2x.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.semantap.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.corporation9592.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -31,10 +31,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.Semantap.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>com.corporation9592.${PRODUCT_NAME:rfc1034identifier}</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>Stuff</string>
+				<string>stuff</string>
 			</array>
 		</dict>
 	</array>

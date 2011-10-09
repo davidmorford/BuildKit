@@ -2,12 +2,13 @@
 # ================================================================================
 # Build Kit 
 #
-# (c) 2008 - 2011, Semantap
+# (c) 2008 - 2011, Dave Morford
 # 
 # iOS Application and Libraries Build Script
 #
 #      Created: Aug. 12, 2009
 # Last Updated: Mar. 23, 2011
+# Last Updated: Oct. 9, 2011
 # ================================================================================
 
 Usage()
@@ -15,9 +16,9 @@ Usage()
     builtin echo "iPhone Build Script, version 4.3\n"
     builtin echo "Usage: Build.command <SDKVersion> <BuildConfiguration>"
     builtin echo "\t<SDKVersion>         = A SDK Version"
-    builtin echo "\t\tAvailable          = [4.3]"
+    builtin echo "\t\tAvailable          = [4.3 | 5.0]"
     builtin echo "\t<BuildConfiguration> = A Build Configuration"
-    builtin echo "\t\tAvailable          = [Debug | Profile | Release | AdHoc | Distribution]"
+    builtin echo "\t\tAvailable          = [Debug | Release]"
     builtin echo "\n"
 }
 

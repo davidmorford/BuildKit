@@ -2,13 +2,16 @@
 //
 // Stuff/Configurations/Distribution.xcconfig
 //
-// Customize with Distribution Build settings. Uses Release.xcconfig
-//
+// Customize with Distribution Code Sign Identity and entitlements settings. Uses Release.xcconfig
+// 
 
-#include "Release.xcconfig"
+#include "Application.xcconfig"
+#include "../../../Configurations/Release.xcconfig"
 
-// Distribution Code Sign Identity and Entitlements
-
-//CODE_SIGN_IDENTITY = iPhone Distribution: 
-//CODE_SIGN_ENTITLEMENTS = $(APPLICATIONDELEGATE_INFOPLIST_PATH)/Entitlements.plist
-//VALIDATE_PRODUCT = YES
+BUILD_PLATFORM_NAME_PATH        = $(BUILD_SHARED_LIBRARIES_PATH)/Release/$(SDK_NAME)
+//CODE_SIGN_ENTITLEMENTS        = $(APPLICATIONDELEGATE_INFOPLIST_PATH)/Entitlements.plist
+CODE_SIGN_IDENTITY              = iPhone Distribution
+CURRENT_PROJECT_VERSION         = $(BUILD_APPLICATION_VERSION)
+GCC_PREPROCESSOR_DEFINITIONS    = NDEBUG
+GCC_OPTIMIZATION_LEVEL          = s
+VALIDATE_PRODUCT                = YES

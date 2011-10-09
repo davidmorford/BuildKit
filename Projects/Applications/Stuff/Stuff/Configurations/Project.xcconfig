@@ -7,5 +7,5 @@
 #include "../../../Configurations/Platform.xcconfig"
 #include "../../../Configurations/Project.xcconfig"
 
-INFOPLIST_ORGANIZATION_NAME	= Semantap
+INFOPLIST_ORGANIZATION_NAME	= Corporation9592
 CODE_SIGN_IDENTITY = iPhone Developer

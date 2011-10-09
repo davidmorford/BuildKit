@@ -11,3 +11,6 @@
 
 SDKROOT = iphoneos
 ARCHS = $(ARCHS_STANDARD_32_BIT)
+
+// 5.0 SDK defines armv7 as the 'standard' arch now. Does this do anything?
+//VALID_ARCHS = armv6 armv7

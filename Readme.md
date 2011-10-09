@@ -92,6 +92,18 @@ Can be created in any top level folder in the Projects root folder. I currently 
 
 ## History
 
+### October 9, 2011
+
+* Verify and update  for Xcode 4.2 and iOS 5.0 SDK
+* Add debug and release schemes for Libraries, Application and Workspace and a "Workspace" scheme to build dependent libraries.
+* Add example of custom configurations and schemes for AdHoc/OTA or Distribution that use the existing Debug/Release configurations and build static libraries.
+* Bump deployment target to 4.3
+
+### May 5, 2011
+
+* More Updates for Xcode 4 workflows.
+* Add Xcode 4 project templates for iOS Applications and Libraries that use the BuildKit structure.
+
 ### March 27, 2011
 
 * Updates for Xcode 3.2.6, Xcode 4.0, iOS SDK 4.3 and LLVM/Clang 1.7/2.0
