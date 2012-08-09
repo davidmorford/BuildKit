@@ -1,4 +1,3 @@
-
 # BuildKit
 
 BuildKit is a collection of configurations, scripts and Xcode project templates organization to manage creating, building and using multiple static libraries for iOS applications. BuildKit leverages Xcode multi-layered build settings and always using the latest iOS SDK best practice including minimum deployment version target set and weak linking.
@@ -8,8 +7,8 @@ For more information on multi-layered configuration files see : [Build Setting E
 ## Requirements
 
   * Xcode : 3.2.6 or Xcode 4.0+
-  * SDK : 4.3
-  * Compiler : LLVM/Clang 1.7 or 2.0
+  * SDK : 4.3 / 5.0 / 6.0
+  * Compiler : LLVM/Clang 1.7 or 2.0 or later
 
 ## Xcode Configuration Files (.xcconfig)
 
