@@ -154,4 +154,4 @@ Can be created in any top level folder in the Projects root folder. I currently 
 
 ## Copyright
 
-(c) 2009 - 2011 Dave Morford. All Right Reserved.
+(c) 2009 - 2016 Dave Morford. All Right Reserved.
